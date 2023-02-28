@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "baseUrl": ".",
+    "declaration": true,
+    "esModuleInterop": true,
+    "jsx": "react",
+    "lib": ["DOM", "ESNext"],
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "noEmit": false,
+    "outDir": "dist",
+    "rootDir": "src",
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "ES5"
+  },
+  "exclude": ["dist", "node_modules"],
+  "include": ["src"]
+}

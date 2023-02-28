@@ -1,0 +1,54 @@
+{
+  "name": "litus",
+  "version": "1.0.0",
+  "description": "Basic JS/TS utils",
+  "author": {
+    "email": "estidlore@outlook.com",
+    "name": "Estid Felipe Lozano Reyes",
+    "url": "https://github.com/estidlore"
+  },
+  "bugs": {
+    "url": "https://github.com/estidlore/litus/issues"
+  },
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://github.com/estidlore/litus#readme",
+  "keywords": [
+    "js",
+    "math",
+    "objects",
+    "primitives",
+    "ts",
+    "utils"
+  ],
+  "license": "GPL-3.0-or-later",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "url": "https://github.com/estidlore/litus",
+    "type": "git"
+  },
+  "scripts": {
+    "build": "tsc && npm pack",
+    "format": "prettier --write .",
+    "lint": "eslint --ext .ts src --fix",
+    "test": "jest"
+  },
+  "types": "dist/index.d.ts",
+  "devDependencies": {
+    "@types/react": "^18.0.28",
+    "@typescript-eslint/parser": "^5.52.0",
+    "eslint": "^8.34.0",
+    "eslint-config-estidlore": "github:estidlore/eslint-config-estidlore",
+    "prettier": "^2.8.4",
+    "react": "^18.2.0",
+    "typescript": "^4.9.5"
+  },
+  "peerDependencies": {
+    "react": "*"
+  }
+}
