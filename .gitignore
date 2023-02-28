@@ -4,3 +4,6 @@ node_modules
 # Package
 dist
 litus-*.tgz
+
+# Test
+coverage
