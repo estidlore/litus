@@ -1,3 +1,7 @@
-const name = "litus";
+import { math } from "./math";
 
-export { name };
+const litus = {
+  ...math
+};
+
+export { litus };
