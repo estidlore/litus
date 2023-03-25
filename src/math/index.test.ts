@@ -1,4 +1,4 @@
-import { math } from ".";
+import * as math from ".";
 
 describe("math", () => {
   it("mod", () => {

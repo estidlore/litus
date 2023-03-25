@@ -1,9 +1,2 @@
-import { math } from "./math";
-import { obj } from "./obj";
-
-const litus = {
-  ...math,
-  ...obj
-};
-
-export { litus };
+export * as math from "./math";
+export * as obj from "./obj";
