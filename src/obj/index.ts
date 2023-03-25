@@ -7,7 +7,7 @@ const copy = <T>(obj: T): T => {
   const res: any = Array.isArray(obj) ? [] : {};
 
   for (const key in obj) {
-    if (Object.prototype.hasOwnProperty.call(obj, key)) {
+    if (hasProps(obj, key)) {
       res[key] = copy(obj[key]);
     }
   }
@@ -15,4 +15,12 @@ const copy = <T>(obj: T): T => {
   return res;
 };
 
-export { copy };
+const hasProps = (obj: object, ...keys: PropertyKey[]): boolean => {
+  return keys.every((key) => Object.prototype.hasOwnProperty.call(obj, key));
+};
+
+const merge = <A extends object, B extends object>(a: A, b: B): A & B => {
+  return copy({ ...a, ...b });
+};
+
+export { copy, hasProps, merge };
