@@ -2,6 +2,10 @@ const add = (arr: number[], n: number): number[] => {
   return arr.map((el) => el + n);
 };
 
+const divide = (arr: number[], n: number): number[] => {
+  return multiply(arr, 1 / n);
+};
+
 const mean = (arr: number[]): number => {
   return sum(arr) / arr.length;
 };
@@ -17,8 +21,16 @@ const mod = (x: number, m: number): number => {
   return ((x % m) + m) % m;
 };
 
+const multiply = (arr: number[], n: number): number[] => {
+  return arr.map((el) => el * n);
+};
+
+const subtract = (arr: number[], n: number): number[] => {
+  return add(arr, -n);
+};
+
 const sum = (arr: number[]): number => {
   return arr.reduce((acc, el) => acc + el, 0);
 };
 
-export { add, mean, median, mod, sum };
+export { add, divide, mean, median, mod, multiply, subtract, sum };

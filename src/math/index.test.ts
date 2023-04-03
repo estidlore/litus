@@ -9,6 +9,14 @@ describe("math", () => {
     expect(math.add(arr, 5)).toStrictEqual(exp);
   });
 
+  it("divide", () => {
+    expect.assertions(1);
+
+    const arr = [-4, 1, 0, 3, 2];
+    const exp = [-2, 0.5, 0, 1.5, 1];
+    expect(math.divide(arr, 2)).toStrictEqual(exp);
+  });
+
   it("mean", () => {
     expect.assertions(1);
 
@@ -32,6 +40,22 @@ describe("math", () => {
       expect(math.mod(k * m + 1, m)).toBe(1);
       expect(math.mod(k * m - 1, m)).toBe(m - 1);
     });
+  });
+
+  it("multiply", () => {
+    expect.assertions(1);
+
+    const arr = [-4, 1, 0, 3, 2];
+    const exp = [-12, 3, 0, 9, 6];
+    expect(math.multiply(arr, 3)).toStrictEqual(exp);
+  });
+
+  it("subtract", () => {
+    expect.assertions(1);
+
+    const arr = [-4, 1, 0, 3, 2];
+    const exp = [-5, 0, -1, 2, 1];
+    expect(math.subtract(arr, 1)).toStrictEqual(exp);
   });
 
   it("sum", () => {
