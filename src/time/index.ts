@@ -1,4 +1,4 @@
-import type { TimeUnit } from "src/types";
+import type { TimeUnit } from "../types";
 
 const MS: Record<TimeUnit, number> = {
   d: 864e5,
