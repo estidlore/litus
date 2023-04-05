@@ -1,18 +1,6 @@
 import * as time from ".";
 
 describe("time", () => {
-  it("convert", () => {
-    expect.assertions(7);
-
-    expect(time.convert("h", "s")).toBe(3600);
-    expect(time.convert("d", "m")).toBe(1440);
-    expect(time.convert("ms", "s")).toBe(1 / 1000);
-    expect(time.convert("h", "d")).toBe(1 / 24);
-    expect(time.convert("m", "m")).toBe(1);
-    expect(time.convert("s", "m", 120)).toBe(2);
-    expect(time.convert("h", "s", -1)).toBe(-3600);
-  });
-
   it("date", () => {
     expect.assertions(2);
 

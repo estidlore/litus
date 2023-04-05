@@ -8,10 +8,6 @@ const MS: Record<TimeUnit, number> = {
   s: 1e3
 };
 
-const convert = (a: TimeUnit, b: TimeUnit, t = 1): number => {
-  return (MS[a] / MS[b]) * t;
-};
-
 const date = (t: Time): Date => {
   return new Date(to(t).val);
 };
@@ -28,4 +24,4 @@ const to = (t: Time, unit: TimeUnit = "ms"): Time => {
   return time((MS[t.unit] / MS[unit]) * t.val, unit);
 };
 
-export { convert, date, get, MS, time, to };
+export { date, get, MS, time, to };
