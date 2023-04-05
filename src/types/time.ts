@@ -1,3 +1,8 @@
 type TimeUnit = "d" | "h" | "m" | "ms" | "s";
 
-export type { TimeUnit };
+interface Time {
+  unit: TimeUnit;
+  val: number;
+}
+
+export type { Time, TimeUnit };

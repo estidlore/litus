@@ -1,4 +1,4 @@
-import type { TimeUnit } from "../types";
+import type { Time, TimeUnit } from "../types";
 
 const MS: Record<TimeUnit, number> = {
   d: 864e5,
@@ -20,4 +20,12 @@ const get = (d: Date, unit: TimeUnit = "ms"): number => {
   return convert("ms", unit, d.getTime());
 };
 
-export { date, get, convert, MS };
+const time = (val: number, unit: TimeUnit = "ms"): Time => {
+  return { unit, val };
+};
+
+const to = (t: Time, unit: TimeUnit = "ms"): Time => {
+  return time((MS[t.unit] / MS[unit]) * t.val, unit);
+};
+
+export { convert, date, get, MS, time, to };

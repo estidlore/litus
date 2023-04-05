@@ -27,4 +27,24 @@ describe("time", () => {
     expect(time.get(d, "h")).toBe(time.convert("d", "h", 1.5));
     expect(time.get(d)).toBe(time.convert("d", "ms", 1.5));
   });
+
+  it("time", () => {
+    expect.assertions(2);
+
+    expect(time.time(3)).toStrictEqual({ unit: "ms", val: 3 });
+    expect(time.time(-4, "h")).toStrictEqual({ unit: "h", val: -4 });
+  });
+
+  it("to", () => {
+    expect.assertions(2);
+
+    expect(time.to(time.time(2, "s"))).toStrictEqual({
+      unit: "ms",
+      val: 2000
+    });
+    expect(time.to(time.time(-1, "h"), "d")).toStrictEqual({
+      unit: "d",
+      val: -1 / 24
+    });
+  });
 });
