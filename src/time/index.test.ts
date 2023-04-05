@@ -16,16 +16,19 @@ describe("time", () => {
   it("date", () => {
     expect.assertions(2);
 
-    expect(time.date(2, "d").getTime()).toBe(time.convert("h", "ms", 48));
-    expect(time.date(2500).getTime()).toBe(time.date(2.5, "s").getTime());
+    const t1 = time.time(2500);
+    const t2 = time.time(2.5, "s");
+    expect(time.date(t1).getTime()).toBe(t1.val);
+    expect(time.date(t2).getTime()).toBe(t1.val);
   });
 
   it("get", () => {
     expect.assertions(2);
 
-    const d = time.date(1.5, "d");
-    expect(time.get(d, "h")).toBe(time.convert("d", "h", 1.5));
-    expect(time.get(d)).toBe(time.convert("d", "ms", 1.5));
+    const t = time.time(1.5, "d");
+    const d = time.date(t);
+    expect(time.get(d, "h")).toStrictEqual(time.to(t, "h"));
+    expect(time.get(d)).toStrictEqual(time.to(t));
   });
 
   it("time", () => {

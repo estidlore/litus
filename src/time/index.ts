@@ -12,12 +12,12 @@ const convert = (a: TimeUnit, b: TimeUnit, t = 1): number => {
   return (MS[a] / MS[b]) * t;
 };
 
-const date = (t: number, unit: TimeUnit = "ms"): Date => {
-  return new Date(convert(unit, "ms", t));
+const date = (t: Time): Date => {
+  return new Date(to(t).val);
 };
 
-const get = (d: Date, unit: TimeUnit = "ms"): number => {
-  return convert("ms", unit, d.getTime());
+const get = (d: Date, unit: TimeUnit = "ms"): Time => {
+  return to(time(d.getTime()), unit);
 };
 
 const time = (val: number, unit: TimeUnit = "ms"): Time => {
