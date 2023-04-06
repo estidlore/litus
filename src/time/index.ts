@@ -1,38 +1,55 @@
-import type { Time, TimeUnit } from "../types";
+import type { TimeUnit } from "../types";
 
-const MS: Record<TimeUnit, number> = {
-  d: 864e5,
-  h: 36e5,
-  m: 6e4,
-  ms: 1,
-  s: 1e3
-};
+class Time {
+  public static UNITS: Record<TimeUnit, number> = {
+    d: 864e5,
+    h: 36e5,
+    m: 6e4,
+    ms: 1,
+    s: 1e3
+  };
 
-const add = (t: Time, t2: Time): Time => {
-  return time(t.val + to(t2, t.unit).val, t.unit);
-};
+  private readonly date;
 
-const date = (t: Time): Date => {
-  return new Date(to(t).val);
-};
+  public constructor(val?: number, unit: TimeUnit = "ms") {
+    this.date = new Date();
+    if (val !== undefined) {
+      this.set(val, unit);
+    }
+  }
 
-const dayTime = (d: Date, unit: TimeUnit = "ms"): Time => {
-  const t = get(d, "d");
-  t.val %= 1;
-  return to(t, unit);
-};
+  public static convert(
+    val: number,
+    from: TimeUnit,
+    to: TimeUnit = "ms"
+  ): number {
+    const ms = Math.round(Time.UNITS[from] * val);
+    return ms / Time.UNITS[to];
+  }
 
-const get = (d: Date, unit: TimeUnit = "ms"): Time => {
-  return to(time(d.getTime()), unit);
-};
+  public add(val: number, unit: TimeUnit = "ms"): number {
+    return this.set(this.get(unit) + val, unit);
+  }
 
-const time = (val: number, unit: TimeUnit = "ms"): Time => {
-  return { unit, val };
-};
+  public get(unit: TimeUnit = "ms"): number {
+    return Time.convert(this.date.getTime(), "ms", unit);
+  }
 
-const to = (t: Time, unit: TimeUnit = "ms"): Time => {
-  const ms = Math.round(MS[t.unit] * t.val);
-  return time(ms / MS[unit], unit);
-};
+  public getDayTime(unit: TimeUnit = "ms"): number {
+    return Time.convert(this.get("d") % 1, "d", unit);
+  }
 
-export { add, date, dayTime, get, MS, time, to };
+  public set(val: number, unit: TimeUnit = "ms"): number {
+    return this.date.setTime(Time.convert(val, unit));
+  }
+
+  public setDayTime(val: number, unit: TimeUnit = "ms"): number {
+    return this.add(val - this.getDayTime(unit), unit);
+  }
+
+  public toDate(): Date {
+    return new Date(this.date);
+  }
+}
+
+export { Time };
