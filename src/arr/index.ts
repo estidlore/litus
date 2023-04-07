@@ -1,3 +1,9 @@
+import type { Primitive } from "../types";
+
+const chunk = <T>(arr: T[], size: number): T[][] => {
+  return range(0, arr.length, size).map((i) => arr.slice(i, i + size));
+};
+
 const fill = <T>(n: number, val: T): T[] => {
   const res = Array(n);
   for (let i = 0; i < n; i++) {
@@ -41,4 +47,10 @@ const range = (a: number, b: number, step = 1): number[] => {
   return res;
 };
 
-export { fill, group, groupBy, range };
+const unique = <T extends Primitive>(arr: T[]): T[] => {
+  const set = Array.from(new Set(arr));
+  const indexed = set.map((el) => <const>[el, arr.indexOf(el)]);
+  return indexed.sort((a, b) => a[1] - b[1]).map((el) => el[0]);
+};
+
+export { chunk, fill, group, groupBy, range, unique };

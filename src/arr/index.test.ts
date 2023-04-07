@@ -25,6 +25,17 @@ const balls: Ball[] = [
 ];
 
 describe("arr", () => {
+  it("chunk", () => {
+    expect.assertions(3);
+
+    expect(arr.chunk([1, 2, 3], 4)).toStrictEqual([[1, 2, 3]]);
+    expect(arr.chunk([1, 2, 3], 2)).toStrictEqual([[1, 2], [3]]);
+    expect(arr.chunk([1, 2, 3, 4], 2)).toStrictEqual([
+      [1, 2],
+      [3, 4]
+    ]);
+  });
+
   it("fill", () => {
     expect.assertions(2);
 
@@ -59,5 +70,12 @@ describe("arr", () => {
     expect(arr.range(3, 0, -1)).toStrictEqual([3, 2, 1]);
     expect(arr.range(0, 1.1, 0.5)).toStrictEqual([0, 0.5, 1]);
     expect(() => arr.range(0, 2, -1)).toThrow();
+  });
+
+  it("unique", () => {
+    expect.assertions(2);
+
+    expect(arr.unique([3, 3, 1, 2, 2, 3])).toStrictEqual([3, 1, 2]);
+    expect(arr.unique([2, 1, 2, 1, 3, 3])).toStrictEqual([2, 1, 3]);
   });
 });
