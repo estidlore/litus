@@ -5,9 +5,14 @@ const chunk = <T>(arr: T[], size: number): T[][] => {
 };
 
 const fill = <T>(n: number, val: T): T[] => {
-  const res = Array(n);
-  for (let i = 0; i < n; i++) {
-    res[i] = val;
+  return from(n, () => val);
+};
+
+const from = <T>(n: number, mapFn: (i: number) => T): T[] => {
+  const res = Array<T>(n);
+  let i = n;
+  while (--i >= 0) {
+    res[i] = mapFn(i);
   }
   return res;
 };
@@ -39,12 +44,7 @@ const range = (a: number, b: number, step = 1): number[] => {
   if (n <= 0) {
     throw Error("Invalid range");
   }
-  const res = Array(n);
-  let i = n;
-  while (--i >= 0) {
-    res[i] = a + step * i;
-  }
-  return res;
+  return from(n, (i) => a + step * i);
 };
 
 const unique = <T extends Primitive>(arr: T[]): T[] => {
@@ -53,4 +53,4 @@ const unique = <T extends Primitive>(arr: T[]): T[] => {
   return indexed.sort((a, b) => a[1] - b[1]).map((el) => el[0]);
 };
 
-export { chunk, fill, group, groupBy, range, unique };
+export { chunk, fill, from, group, groupBy, range, unique };
