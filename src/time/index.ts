@@ -1,4 +1,4 @@
-import type { TimeUnit } from "../types";
+import type { TimeFormat, TimeFormatOptions, TimeUnit } from "../types";
 
 class Time {
   public static UNITS: Record<TimeUnit, number> = {
@@ -8,6 +8,20 @@ class Time {
     ms: 1,
     s: 1e3
   };
+
+  public static formatOptions: TimeFormatOptions = {
+    date: {
+      dateStyle: "medium"
+    },
+    full: {
+      dateStyle: "short",
+      timeStyle: "short"
+    },
+    time: {
+      timeStyle: "medium"
+    }
+  };
+  public static locales?: Intl.LocalesArgument;
 
   private readonly date;
 
@@ -29,6 +43,15 @@ class Time {
 
   public add(val: number, unit: TimeUnit = "ms"): number {
     return this.set(this.get(unit) + val, unit);
+  }
+
+  public format(
+    mode?: TimeFormat,
+    local?: Intl.LocalesArgument,
+    opts?: Intl.DateTimeFormatOptions
+  ): string {
+    const options = { ...Time.formatOptions[mode ?? "full"], ...opts };
+    return this.date.toLocaleString(local ?? Time.locales, options);
   }
 
   public get(unit: TimeUnit = "ms"): number {

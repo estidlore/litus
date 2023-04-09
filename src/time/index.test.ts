@@ -25,6 +25,36 @@ describe("Time", () => {
     expect(t.add(-2.4, "s")).toBe(100);
   });
 
+  it("format", () => {
+    expect.assertions(6);
+
+    Time.locales = "en-US";
+    const t = new Time(Math.random() * 1000, "d");
+
+    expect(t.format()).toMatch(
+      /^\d{1,2}\/\d{1,2}\/\d{2}, \d{1,2}:\d{2} (A|P)M$/
+    );
+    expect(t.format("date")).toMatch(/^\b[A-Za-z]{3} \d{1,2}, \d{4}\b$/);
+    expect(t.format("time")).toMatch(/^\d{1,2}:\d{2}:\d{2} (A|P)M$/);
+    Time.formatOptions = {
+      date: {
+        dateStyle: "short"
+      },
+      full: {
+        dateStyle: "medium",
+        timeStyle: "medium"
+      },
+      time: {
+        timeStyle: "short"
+      }
+    };
+    expect(t.format()).toMatch(
+      /^\b[A-Za-z]{3} \d{1,2}, \d{4}\b, \d{1,2}:\d{2}:\d{2} (A|P)M$/
+    );
+    expect(t.format("date")).toMatch(/^\d{1,2}\/\d{1,2}\/\d{2}$/);
+    expect(t.format("time")).toMatch(/^\d{1,2}:\d{2} (A|P)M$/);
+  });
+
   it("get", () => {
     expect.assertions(2);
 
