@@ -48,7 +48,7 @@ describe("Time", () => {
         timeStyle: "short"
       }
     };
-    expect(t.format()).toMatch(
+    expect(t.format("full", "en-US")).toMatch(
       /^\b[A-Za-z]{3} \d{1,2}, \d{4}\b, \d{1,2}:\d{2}:\d{2} (A|P)M$/
     );
     expect(t.format("date")).toMatch(/^\d{1,2}\/\d{1,2}\/\d{2}$/);
