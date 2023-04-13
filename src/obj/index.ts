@@ -20,7 +20,7 @@ const hasProps = (obj: object, ...keys: PropertyKey[]): boolean => {
 };
 
 const merge = <A extends object, B extends object>(a: A, b: B): A & B => {
-  return copy({ ...a, ...b });
+  return Object.assign(copy(a), copy(b));
 };
 
 export { copy, hasProps, merge };

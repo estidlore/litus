@@ -1,3 +1,5 @@
+import { copy } from "../obj";
+
 const add = (arr: number[], n: number): number[] => {
   return arr.map((el) => el + n);
 };
@@ -14,7 +16,7 @@ const median = (arr: number[]): number => {
   const mid = arr.length / 2;
   const a = Math.floor(mid - 0.5);
   const b = Math.ceil(mid + 0.5);
-  return mean([...arr].sort().slice(a, b));
+  return mean(copy(arr).sort().slice(a, b));
 };
 
 const mod = (x: number, m: number): number => {

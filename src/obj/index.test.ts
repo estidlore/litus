@@ -48,7 +48,7 @@ describe("obj", () => {
       height: 175
     };
     const union = obj.merge(person, extra);
-    const expected = { ...person, ...extra };
+    const expected = Object.assign({}, person, extra);
 
     expect(union).toStrictEqual(expected);
     expect(union).not.toBe(expected);

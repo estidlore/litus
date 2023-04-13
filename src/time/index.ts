@@ -1,3 +1,4 @@
+import { merge } from "../obj";
 import type { TimeFormat, TimeFormatOptions, TimeUnit } from "../types";
 
 class Time {
@@ -46,12 +47,12 @@ class Time {
   }
 
   public format(
-    mode?: TimeFormat,
-    local?: Intl.LocalesArgument,
-    opts?: Intl.DateTimeFormatOptions
+    mode: TimeFormat = "full",
+    local: Intl.LocalesArgument = Time.locales,
+    opts: Intl.DateTimeFormatOptions = {}
   ): string {
-    const options = { ...Time.formatOptions[mode ?? "full"], ...opts };
-    return this.date.toLocaleString(local ?? Time.locales, options);
+    const options = merge(Time.formatOptions[mode], opts);
+    return this.date.toLocaleString(local, options);
   }
 
   public get(unit: TimeUnit = "ms"): number {
