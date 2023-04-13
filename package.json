@@ -15,14 +15,16 @@
   ],
   "homepage": "https://github.com/estidlore/litus#readme",
   "keywords": [
-    "js",
+    "array",
+    "date",
+    "javascript",
     "math",
-    "objects",
-    "primitives",
-    "ts",
+    "object",
+    "time",
+    "typescript",
     "utils"
   ],
-  "license": "GPL-3.0-or-later",
+  "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "publishConfig": {
