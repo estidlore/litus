@@ -33,11 +33,18 @@ describe("obj", () => {
     expect(copy.name[1]).toBe("D.");
   });
 
-  it("hasProps", () => {
+  it("has", () => {
     expect.assertions(2);
 
-    expect(obj.hasProps(person, "birth", "id", "name")).toBe(true);
-    expect(obj.hasProps(person, "height")).toBe(false);
+    expect(obj.has(person, "birth", "id", "name")).toBe(true);
+    expect(obj.has(person, "height")).toBe(false);
+  });
+
+  it("keys", () => {
+    expect.assertions(2);
+
+    expect(obj.keys(person)).toStrictEqual(["birth", "id", "name"]);
+    expect(obj.keys(person.birth)).toStrictEqual(["day", "month", "year"]);
   });
 
   it("merge", () => {
@@ -53,5 +60,12 @@ describe("obj", () => {
     expect(union).toStrictEqual(expected);
     expect(union).not.toBe(expected);
     expect(union.birth).not.toBe(person.birth);
+  });
+
+  it("vals", () => {
+    expect.assertions(2);
+
+    expect(obj.vals(person.birth)).toStrictEqual([1, 2, 2000]);
+    expect(obj.vals(person.name)).toStrictEqual(["John", "Doe"]);
   });
 });

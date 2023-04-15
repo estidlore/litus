@@ -6,21 +6,27 @@ const copy = <T>(obj: T): T => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const res: any = Array.isArray(obj) ? [] : {};
 
-  for (const key in obj) {
-    if (hasProps(obj, key)) {
-      res[key] = copy(obj[key]);
-    }
-  }
+  keys(obj).forEach((key) => {
+    res[key] = copy(obj[key]);
+  });
 
   return res;
 };
 
-const hasProps = (obj: object, ...keys: PropertyKey[]): boolean => {
+const has = (obj: object, ...keys: PropertyKey[]): boolean => {
   return keys.every((key) => Object.prototype.hasOwnProperty.call(obj, key));
+};
+
+const keys = <T extends object>(obj: T): (keyof T)[] => {
+  return Object.keys(obj) as (keyof T)[];
 };
 
 const merge = <A extends object, B extends object>(a: A, b: B): A & B => {
   return Object.assign(copy(a), copy(b));
 };
 
-export { copy, hasProps, merge };
+const vals = <T extends object>(obj: T): T[keyof T][] => {
+  return Object.values(obj);
+};
+
+export { copy, has, keys, merge, vals };
