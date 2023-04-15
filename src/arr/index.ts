@@ -21,7 +21,7 @@ const group = <T extends object, K extends PropertyKey>(
   arr: T[],
   getKey: (obj: T) => K
 ): Record<K, T[]> => {
-  const res = <Record<K, T[]>>{};
+  const res = {} as Record<K, T[]>;
   arr.forEach((el) => {
     const val = getKey(el);
     if (res[val] === undefined) {
@@ -36,7 +36,7 @@ const groupBy = <T extends object, K extends keyof T>(
   arr: T[],
   key: T[K] extends PropertyKey ? K : never
 ): Record<PropertyKey & T[K], T[]> => {
-  return group(arr, (obj) => <PropertyKey & T[K]>obj[key]);
+  return group(arr, (obj) => obj[key] as PropertyKey & T[K]);
 };
 
 const range = (a: number, b: number, step = 1): number[] => {
@@ -49,7 +49,7 @@ const range = (a: number, b: number, step = 1): number[] => {
 
 const unique = <T extends Primitive>(arr: T[]): T[] => {
   const set = Array.from(new Set(arr));
-  const indexed = set.map((el) => <const>[el, arr.indexOf(el)]);
+  const indexed = set.map((el) => [el, arr.indexOf(el)] as const);
   return indexed.sort((a, b) => a[1] - b[1]).map((el) => el[0]);
 };
 
