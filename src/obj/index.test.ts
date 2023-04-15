@@ -33,6 +33,20 @@ describe("obj", () => {
     expect(copy.name[1]).toBe("D.");
   });
 
+  it("entries", () => {
+    expect.assertions(2);
+
+    expect(obj.entries(person.birth)).toStrictEqual([
+      ["day", 1],
+      ["month", 2],
+      ["year", 2000]
+    ]);
+    expect(obj.entries(person.name)).toStrictEqual([
+      ["0", "John"],
+      ["1", "Doe"]
+    ]);
+  });
+
   it("has", () => {
     expect.assertions(2);
 
