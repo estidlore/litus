@@ -27,6 +27,17 @@ const multiply = (arr: number[], n: number): number[] => {
   return arr.map((el) => el * n);
 };
 
+const pow = (arr: number[], n: number): number[] => {
+  return arr.map((el) => Math.pow(el, n));
+};
+
+const round = (arr: number[], n = 0): number[] => {
+  return arr.map((el) => {
+    const k = Math.pow(10, n);
+    return Math.round(el * k) / k;
+  });
+};
+
 const subtract = (arr: number[], n: number): number[] => {
   return add(arr, -n);
 };
@@ -35,4 +46,4 @@ const sum = (arr: number[]): number => {
   return arr.reduce((acc, el) => acc + el, 0);
 };
 
-export { add, divide, mean, median, mod, multiply, subtract, sum };
+export { add, divide, mean, median, mod, multiply, pow, round, subtract, sum };

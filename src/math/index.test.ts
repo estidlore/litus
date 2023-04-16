@@ -50,6 +50,23 @@ describe("math", () => {
     expect(math.multiply(arr, 3)).toStrictEqual(exp);
   });
 
+  it("pow", () => {
+    expect.assertions(1);
+
+    const arr = [-4, 1, 0, 3, 2];
+    const exp = [16, 1, 0, 9, 4];
+    expect(math.pow(arr, 2)).toStrictEqual(exp);
+  });
+
+  it("round", () => {
+    expect.assertions(3);
+
+    const arr = [-72, 57.6, -1.024];
+    expect(math.round(arr)).toStrictEqual([-72, 58, -1]);
+    expect(math.round(arr, 2)).toStrictEqual([-72, 57.6, -1.02]);
+    expect(math.round(arr, -1)).toStrictEqual([-70, 60, -0]);
+  });
+
   it("subtract", () => {
     expect.assertions(1);
 
