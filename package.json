@@ -1,7 +1,7 @@
 {
   "name": "litus",
   "version": "1.0.0",
-  "description": "Basic JS/TS utils",
+  "description": "Commonly used utilities for JS and TS",
   "author": {
     "email": "estidlore@outlook.com",
     "name": "Estid Felipe Lozano Reyes",
