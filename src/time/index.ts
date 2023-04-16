@@ -1,5 +1,5 @@
 import { merge } from "../obj";
-import type { TimeFormat, TimeFormatOptions, TimeUnit } from "../types";
+import type { TimeFormat, TimeFormatOptions, TimeUnit } from "./types";
 
 class Time {
   public static UNITS: Record<TimeUnit, number> = {
