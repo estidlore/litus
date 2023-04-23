@@ -17,7 +17,7 @@ const from = <T>(n: number, mapFn: (i: number) => T): T[] => {
   return res;
 };
 
-const group = <T extends object, K extends PropertyKey>(
+const group = <T, K extends PropertyKey>(
   arr: T[],
   getKey: (obj: T) => K
 ): Record<K, T[]> => {
@@ -47,10 +47,30 @@ const range = (a: number, b: number, step = 1): number[] => {
   return from(n, (i) => a + step * i);
 };
 
+const sort = <T>(
+  arr: T[],
+  mapFn: ((el: T) => number) | ((el: T) => string)
+): T[] => {
+  const mapped = arr.map((el) => [mapFn(el), el] as const);
+  mapped.sort(([a], [b]) => {
+    if (a < b) {
+      return -1;
+    }
+    if (a > b) {
+      return 1;
+    }
+    return 0;
+  });
+  mapped.forEach(([, el], i) => {
+    arr[i] = el;
+  });
+  return arr;
+};
+
 const unique = <T extends Primitive>(arr: T[]): T[] => {
   const set = Array.from(new Set(arr));
   const indexed = set.map((el) => [el, arr.indexOf(el)] as const);
   return indexed.sort((a, b) => a[1] - b[1]).map((el) => el[0]);
 };
 
-export { chunk, fill, from, group, groupBy, range, unique };
+export { chunk, fill, from, group, groupBy, range, sort, unique };
