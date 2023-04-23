@@ -72,6 +72,14 @@ describe("arr", () => {
     expect(() => arr.range(0, 2, -1)).toThrow();
   });
 
+  it("sort", () => {
+    expect.assertions(3);
+
+    expect(arr.sort([2, 1, 2], (n) => -n)).toStrictEqual([2, 2, 1]);
+    expect(arr.sort(["3", "1", "2"], (n) => n)).toStrictEqual(["1", "2", "3"]);
+    expect(arr.sort(["1", 2, 11], String)).toStrictEqual(["1", 11, 2]);
+  });
+
   it("unique", () => {
     expect.assertions(2);
 
