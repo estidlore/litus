@@ -9,6 +9,19 @@ describe("math", () => {
     expect(math.add(arr, 5)).toStrictEqual(exp);
   });
 
+  it("calc", () => {
+    expect.assertions(6);
+
+    expect(() => math.calc((a, b, x) => a * x + b, 1, 2)).toThrow();
+    expect(() => math.calc((a, b) => a + b, [1, 2], [3])).toThrow();
+    expect(math.calc((a, b) => a + b, 1, 2)).toBe(3);
+    expect(math.calc((a) => a - 1, [3])).toStrictEqual([2]);
+    expect(math.calc((a, b) => a + b, 1, [2, 3])).toStrictEqual([3, 4]);
+    expect(math.calc((a, b, x) => a * b + x, [1, 2], 3, 4)).toStrictEqual([
+      7, 10
+    ]);
+  });
+
   it("divide", () => {
     expect.assertions(1);
 
