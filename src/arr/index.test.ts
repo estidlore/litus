@@ -43,6 +43,13 @@ describe("arr", () => {
     expect(arr.fill(2, "a")).toStrictEqual(["a", "a"]);
   });
 
+  it("from", () => {
+    expect.assertions(2);
+
+    expect(arr.from(3, (i) => i < 2)).toStrictEqual([true, true, false]);
+    expect(arr.from(4, (i) => i % 2)).toStrictEqual([0, 1, 0, 1]);
+  });
+
   it("group", () => {
     expect.assertions(1);
 
