@@ -1,4 +1,4 @@
-import type { Primitive } from "../types";
+import type { Primitive } from "types";
 
 const unique = <T extends Primitive>(arr: T[]): T[] => {
   const set = Array.from(new Set(arr));
