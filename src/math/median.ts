@@ -1,4 +1,5 @@
-import { copy } from "../obj/copy";
+import { copy } from "obj/copy";
+
 import { mean } from "./mean";
 
 const median = (arr: number[]): number => {

@@ -35,7 +35,7 @@
     "type": "git"
   },
   "scripts": {
-    "build": "rm -rf ./dist && tsc -p tsconfig.prod.json && npm pack",
+    "build": "rm -rf ./dist && tsc -p tsconfig.prod.json && tsc-alias && npm pack",
     "format": "prettier --write .",
     "lint": "eslint --ext .ts src --fix",
     "test": "jest"

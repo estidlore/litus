@@ -1,4 +1,5 @@
-import { unapply } from "../func/unapply";
+import { unapply } from "func/unapply";
+
 import { calc } from "./calc";
 import { sum } from "./sum";
 
