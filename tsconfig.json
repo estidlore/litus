@@ -7,15 +7,15 @@
     "jsx": "react",
     "lib": ["DOM", "ESNext"],
     "module": "CommonJS",
-    "moduleResolution": "node",
+    "moduleResolution": "Node",
     "noEmit": false,
     "outDir": "dist",
     "rootDir": "src",
     "skipLibCheck": true,
     "sourceMap": true,
     "strict": true,
-    "target": "ES5"
+    "target": "ES2015"
   },
-  "exclude": ["dist", "node_modules"],
+  "exclude": [],
   "include": ["src"]
 }
