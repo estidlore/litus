@@ -25,8 +25,8 @@
     "utils"
   ],
   "license": "MIT",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
   "publishConfig": {
     "access": "public"
   },
@@ -35,7 +35,9 @@
     "type": "git"
   },
   "scripts": {
-    "build": "rm -rf ./dist && tsc -p tsconfig.build.json && tsc-alias -p tsconfig.build.json",
+    "build": "rm -rf ./dist && npm run build:cjs && npm run build:esm",
+    "build:cjs": "tsc -p tsconfig.build.cjs.json && tsc-alias -p tsconfig.build.cjs.json",
+    "build:esm": "tsc -p tsconfig.build.esm.json && tsc-alias -p tsconfig.build.esm.json",
     "format": "prettier --write .",
     "lint": "eslint --ext .ts src --fix",
     "test": "jest"

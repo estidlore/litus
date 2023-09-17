@@ -1,11 +1,9 @@
 {
   "compilerOptions": {
-    "allowJs": true,
     "baseUrl": "src",
     "declaration": true,
     "esModuleInterop": true,
-    "jsx": "react",
-    "lib": ["DOM", "ESNext"],
+    "lib": ["ESNext"],
     "module": "CommonJS",
     "moduleResolution": "Node",
     "noEmit": false,
