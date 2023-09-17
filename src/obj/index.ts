@@ -1,6 +1,6 @@
-export { copy } from "./copy";
-export { entries } from "./entries";
-export { has } from "./has";
-export { keys } from "./keys";
-export { merge } from "./merge";
-export { vals } from "./vals";
+export * from "./copy";
+export * from "./entries";
+export * from "./has";
+export * from "./keys";
+export * from "./merge";
+export * from "./vals";
