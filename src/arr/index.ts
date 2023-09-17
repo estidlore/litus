@@ -1,8 +1,8 @@
-export { chunk } from "./chunk";
-export { fill } from "./fill";
-export { from } from "./from";
-export { group } from "./group";
-export { groupBy } from "./groupBy";
-export { range } from "./range";
-export { sort } from "./sort";
-export { unique } from "./unique";
+export * from "./chunk";
+export * from "./fill";
+export * from "./from";
+export * from "./group";
+export * from "./groupBy";
+export * from "./range";
+export * from "./sort";
+export * from "./unique";
