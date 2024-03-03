@@ -47,11 +47,40 @@ describe("obj", () => {
     ]);
   });
 
+  it("equal", () => {
+    expect.assertions(9);
+
+    expect(obj.equal(1, 1)).toBe(true);
+    expect(obj.equal(person, person)).toBe(true);
+    expect(obj.equal(1, "1")).toBe(false);
+    expect(obj.equal(1, person)).toBe(false);
+
+    expect(obj.equal({ a: 1 }, person)).toBe(false);
+    expect(obj.equal({ a: 1 }, { b: 2 })).toBe(false);
+    expect(obj.equal({ a: 1 }, { a: 2 })).toBe(false);
+
+    const person2 = obj.copy(person);
+    expect(obj.equal(person, person2)).toBe(true);
+    person2.birth.day++;
+    expect(obj.equal(person, person2)).toBe(false);
+  });
+
   it("has", () => {
     expect.assertions(2);
 
     expect(obj.has(person, "birth", "id", "name")).toBe(true);
     expect(obj.has(person, "height")).toBe(false);
+  });
+
+  it("isObj", () => {
+    expect.assertions(7);
+    expect(obj.isObj(undefined)).toBe(false);
+    expect(obj.isObj(false)).toBe(false);
+    expect(obj.isObj(0)).toBe(false);
+    expect(obj.isObj("")).toBe(false);
+    expect(obj.isObj(null)).toBe(false);
+    expect(obj.isObj({})).toBe(true);
+    expect(obj.isObj(() => 0)).toBe(false);
   });
 
   it("keys", () => {
