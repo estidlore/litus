@@ -1,6 +1,5 @@
 type Entry<T extends object> = [Key<T>, Val<T>];
-type KeyOf<T extends object> = Exclude<keyof T, symbol>;
-type Key<T extends object> = `${KeyOf<T>}`;
-type Val<T extends object> = T[KeyOf<T>];
+type Key<T extends object> = keyof T;
+type Val<T extends object> = T[keyof T];
 
-export type { Entry, Key, KeyOf, Val };
+export type { Entry, Key, Val };
