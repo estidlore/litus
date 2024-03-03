@@ -87,6 +87,13 @@ describe("arr", () => {
     expect(arr.sort(["1", 2, 11], String)).toStrictEqual(["1", 11, 2]);
   });
 
+  it("union", () => {
+    expect.assertions(2);
+
+    expect(arr.union([1, 2, 2, 3])).toEqual(new Set([1, 2, 3]));
+    expect(arr.union([1, 2], [2, 3])).toEqual(new Set([1, 2, 3]));
+  });
+
   it("unique", () => {
     expect.assertions(2);
 

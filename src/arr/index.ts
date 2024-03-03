@@ -5,4 +5,5 @@ export * from "./group";
 export * from "./groupBy";
 export * from "./range";
 export * from "./sort";
+export * from "./union";
 export * from "./unique";
