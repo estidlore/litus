@@ -105,6 +105,13 @@ describe("obj", () => {
     expect(union.birth).not.toBe(person.birth);
   });
 
+  it("omit", () => {
+    expect.assertions(1);
+
+    const omitted = obj.omit(person, ["birth", "id"]);
+    expect(omitted).toStrictEqual({ name: person.name });
+  });
+
   it("vals", () => {
     expect.assertions(2);
 
