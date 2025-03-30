@@ -1,4 +1,5 @@
 export * from "./add";
+export * from "./aprox";
 export * from "./calc";
 export * from "./divide";
 export * from "./mean";
