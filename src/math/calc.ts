@@ -3,7 +3,7 @@ import { unapply } from "func/unapply";
 
 import type { Calc, Quantity } from "./types";
 
-const calc = (
+export const calc = (
   opFn: (...a: number[]) => number
 ): (<A extends Quantity[]>(...args: A) => Calc<A>) => {
   return unapply(<A extends Quantity[]>(arr: A) => {
@@ -26,5 +26,3 @@ const calc = (
     }) as Calc<A>;
   });
 };
-
-export { calc };

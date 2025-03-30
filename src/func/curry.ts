@@ -1,7 +1,7 @@
 import type { CurryArgs, CurryFn, CurryFnRes, CurryRest } from "./types";
 import { unapply } from "./unapply";
 
-const curry = <R, T extends unknown[]>(
+export const curry = <R, T extends unknown[]>(
   fn: (...args: T) => R,
   arity = fn.length
 ): CurryFn<R, T> => {
@@ -18,5 +18,3 @@ const curry = <R, T extends unknown[]>(
     ) as CurryFnRes<R, T, A>;
   });
 };
-
-export { curry };

@@ -1,5 +1,3 @@
-const isObj = (el: unknown): boolean => {
+export const isObj = (el: unknown): boolean => {
   return typeof el === "object" && el !== null;
 };
-
-export { isObj };

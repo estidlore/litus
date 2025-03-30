@@ -1,4 +1,4 @@
-const sort = <T>(
+export const sort = <T>(
   arr: T[],
   mapFn: ((el: T) => number) | ((el: T) => string)
 ): T[] => {
@@ -17,5 +17,3 @@ const sort = <T>(
   });
   return arr;
 };
-
-export { sort };

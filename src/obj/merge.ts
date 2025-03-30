@@ -1,7 +1,8 @@
 import { copy } from "./copy";
 
-const merge = <A extends object, B extends object>(a: A, b: B): A & B => {
+export const merge = <A extends object, B extends object>(
+  a: A,
+  b: B
+): A & B => {
   return Object.assign(copy(a), copy(b));
 };
-
-export { merge };
