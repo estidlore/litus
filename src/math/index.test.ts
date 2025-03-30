@@ -75,6 +75,7 @@ describe("math", () => {
     expect.assertions(3);
 
     const arr = [-72, 57.6, -1.024];
+    expect(math.round(arr[2])).toBe(-1);
     expect(math.round(arr)).toStrictEqual([-72, 58, -1]);
     expect(math.round(arr, 2)).toStrictEqual([-72, 57.6, -1.02]);
     expect(math.round(arr, -1)).toStrictEqual([-70, 60, -0]);
