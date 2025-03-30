@@ -1,6 +1,6 @@
 import { unapply } from "./unapply";
 
-const debounce = <A extends unknown[]>(
+export const debounce = <A extends unknown[]>(
   fn: (...args: A) => void,
   delay = 100
 ) => {
@@ -12,5 +12,3 @@ const debounce = <A extends unknown[]>(
     }, delay);
   });
 };
-
-export { debounce };

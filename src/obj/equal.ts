@@ -26,6 +26,4 @@ const deepEqual = (args: unknown[]): boolean => {
   });
 };
 
-const equal = unapply(deepEqual);
-
-export { equal };
+export const equal = unapply(deepEqual);

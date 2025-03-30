@@ -1,6 +1,6 @@
 import { entries } from "./entries";
 
-const copy = <T>(obj: T): T => {
+export const copy = <T>(obj: T): T => {
   if (typeof obj !== "object" || obj === null) {
     return obj;
   }
@@ -14,5 +14,3 @@ const copy = <T>(obj: T): T => {
 
   return res;
 };
-
-export { copy };

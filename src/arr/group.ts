@@ -1,4 +1,4 @@
-const group = <T, K extends PropertyKey>(
+export const group = <T, K extends PropertyKey>(
   arr: T[],
   getKey: (obj: T) => K
 ): Record<K, T[]> => {
@@ -12,5 +12,3 @@ const group = <T, K extends PropertyKey>(
   });
   return res;
 };
-
-export { group };

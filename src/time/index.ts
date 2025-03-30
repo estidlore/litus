@@ -2,7 +2,7 @@ import { merge } from "obj/merge";
 
 import type { TimeFormat, TimeFormatOptions, TimeUnit } from "./types";
 
-class Time {
+export class Time {
   public static UNITS: Record<TimeUnit, number> = {
     d: 864e5,
     h: 36e5,
@@ -76,5 +76,3 @@ class Time {
     return new Date(this.date);
   }
 }
-
-export { Time };
