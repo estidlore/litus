@@ -112,6 +112,16 @@ describe("obj", () => {
     expect(omitted).toStrictEqual({ name: person.name });
   });
 
+  it("pick", () => {
+    expect.assertions(1);
+
+    const picked = obj.pick(person, ["birth", "id"]);
+    expect(picked).toStrictEqual({
+      birth: person.birth,
+      id: person.id
+    });
+  });
+
   it("vals", () => {
     expect.assertions(2);
 
