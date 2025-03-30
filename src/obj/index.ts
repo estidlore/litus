@@ -5,4 +5,5 @@ export * from "./has";
 export * from "./isObj";
 export * from "./keys";
 export * from "./merge";
+export * from "./omit";
 export * from "./vals";
