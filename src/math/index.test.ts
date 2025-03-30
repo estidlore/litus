@@ -39,9 +39,14 @@ describe("math", () => {
   });
 
   it("mean", () => {
-    expect.assertions(1);
+    expect.assertions(4);
 
-    expect(math.mean([-4, 1, 0, 3, 2])).toBe(2 / 5);
+    const nums = [-4, 1, 0, 3, 2];
+    expect(math.mean(nums)).toBe(2 / 5);
+    expect(math.mean(nums, [1, 1, 1, 1, 1])).toBe(2 / 5);
+    expect(() => math.mean(nums, [1, 1, 1, 1])).toThrow();
+    const meanw = math.mean(nums, [1, 2, 3, 4, 5]);
+    expect(math.aprox(meanw, 20 / 15)).toBe(true);
   });
 
   it("median", () => {
