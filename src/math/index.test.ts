@@ -9,6 +9,14 @@ describe("math", () => {
     expect(math.add(arr, 5)).toStrictEqual(exp);
   });
 
+  it("aprox", () => {
+    expect.assertions(3);
+
+    expect(math.aprox(3.14, Math.PI)).toBe(false);
+    expect(math.aprox(3.14, Math.PI, 2)).toBe(true);
+    expect(math.aprox(3.1416, Math.PI)).toBe(true);
+  });
+
   it("calc", () => {
     expect.assertions(6);
 
@@ -72,7 +80,7 @@ describe("math", () => {
   });
 
   it("round", () => {
-    expect.assertions(3);
+    expect.assertions(4);
 
     const arr = [-72, 57.6, -1.024];
     expect(math.round(arr[2])).toBe(-1);
