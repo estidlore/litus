@@ -87,6 +87,22 @@ describe("arr", () => {
     expect(arr.sort(["1", 2, 11], String)).toStrictEqual(["1", 11, 2]);
   });
 
+  it("transpose", () => {
+    expect.assertions(2);
+    const matrix = [
+      [1, 2, 3],
+      [4, 5, 6]
+    ];
+    const t = [
+      [1, 4],
+      [2, 5],
+      [3, 6]
+    ];
+
+    expect(arr.transpose(matrix)).toStrictEqual(t);
+    expect(arr.transpose(t)).toStrictEqual(matrix);
+  });
+
   it("union", () => {
     expect.assertions(2);
 
