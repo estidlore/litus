@@ -38,6 +38,20 @@ describe("math", () => {
     expect(math.divide(arr, 2)).toStrictEqual(exp);
   });
 
+  it("inRange", () => {
+    expect.assertions(7);
+
+    expect(math.inRange(3, 1, 5)).toBe(true);
+    expect(math.inRange(3, 5, 1)).toBe(true);
+    expect(math.inRange(3, 5)).toBe(true);
+
+    expect(math.inRange(0, 0)).toBe(false);
+    expect(math.inRange(0, 1)).toBe(true);
+
+    expect(math.inRange(1, 0, 1)).toBe(false);
+    expect(math.inRange(1, 1, 0)).toBe(false);
+  });
+
   it("mean", () => {
     expect.assertions(4);
 

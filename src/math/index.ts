@@ -2,6 +2,7 @@ export * from "./add";
 export * from "./aprox";
 export * from "./calc";
 export * from "./divide";
+export * from "./inRange";
 export * from "./mean";
 export * from "./median";
 export * from "./mod";
