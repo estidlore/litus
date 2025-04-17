@@ -59,6 +59,14 @@ describe("math", () => {
     expect(math.inRange(1, 1, 0)).toBe(false);
   });
 
+  it("interp", () => {
+    expect.assertions(2);
+
+    expect(() => math.interp([0, 1], [1, 2], [3])).toThrow();
+    const ix = math.interp([0, 1, 1.5, 2.72, 3.1], [1, 2, 3], [3, 2, 0]);
+    expect(math.round(ix, 2)).toStrictEqual([3, 3, 2.5, 0.56, 0]);
+  });
+
   it("mean", () => {
     expect.assertions(4);
 
