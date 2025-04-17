@@ -30,6 +30,13 @@ describe("math", () => {
     ]);
   });
 
+  it("cumsum", () => {
+    expect.assertions(1);
+
+    const arr = [-4, 1, 0, 3, 2];
+    expect(math.cumsum(arr)).toStrictEqual([-4, -3, -3, 0, 2]);
+  });
+
   it("divide", () => {
     expect.assertions(1);
 
