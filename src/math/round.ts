@@ -1,4 +1,4 @@
-import { Quantity } from "./types";
+import type { Quantity } from "./types";
 
 const _round = (num: number, n: number): number => {
   const k = Math.pow(10, n);
