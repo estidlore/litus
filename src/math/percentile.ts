@@ -38,16 +38,16 @@ const _weighted = (x: number[], p: number[], w: number[]): number[] => {
 export const percentile = <T extends Quantity>(
   x: number[],
   p: T,
-  w?: number[]
+  weights?: number[]
 ): QuantityT<T> => {
   if (typeof p === "number") {
-    return percentile(x, [p], w)[0] as QuantityT<T>;
+    return percentile(x, [p], weights)[0] as QuantityT<T>;
   }
   if (p.some((v) => v < 0 || v > 100)) {
     throw new Error("Percentiles must be between 0 and 100");
   }
-  if (w === undefined) {
+  if (weights === undefined) {
     return _linear(x, p) as QuantityT<T>;
   }
-  return _weighted(x, p, w) as QuantityT<T>;
+  return _weighted(x, p, weights) as QuantityT<T>;
 };
