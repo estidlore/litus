@@ -1,3 +1,4 @@
+import * as arr from "arr";
 import * as math from ".";
 
 describe("math", () => {
@@ -103,6 +104,35 @@ describe("math", () => {
     const arr = [-4, 1, 0, 3, 2];
     const exp = [-12, 3, 0, 9, 6];
     expect(math.multiply(arr, 3)).toStrictEqual(exp);
+  });
+
+  it("percentile", () => {
+    expect.assertions(8);
+
+    const x = [1, 2, 3, 4, 5];
+    const p = [25, 50, 75];
+    const res = [2, 3, 4];
+
+    const w = [1, 2, 3, 4, 5];
+    const resW = [1, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5];
+
+    expect(() => math.percentile(x, -1)).toThrow(
+      "Percentiles must be between 0 and 100"
+    );
+    expect(() => math.percentile(x, 101)).toThrow(
+      "Percentiles must be between 0 and 100"
+    );
+    expect(() => math.percentile(x, p, [1, 2, 1, 2, -1])).toThrow(
+      "Weights must be non-negative"
+    );
+    expect(() => math.percentile(x, p, [1, 2, 3])).toThrow(
+      "Weights must be the same length as the array"
+    );
+
+    expect(math.percentile(x, p)).toStrictEqual(res);
+    expect(math.percentile(x, p, arr.fill(5, 1))).toStrictEqual(res);
+    expect(math.percentile(x, 10)).toBe(1.4);
+    expect(math.percentile(x, arr.range(5, 100, 5), w)).toStrictEqual(resW);
   });
 
   it("pow", () => {
