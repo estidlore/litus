@@ -6,7 +6,7 @@ import { transpose } from "arr/transpose";
 import { cumsum } from "./cumsum";
 import { divide } from "./divide";
 import { interp } from "./interp";
-import { Quantity, QuantityT } from "./types";
+import type { Quantity, QuantityT } from "./types";
 
 const _linear = (x: number[], p: number[]): number[] => {
   const Pnorm = divide(p, 100);

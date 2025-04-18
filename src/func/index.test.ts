@@ -39,4 +39,16 @@ describe("func", () => {
 
     jest.useRealTimers();
   });
+
+  it("memo", () => {
+    expect.assertions(4);
+    const fn = jest.fn((a: number, b: number) => a + b);
+    const memoizedFn = func.memo(fn);
+
+    expect(memoizedFn(1, 2)).toBe(3);
+    expect(fn).toBeCalledTimes(1);
+
+    expect(memoizedFn(1, 2)).toBe(3);
+    expect(fn).toBeCalledTimes(1);
+  });
 });
