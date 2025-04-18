@@ -4,11 +4,12 @@ import { sort } from "arr/sort";
 import { transpose } from "arr/transpose";
 
 import { cumsum } from "./cumsum";
+import { divide } from "./divide";
 import { interp } from "./interp";
 import { Quantity, QuantityT } from "./types";
 
 const _linear = (x: number[], p: number[]): number[] => {
-  const Pnorm = p.map((el) => el / 100);
+  const Pnorm = divide(p, 100);
   const step = 1 / (x.length - 1);
   const xp = range(0, 1 + step, step);
   return interp(Pnorm, xp, x.sort());
@@ -25,8 +26,8 @@ const _weighted = (x: number[], p: number[], w: number[]): number[] => {
   const [Xsorted, Wsorted] = transpose(X);
   const Wcum = cumsum(Wsorted);
   const Wtotal = Wcum[Wcum.length - 1];
-  const Wnorm = Wcum.map((el) => el / Wtotal);
-  const Pnorm = p.map((el) => el / 100);
+  const Wnorm = divide(Wcum, Wtotal);
+  const Pnorm = divide(p, 100);
 
   let i = 0;
   return Pnorm.map((pi) => {

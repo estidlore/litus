@@ -1,7 +1,7 @@
 import type { Primitive } from "types";
+import { sort } from "./sort";
 
 export const unique = <T extends Primitive>(arr: T[]): T[] => {
   const set = Array.from(new Set(arr));
-  const indexed = set.map((el) => [el, arr.indexOf(el)] as const);
-  return indexed.sort((a, b) => a[1] - b[1]).map((el) => el[0]);
+  return sort(set, (el) => arr.indexOf(el));
 };
