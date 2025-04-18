@@ -43,6 +43,22 @@ describe("arr", () => {
     expect(arr.fill(2, "a")).toStrictEqual(["a", "a"]);
   });
 
+  it("find", () => {
+    expect.assertions(2);
+
+    expect(arr.find(balls, ({ name }) => name === "Baseball")).toStrictEqual(
+      balls[0]
+    );
+    expect(arr.find(balls, ({ name }) => name === "Soccer")).toBeUndefined();
+  });
+
+  it("findIdx", () => {
+    expect.assertions(2);
+
+    expect(arr.findIdx(balls, ({ name }) => name === "Baseball")).toBe(0);
+    expect(arr.findIdx(balls, ({ name }) => name === "Soccer")).toBe(-1);
+  });
+
   it("from", () => {
     expect.assertions(2);
 
