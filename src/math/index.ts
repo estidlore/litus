@@ -9,6 +9,7 @@ export * from "./mean";
 export * from "./median";
 export * from "./mod";
 export * from "./multiply";
+export * from "./percentile";
 export * from "./pow";
 export * from "./round";
 export * from "./subtract";
