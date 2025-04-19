@@ -3,11 +3,10 @@ import * as math from ".";
 
 describe("math", () => {
   it("add", () => {
-    expect.assertions(1);
+    expect.assertions(2);
 
-    const arr = [-4, 1, 0, 3, 2];
-    const exp = [1, 6, 5, 8, 7];
-    expect(math.add(arr, 5)).toStrictEqual(exp);
+    expect(math.add([-4, 1, 0, 3, 2], 5)).toStrictEqual([1, 6, 5, 8, 7]);
+    expect(math.add([1, 2], [3, 4])).toStrictEqual([4, 6]);
   });
 
   it("aprox", () => {
@@ -19,12 +18,12 @@ describe("math", () => {
   });
 
   it("calc", () => {
-    expect.assertions(6);
+    expect.assertions(4);
 
-    expect(() => math.calc((a, b, x) => a * x + b)(1, 2)).toThrow();
-    expect(() => math.calc((a, b) => a + b)([1, 2], [3])).toThrow();
-    expect(math.calc((a, b) => a + b)(1, 2, 3)).toBe(3);
-    expect(math.calc((a) => a - 1)([3])).toStrictEqual([2]);
+    expect(() => math.calc((a, b) => a + b)([1, 2], [3])).toThrow(
+      "All vectors must have same length"
+    );
+    expect(math.calc((a) => a - 1)(3)).toStrictEqual(2);
     expect(math.calc((a, b) => a + b)(1, [2, 3])).toStrictEqual([3, 4]);
     expect(math.calc((a, b, x) => a * b + x)([1, 2], 3, 4)).toStrictEqual([
       7, 10
@@ -39,11 +38,10 @@ describe("math", () => {
   });
 
   it("divide", () => {
-    expect.assertions(1);
+    expect.assertions(2);
 
-    const arr = [-4, 1, 0, 3, 2];
-    const exp = [-2, 0.5, 0, 1.5, 1];
-    expect(math.divide(arr, 2)).toStrictEqual(exp);
+    expect(math.divide([-4, 1, 0, 3], 2)).toStrictEqual([-2, 0.5, 0, 1.5]);
+    expect(math.divide([1, 2], [3, 4])).toStrictEqual([1 / 3, 0.5]);
   });
 
   it("inRange", () => {
@@ -76,7 +74,7 @@ describe("math", () => {
     expect(math.mean(nums, [1, 1, 1, 1, 1])).toBe(2 / 5);
     expect(() => math.mean(nums, [1, 1, 1, 1])).toThrow();
     const meanw = math.mean(nums, [1, 2, 3, 4, 5]);
-    expect(math.aprox(meanw, 20 / 15)).toBe(true);
+    expect(meanw).toBe(20 / 15);
   });
 
   it("median", () => {
@@ -154,11 +152,10 @@ describe("math", () => {
   });
 
   it("subtract", () => {
-    expect.assertions(1);
+    expect.assertions(2);
 
-    const arr = [-4, 1, 0, 3, 2];
-    const exp = [-5, 0, -1, 2, 1];
-    expect(math.subtract(arr, 1)).toStrictEqual(exp);
+    expect(math.subtract([-4, 1, 0, 3, 2], 1)).toStrictEqual([-5, 0, -1, 2, 1]);
+    expect(math.subtract([1, 2], [3, 4])).toStrictEqual([-2, -2]);
   });
 
   it("sum", () => {

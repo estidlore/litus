@@ -1,5 +1,3 @@
-import { multiply } from "./multiply";
+import { calc } from "./calc";
 
-export const divide = (arr: number[], n: number): number[] => {
-  return multiply(arr, 1 / n);
-};
+export const divide = calc((a, b) => a / b);
