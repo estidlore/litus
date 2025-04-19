@@ -2,6 +2,8 @@ export * from "./chunk";
 export * from "./fill";
 export * from "./find";
 export * from "./findIdx";
+export * from "./findAll";
+export * from "./findAllIdx";
 export * from "./from";
 export * from "./group";
 export * from "./groupBy";

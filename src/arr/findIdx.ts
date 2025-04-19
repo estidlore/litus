@@ -1,6 +1,8 @@
+import type { Predicate } from "./types";
+
 export const findIdx = <T>(
   arr: T[],
-  predicate: (val: T, idx: number, obj: T[]) => boolean,
+  predicate: Predicate<T>,
   from = 0,
   to = arr.length
 ): number => {

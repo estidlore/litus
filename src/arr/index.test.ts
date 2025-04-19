@@ -43,20 +43,32 @@ describe("arr", () => {
     expect(arr.fill(2, "a")).toStrictEqual(["a", "a"]);
   });
 
-  it("find", () => {
-    expect.assertions(2);
+  it("find & findIdx", () => {
+    expect.assertions(4);
 
-    expect(arr.find(balls, ({ name }) => name === "Baseball")).toStrictEqual(
+    expect(arr.findIdx(balls, (el) => el.name === "Baseball")).toBe(0);
+    expect(arr.find(balls, (el) => el.name === "Baseball")).toStrictEqual(
       balls[0]
     );
-    expect(arr.find(balls, ({ name }) => name === "Soccer")).toBeUndefined();
+
+    expect(arr.findIdx(balls, (el) => el.name === "Soccer")).toBe(-1);
+    expect(arr.find(balls, (el) => el.name === "Soccer")).toBeUndefined();
   });
 
-  it("findIdx", () => {
-    expect.assertions(2);
+  it("findAll & findAllIdx", () => {
+    expect.assertions(4);
 
-    expect(arr.findIdx(balls, ({ name }) => name === "Baseball")).toBe(0);
-    expect(arr.findIdx(balls, ({ name }) => name === "Soccer")).toBe(-1);
+    const bigs = arr.findAll(balls, (el) => el.size === "big");
+    const bigIdxs = arr.findAllIdx(balls, (el) => el.size === "big");
+
+    expect(bigIdxs).toStrictEqual([1, 2]);
+    expect(bigs).toStrictEqual(bigIdxs.map((i) => balls[i]));
+
+    const resIdx2 = arr.findAllIdx(balls, (el) => el.size === "big", 0, 3, 1);
+    const res2 = arr.findAll(balls, (el) => el.size === "big", 0, 2);
+
+    expect(res2).toStrictEqual([balls[1]]);
+    expect(resIdx2).toStrictEqual([1]);
   });
 
   it("from", () => {
