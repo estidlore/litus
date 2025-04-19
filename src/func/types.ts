@@ -1,8 +1,8 @@
-type CurryArgs<T extends unknown[]> = T extends [...infer Ti, infer Tn]
+export type CurryArgs<T extends unknown[]> = T extends [...infer Ti, infer Tn]
   ? CurryArgs<Ti> | [...Ti, Tn]
   : [];
 
-type CurryRest<T extends unknown[], A extends CurryArgs<T>> = T extends [
+export type CurryRest<T extends unknown[], A extends CurryArgs<T>> = T extends [
   unknown,
   ...infer Ti
 ]
@@ -11,15 +11,12 @@ type CurryRest<T extends unknown[], A extends CurryArgs<T>> = T extends [
     : T
   : [];
 
-type CurryFnRes<R, T extends unknown[], A extends CurryArgs<T>> = CurryRest<
-  T,
-  A
-> extends []
-  ? R
-  : CurryFn<R, CurryRest<T, A>>;
+export type CurryFnRes<
+  R,
+  T extends unknown[],
+  A extends CurryArgs<T>
+> = CurryRest<T, A> extends [] ? R : CurryFn<R, CurryRest<T, A>>;
 
-type CurryFn<R, T extends unknown[]> = <A extends CurryArgs<T>>(
+export type CurryFn<R, T extends unknown[]> = <A extends CurryArgs<T>>(
   ...args: A
 ) => CurryFnRes<R, T, A>;
-
-export type { CurryArgs, CurryFn, CurryFnRes, CurryRest };
