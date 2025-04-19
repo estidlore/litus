@@ -86,6 +86,13 @@ describe("arr", () => {
     });
   });
 
+  it("max & min", () => {
+    expect.assertions(2);
+
+    expect(arr.max(balls, (el) => el.name.length)).toStrictEqual(balls[2]);
+    expect(arr.min(balls, (el) => el.name.length)).toStrictEqual(balls[1]);
+  });
+
   it("range", () => {
     expect.assertions(4);
 

@@ -5,6 +5,8 @@ export * from "./findIdx";
 export * from "./from";
 export * from "./group";
 export * from "./groupBy";
+export * from "./max";
+export * from "./min";
 export * from "./range";
 export * from "./sort";
 export * from "./transpose";
