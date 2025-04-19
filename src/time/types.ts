@@ -1,5 +1,3 @@
-type TimeFormat = "date" | "full" | "time";
-type TimeFormatOptions = Record<TimeFormat, Intl.DateTimeFormatOptions>;
-type TimeUnit = "d" | "h" | "m" | "ms" | "s";
-
-export type { TimeFormat, TimeFormatOptions, TimeUnit };
+export type TimeFormat = "date" | "full" | "time";
+export type TimeFormatOptions = Record<TimeFormat, Intl.DateTimeFormatOptions>;
+export type TimeUnit = "d" | "h" | "m" | "ms" | "s";

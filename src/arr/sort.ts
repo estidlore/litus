@@ -1,7 +1,4 @@
-export const sort = <T>(
-  arr: T[],
-  mapFn: ((el: T) => number) | ((el: T) => string)
-): T[] => {
+export const sort = <T>(arr: T[], mapFn: (el: T) => number | string): T[] => {
   const mapped = arr.map((el) => [mapFn(el), el] as const);
   mapped.sort(([a], [b]) => {
     if (a < b) {
