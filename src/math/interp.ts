@@ -5,12 +5,11 @@ export const interp = (x: number[], xp: number[], fp: number[]): number[] => {
     throw new Error("xp and fp must have the same length");
   }
 
-  let i = 0;
   return x.map((xi) => {
     if (xi >= xp[xp.length - 1]) {
       return fp[fp.length - 1];
     }
-    i = findIdx(xp, (el) => el >= xi, i);
+    const i = findIdx(xp, (el) => el >= xi);
     if (i === 0) {
       return fp[0];
     }

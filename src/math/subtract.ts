@@ -1,5 +1,3 @@
-import { add } from "./add";
+import { calc } from "./calc";
 
-export const subtract = (arr: number[], n: number): number[] => {
-  return add(arr, -n);
-};
+export const subtract = calc((a, b) => a - b);

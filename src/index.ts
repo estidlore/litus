@@ -1,4 +1,5 @@
 export * as arr from "arr";
+export * from "arr/types";
 export * as func from "func";
 export * as math from "math";
 export * as obj from "obj";
