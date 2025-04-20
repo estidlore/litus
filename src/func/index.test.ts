@@ -63,4 +63,24 @@ describe("func", () => {
     expect(memoizedFn(1, 2)).toBe(3);
     expect(fn).toBeCalledTimes(3);
   });
+
+  it("throttle", () => {
+    expect.assertions(3);
+    jest.useFakeTimers();
+    const fn = jest.fn();
+    const throttledFn = func.throttle(fn);
+
+    throttledFn();
+    expect(fn).toBeCalledTimes(1);
+
+    jest.advanceTimersByTime(40);
+    throttledFn();
+    jest.advanceTimersByTime(40);
+    throttledFn();
+    expect(fn).toBeCalledTimes(1);
+
+    jest.advanceTimersByTime(40);
+    throttledFn();
+    expect(fn).toBeCalledTimes(2);
+  });
 });

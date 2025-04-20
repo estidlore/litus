@@ -10,6 +10,7 @@ import { func } from "litus";
 - [func.curry](#funccurry)
 - [func.debounce](#funcdebounce)
 - [func.memo](#funcmemo)
+- [func.throttle](#functhrottle)
 - [func.unapply](#funcunapply)
 - [Other docs](#other-docs)
 
@@ -65,8 +66,8 @@ curried(1, true);
 ## func.debounce
 
 Given a function, creates a new function that if it's called multiple times
-consecutively, only the last call is executed. Useful to fetch only once when,
-for example, an user is typing in a search input.
+consecutively, only the last call is executed.
+See also [func.throttle](#functhrottle).
 
 **Arguments**
 
@@ -113,6 +114,33 @@ optional ttl in ms to expire the cache.
 const fibonacci = func.memo((n: number): number { ... });
 fibonacci(99); // called
 fibonacci(99); // not called, output of 99 is cached
+```
+
+## func.throttle
+
+Given a function, creates a new function that if it's called multiple times
+consecutively, it executes the original function only when it's called after
+`interval` ms since last execution, the calls between them are ignored.
+See also [func.debounce](#funcdebounce).
+
+**Arguments**
+
+- `fn: (...args: A) => void`
+- `interval = 100`
+
+**Returns**
+
+`(...args: A) => void`
+
+**Usage**
+
+```ts
+const handleMouseMove = func.throttle((ev) => { ... }, 100);
+handleMouseMove(ev); // 0 ms - called
+handleMouseMove(ev); // 30 ms - ignored
+handleMouseMove(ev); // 60 ms - ignored
+handleMouseMove(ev); // 90 ms - ignored
+handleMouseMove(ev); // 120 ms - called
 ```
 
 ## func.unapply
