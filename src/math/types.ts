@@ -1,4 +1,4 @@
-export type Quantity = number | number[];
+export type Quantity = number[] | number;
 
 export type QuantityT<T extends Quantity> = T extends number
   ? number

@@ -1,4 +1,5 @@
 import type { Primitive } from "types";
+
 import { sort } from "./sort";
 
 export const unique = <T extends Primitive>(arr: T[]): T[] => {

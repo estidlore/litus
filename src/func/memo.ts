@@ -1,18 +1,24 @@
 import type { Primitive } from "types";
+
 import { unapply } from "./unapply";
 
 export const memo = <T extends unknown[], R>(
   fn: (...args: T) => R,
-  idFn: (arg: T) => Primitive = JSON.stringify
+  idFn: (arg: T) => Primitive = JSON.stringify,
+  ttl = 0
 ): ((...args: T) => R) => {
-  const cache = new Map<Primitive, R>();
+  const cache = new Map<Primitive, { val: R; exp?: number }>();
   return unapply((args: T): R => {
     const key = idFn(args);
-    if (cache.has(key)) {
-      return cache.get(key) as R;
+    const cached = cache.get(key);
+    if (cached !== undefined) {
+      if (cached.exp === undefined || Date.now() < cached.exp) {
+        return cached.val;
+      }
     }
-    const result = fn.apply(this, args);
-    cache.set(key, result);
-    return result;
+    const val = fn.apply(this, args);
+    const exp = ttl <= 0 ? undefined : Date.now() + ttl;
+    cache.set(key, { exp, val });
+    return val;
   });
 };
