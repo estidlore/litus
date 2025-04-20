@@ -14,10 +14,14 @@
 
 Litus provides strongly-typed utils for:
 
-- **Arrays:** chunk, from, group, ... (12 total)
-- **Functions:** apply, curry, unapply, ... (5 total)
-- **Math:** aprox, multiply, percentile, mod, ... (16 total)
-- **Object:** copy, entries, merge, ... (10 total)
+- **[Arrays](https://github.com/estidlore/litus/blob/main/docs/Array.md):**
+  chunk, from, group, ... (16 total)
+- **[Functions](https://github.com/estidlore/litus/blob/main/docs/Function.md):**
+  apply, curry, unapply, ... (5 total)
+- **[Math](https://github.com/estidlore/litus/blob/main/docs/Math.md):**
+  aprox, multiply, percentile, mod, ... (16 total)
+- **[Objects](https://github.com/estidlore/litus/blob/main/docs/Object.md):**
+  copy, entries, merge, ... (10 total)
 - **Time:** convert, format, setDayTime, ...
 
 <!-- Installation -->

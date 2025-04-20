@@ -1,0 +1,128 @@
+# Function
+
+```ts
+import { func } from "litus";
+```
+
+## func.apply
+
+Given a function that receives a spread arg (`...args: T[]`), it creates
+a new function without spread arg (`args: T[]`).
+It's the opposite of [func.unapply](#funcunapply).
+
+**Arguments**
+
+- `fn: (...args: T[]) => R`
+
+**Returns**
+
+`(arg: T[]) => R`
+
+**Usage**
+
+```ts
+func.apply((...nums: number[]): void => {});
+// => (nums: number[]): void => {}
+```
+
+## func.curry
+
+Given a function with several args, creates a new function that can be called
+with partial args and returns another function with remaining args until
+all the args are passed, then it returns the response of original function.
+
+**Arguments**
+
+- `fn: (...args: T) => R`
+- `arity: number = fn.length`
+
+**Returns**
+
+`function`
+
+**Usage**
+
+```ts
+const fn = (a: string, b: number, c: boolean): string => {
+  return `${a}.${b}-${c ? "T" : "F"}`;
+};
+let curried = func.curry(fn);
+curried = curried("Hi");
+// => (b: number, c: boolean): string => { ... }
+curried(1, true);
+// => Hi.1-T
+```
+
+## func.debounce
+
+Given a function, creates a new function that if it's called multiple times
+consecutively, only the last call is executed. Useful to fetch only once when,
+for example, an user is typing in a search input.
+
+**Arguments**
+
+- `fn: (...args: A) => void`
+- `delay: number = 100`
+
+**Returns**
+
+`(...args: A) => void`
+
+**Usage**
+
+```ts
+const search = func.debounce((input: string) => { ... }, 300);
+search("C"); // ignored
+search("Co"); // ignored
+search("Com"); // ignored
+search("Comp"); // ignored
+search("Compu"); // ignored
+search("Comput"); // ignored
+search("Compute"); // ignored
+search("Computer"); // called after 300ms
+```
+
+## func.memo
+
+Creates a function that caches the output to speed up complex computations. It
+also receives an optional function to get the cache id of given args and an
+optional ttl in ms to expire the cache.
+
+**Arguments**
+
+- `fn: (...args: T) => R`
+- `idFn: (arg: T) => Primitive = JSON.stringify`
+- `ttl?: number`
+
+**Returns**
+
+`(...args: T) => R`
+
+**Usage**
+
+```ts
+const fibonacci = func.memo((n: number): number { ... });
+fibonacci(99); // called
+fibonacci(99); // not called, output of 99 is cached
+```
+
+## func.unapply
+
+Given a function that receives an array arg (`arg: T[]`), it creates
+a new function with spread arg (`...args: T[]`).
+It's the opposite of [func.apply](#funcapply).
+
+**Arguments**
+
+- `fn: (arg: T[]) => R`
+
+**Returns**
+
+`(...args: T[]) => R`
+
+**Usage**
+
+```ts
+func.apply((nums: number[]): void => {});
+// => (...nums: number[]): void => {}
+```

@@ -170,9 +170,9 @@ const people = [
 ];
 
 arr.sort([3, 1, 2], (n) => n);
-// [1, 2, 3]
+// => [1, 2, 3]
 arr.sort(people, (el) => -el.age);
-// [{ age: 30, name: "Jane" }, { age: 18, name: "John" }]
+// => [{ age: 30, name: "Jane" }, { age: 18, name: "John" }]
 ```
 
 ## arr.transpose (matrix: T[][])
