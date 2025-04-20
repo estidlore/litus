@@ -41,14 +41,26 @@ describe("func", () => {
   });
 
   it("memo", () => {
-    expect.assertions(4);
+    expect.assertions(10);
+    jest.useFakeTimers();
     const fn = jest.fn((a: number, b: number) => a + b);
-    const memoizedFn = func.memo(fn);
+    let memoizedFn = func.memo(fn);
 
     expect(memoizedFn(1, 2)).toBe(3);
     expect(fn).toBeCalledTimes(1);
-
     expect(memoizedFn(1, 2)).toBe(3);
     expect(fn).toBeCalledTimes(1);
+
+    memoizedFn = func.memo(fn, undefined, 100);
+    expect(memoizedFn(1, 2)).toBe(3);
+    expect(fn).toBeCalledTimes(2);
+
+    jest.advanceTimersByTime(50);
+    expect(memoizedFn(1, 2)).toBe(3);
+    expect(fn).toBeCalledTimes(2);
+
+    jest.advanceTimersByTime(50);
+    expect(memoizedFn(1, 2)).toBe(3);
+    expect(fn).toBeCalledTimes(3);
   });
 });

@@ -12,7 +12,7 @@ export const curry = <R, T extends unknown[]>(
     }
     return curry(
       unapply(<Rest extends CurryRest<T, A>>(rArgs: Rest): R => {
-        return fn.apply(this, args.concat(rArgs) as unknown as T);
+        return fn.apply(this, (args as unknown[]).concat(rArgs) as T);
       }),
       missing
     ) as CurryFnRes<R, T, A>;
