@@ -4,9 +4,19 @@
 import { math } from "litus";
 ```
 
-## math.add (...q: Quantity[])
+## math.add
 
 Calculates the sum of given quantities (vectors / scalars).
+
+**Arguments**
+
+- `...q: Quantity[]`
+
+**Returns**
+
+`Calc<A>`
+
+**Usage**
 
 ```ts
 math.add([-4, 1, 0, 3, 2], 5);
@@ -15,10 +25,22 @@ math.add([1, 2], [3, 4]);
 // => [4, 6]
 ```
 
-## math.aprox (a, b, precision = 4)
+## math.aprox
 
 Compares if two numbers are aproximately equal using a custom precision.
 Useful to handle float precision issues.
+
+**Arguments**
+
+- `a: number`
+- `b: number`
+- `precision = 4`
+
+**Returns**
+
+`boolean`
+
+**Usage**
 
 ```ts
 math.aprox(3.1416, Math.PI);
@@ -29,11 +51,21 @@ math.aprox(3.14, Math.PI, 2);
 // => true
 ```
 
-## math.calc (opFn: (...nums: number[]) => number)
+## math.calc
 
 Given an operation function, it creates a new function that calculates the
 result of that operation over any combination of quantities (vectors / scalars).
 It's the base of `add`, `divide`, `multiply` and `subtract`.
+
+**Arguments**
+
+- `opFn: (...nums: T) => number`
+
+**Returns**
+
+- `(...q: Quantity[]) => Calc<T>`
+
+**Usage**
 
 ```ts
 // fn will receive 3 args (a, b, c). Each can be a vector or a scalar.
@@ -44,18 +76,39 @@ fn(1, [2, 3, 4], [0, -1, -2]);
 // => [2, 2, 2]
 ```
 
-## math.cumsum (arr: number[])
+## math.cumsum
 
 Calculates the cumulative sum of an array of numbers
+
+**Arguments**
+
+- `arr: number[]`
+
+**Returns**
+
+- `number[]`
+
+**Usage**
 
 ```ts
 arr.cumsum([-4, 1, 0, 3, 2]);
 // => [-4, -3, -3, 0, 2]
 ```
 
-## math.divide (a: Quantity, b: Quantity)
+## math.divide
 
 Calculates the division of two quantities (vectors / scalars)
+
+**Arguments**
+
+- `a: Quantity`
+- `b: Quantity`
+
+**Returns**
+
+`Calc<A>`
+
+**Usage**
 
 ```ts
 math.divide([-4, 1, 0, 3], 2);
@@ -64,9 +117,21 @@ math.divide([1, 2], [3, 4]);
 // => [1 / 3, 0.5]
 ```
 
-## inRange (n: number, a = 0, b)
+## inRange
 
 Checks if a number is in a half-open range `[a, b)`
+
+**Arguments**
+
+- `n: number`
+- `a: number`
+- `b = 0`
+
+**Returns**
+
+`boolean`
+
+**Usage**
 
 ```ts
 math.inRange(3, 1, 5);
@@ -77,19 +142,39 @@ math.inRange(5, 5);
 // => false
 ```
 
-## math.interp (x: number[], xp: number[], fp: number[])
+## math.interp
 
 Calculates the linear interpolation of monotolically increasing points (xp, fp).
-`xp` and `fp` must be always increasing.
+
+**Arguments**
+
+- `x: number[]`
+- `xp: number[]` - Must be increasing
+- `fp: number[]` - Must be increasing and same size of `xp`.
+
+**Returns**
+
+**Usage**
 
 ```ts
 const ix = math.interp([0, 1, 1.5, 2.72, 3.1], [1, 2, 3], [3, 2, 0]);
 // => aprox: [3, 3, 2.5, 0.56, 0]
 ```
 
-## math.mean (arr: number[], weights?: number[])
+## math.mean
 
 Calculates the mean of an array of numbers
+
+**Arguments**
+
+- `arr: number[]`
+- `weights?: number[]`
+
+**Returns**
+
+`number`
+
+**Usage**
 
 ```ts
 const nums = [-4, 1, 0, 3, 2];
@@ -99,9 +184,20 @@ const meanw = math.mean(nums, [1, 2, 3, 4, 5]);
 // => 20 / 15
 ```
 
-## math.median (arr: number[], weights?: number[])
+## math.median
 
 Calculates the median of an array of numbers
+
+**Arguments**
+
+- `arr: number[]`
+- `weights?: number[]`
+
+**Returns**
+
+`number`
+
+**Usage**
 
 ```ts
 math.median([-4, 1, 0, 3, 2]);
@@ -110,9 +206,20 @@ math.median([1, 0, 3, 2]);
 // => 1.5
 ```
 
-## math.mod (x, m)
+## math.mod
 
 Calculates the positive mod (%) of a number
+
+**Arguments**
+
+- `x: number`
+- `m: number`
+
+**Returns**
+
+`number`
+
+**Usage**
 
 ```ts
 math.mod(5, 3);
@@ -121,9 +228,19 @@ math.mod(-5, 3);
 // => 1
 ```
 
-## math.multiply (...q: Quantity[])
+## math.multiply
 
 Calculates the multiplication of given quantities (vectors / scalars).
+
+**Arguments**
+
+- `...q: Quantity[]`
+
+**Returns**
+
+`Calc<A>`
+
+**Usage**
 
 ```ts
 math.multiply([-4, 1, 0, 3, 2], 3);
@@ -132,29 +249,63 @@ math.multiply([1, 2], [3, 4]);
 // => [3, 8]
 ```
 
-## math.percentile (x: number[], p: T, weights?: number[])
+## math.percentile
 
 Calculates given percentile(s) of an array of numbers.
 If weights (occurrences) are provided, it returns weighted percentiles;
 otherwise, it returns the linear interpolation of percentiles.
+
+**Arguments**
+
+- `x: number[]`
+- `p: T`
+- `weights?: number[]`
+
+**Returns**
+
+`number[]`
+
+**Usage**
 
 ```ts
 math.percentile([1, 2, 3, 4, 5], [10, 25]);
 // => [1.4, 2]
 ```
 
-## math.pow (arr: number[], exp: number)
+## math.pow
 
 Calculates the power of array of numbers to the given exponent
+
+**Arguments**
+
+- `arr: number[]`
+- `exp: number`
+
+**Returns**
+
+`number[]`
+
+**Usage**
 
 ```ts
 math.pow([-4, 1, 0, 3, 2], 2);
 // => [16, 1, 0, 9, 4]
 ```
 
-## math.round (q: Quantity, precision = 0)
+## math.round
 
 Rounds a quantity (vector / scalar) to given precision decimals
+
+**Arguments**
+
+- `q: Quantity`
+- `precision = 0`
+
+**Returns**
+
+`Quantity`
+
+**Usage**
 
 ```ts
 math.round([-72, 57.6, -1.024]);
@@ -163,9 +314,20 @@ math.round([-72, 57.6, -1.024], 2);
 // => [-72, 57.6, -1.02]
 ```
 
-## math.subtract (a: Quantity, b: Quantity)
+## math.subtract
 
 Calculates the subtraction of two quantities (vectors / scalars)
+
+**Arguments**
+
+- `a: Quantity`
+- `b: Quantity`
+
+**Returns**
+
+`Calc<A>`
+
+**Usage**
 
 ```ts
 math.subtract([-4, 1, 0, 3, 2], 1);
@@ -174,9 +336,19 @@ math.subtract([1, 2], [3, 4]);
 // => [-2, -2]
 ```
 
-## math.sum (arr: number[])
+## math.sum
 
 Calculates the sum of an array of numbers
+
+**Arguments**
+
+- `arr: number[]`
+
+**Returns**
+
+`number`
+
+**Usage**
 
 ```ts
 math.sum([-4, 1, 0, 3, 2]);

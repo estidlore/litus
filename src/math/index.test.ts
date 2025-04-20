@@ -98,11 +98,10 @@ describe("math", () => {
   });
 
   it("multiply", () => {
-    expect.assertions(1);
+    expect.assertions(2);
 
-    const arr = [-4, 1, 0, 3, 2];
-    const exp = [-12, 3, 0, 9, 6];
-    expect(math.multiply(arr, 3)).toStrictEqual(exp);
+    expect(math.multiply(2, 3)).toBe(6);
+    expect(math.multiply([-4, 1, 0, 3, 2], 3)).toStrictEqual([-12, 3, 0, 9, 6]);
   });
 
   it("percentile", () => {
