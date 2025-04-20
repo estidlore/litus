@@ -4,10 +4,12 @@ import { unapply } from "func/unapply";
 
 import type { Calc, Quantity } from "./types";
 
-export const calc = <T extends number[], A extends ConvertTuple<T, Quantity>>(
+type Q<T> = ConvertTuple<T, Quantity>;
+
+export const calc = <T extends number[]>(
   opFn: (...nums: T) => number
-): ((...q: A) => Calc<A>) => {
-  return unapply((arr) => {
+): (<A extends Q<T>>(...q: A) => Calc<A>) => {
+  return unapply(<A extends Q<T>>(arr: A) => {
     const vectors = arr.filter((el) => typeof el !== "number") as number[][];
     if (vectors.length === 0) {
       return opFn.apply(undefined, arr as unknown as T) as Calc<A>;
