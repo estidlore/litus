@@ -4,6 +4,25 @@
 import { arr } from "litus";
 ```
 
+## Content
+
+- [arr.chunk](#arrchunk)
+- [arr.fill](#arrfill)
+- [arr.find](#arrfind)
+- [arr.findAll](#arrfindall)
+- [arr.findAllIdx](#arrfindallidx)
+- [arr.findIdx](#arrfindidx)
+- [arr.from](#arrfrom)
+- [arr.group](#arrgroup)
+- [arr.max](#arrmax)
+- [arr.min](#arrmin)
+- [arr.range](#arrrange)
+- [arr.sort](#arrsort)
+- [arr.transpose](#arrtranspose)
+- [arr.union](#arrunion)
+- [arr.unique](#arrunique)
+- [Other docs](#other-docs)
+
 ## arr.chunk
 
 Splits an array in several sub-arrays of given size.
@@ -377,3 +396,10 @@ Creates an array of the unique values of given array
 arr.unique([3, 3, 1, 2, 2, 3]);
 // => [3, 1, 2]
 ```
+
+## Other docs
+
+- Arrays (this)
+- [Functions](https://github.com/estidlore/litus/blob/main/docs/Function.md)
+- [Math](https://github.com/estidlore/litus/blob/main/docs/Math.md)
+- [Objects](https://github.com/estidlore/litus/blob/main/docs/Object.md)

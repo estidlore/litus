@@ -4,6 +4,26 @@
 import { math } from "litus";
 ```
 
+## Content
+
+- [math.add](#mathadd)
+- [math.aprox](#mathaprox)
+- [math.calc](#mathcalc)
+- [math.cumsum](#mathcumsum)
+- [math.divide](#mathdivide)
+- [math.inrange](#mathinrange)
+- [math.interp](#mathinterp)
+- [math.mean](#mathmean)
+- [math.median](#mathmedian)
+- [math.mod](#mathmod)
+- [math.multiply](#mathmultiply)
+- [math.percentile](#mathpercentile)
+- [math.pow](#mathpow)
+- [math.round](#mathround)
+- [math.subtract](#mathsubtract)
+- [math.sum](#mathsum)
+- [Other docs](#other-docs)
+
 ## math.add
 
 Calculates the sum of given quantities (vectors / scalars).
@@ -117,7 +137,7 @@ math.divide([1, 2], [3, 4]);
 // => [1 / 3, 0.5]
 ```
 
-## inRange
+## math.inRange
 
 Checks if a number is in a half-open range `[a, b)`
 
@@ -354,3 +374,10 @@ Calculates the sum of an array of numbers
 math.sum([-4, 1, 0, 3, 2]);
 // => 2
 ```
+
+## Other docs
+
+- [Arrays](https://github.com/estidlore/litus/blob/main/docs/Array.md)
+- [Functions](https://github.com/estidlore/litus/blob/main/docs/Function.md)
+- Math (this)
+- [Objects](https://github.com/estidlore/litus/blob/main/docs/Object.md)

@@ -4,6 +4,20 @@
 import { obj } from "litus";
 ```
 
+## Content
+
+- [obj.copy](#objcopy)
+- [obj.entries](#objentries)
+- [obj.equal](#objequal)
+- [obj.has](#objhas)
+- [obj.isObj](#objisobj)
+- [obj.keys](#objkeys)
+- [obj.merge](#objmerge)
+- [obj.omit](#objomit)
+- [obj.pick](#objpick)
+- [obj.vals](#objvals)
+- [Other docs](#other-docs)
+
 ## obj.copy
 
 Creates a deep copy of the provided object or array
@@ -193,3 +207,10 @@ Retrieves a strongly-typed array of the values of an object.
 obj.vals({ age: 18, name: "John" });
 // => [18, "John"]
 ```
+
+## Other docs
+
+- [Arrays](https://github.com/estidlore/litus/blob/main/docs/Array.md)
+- [Functions](https://github.com/estidlore/litus/blob/main/docs/Function.md)
+- [Math](https://github.com/estidlore/litus/blob/main/docs/Math.md)
+- Objects (this)

@@ -4,6 +4,15 @@
 import { func } from "litus";
 ```
 
+## Content
+
+- [func.apply](#funcapply)
+- [func.curry](#funccurry)
+- [func.debounce](#funcdebounce)
+- [func.memo](#funcmemo)
+- [func.unapply](#funcunapply)
+- [Other docs](#other-docs)
+
 ## func.apply
 
 Given a function that receives a spread arg (`...args: T[]`), it creates
@@ -126,3 +135,10 @@ It's the opposite of [func.apply](#funcapply).
 func.apply((nums: number[]): void => {});
 // => (...nums: number[]): void => {}
 ```
+
+## Other docs
+
+- [Arrays](https://github.com/estidlore/litus/blob/main/docs/Array.md)
+- Functions (this)
+- [Math](https://github.com/estidlore/litus/blob/main/docs/Math.md)
+- [Objects](https://github.com/estidlore/litus/blob/main/docs/Object.md)
