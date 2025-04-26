@@ -26,8 +26,11 @@ const balls: Ball[] = [
 
 describe("arr", () => {
   it("chunk", () => {
-    expect.assertions(3);
+    expect.assertions(4);
 
+    expect(() => arr.chunk([1, 2, 3], 0)).toThrow(
+      "Size must be greater than 0"
+    );
     expect(arr.chunk([1, 2, 3], 4)).toStrictEqual([[1, 2, 3]]);
     expect(arr.chunk([1, 2, 3], 2)).toStrictEqual([[1, 2], [3]]);
     expect(arr.chunk([1, 2, 3, 4], 2)).toStrictEqual([
