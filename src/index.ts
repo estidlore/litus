@@ -1,8 +1,12 @@
 export * as arr from "arr";
-export * from "arr/types";
 export * as func from "func";
 export * as math from "math";
 export * as obj from "obj";
+export * from "arr";
+export * from "func";
+export * from "math";
+export * from "obj";
+export * from "arr/types";
 export * from "obj/types";
 export * from "time";
 export * from "time/types";
