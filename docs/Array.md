@@ -21,6 +21,7 @@ import { arr } from "litus";
 - [arr.transpose](#arrtranspose)
 - [arr.union](#arrunion)
 - [arr.unique](#arrunique)
+- [arr.zip](#arrzip)
 - [Other docs](#other-docs)
 
 ## arr.chunk
@@ -342,11 +343,11 @@ Switches the axes of a 2D array. It also works as a "zip" function
 
 **Arguments**
 
-- `matrix: T[][]`
+- `matrix: T`
 
 **Returns**
 
-`T[][]`
+`Transpose<T>`
 
 **Usage**
 
@@ -395,6 +396,27 @@ Creates an array of the unique values of given array
 ```ts
 arr.unique([3, 3, 1, 2, 2, 3]);
 // => [3, 1, 2]
+```
+
+## arr.zip
+
+Creates an array of grouped elements, the first of which contains the first
+elements of the given arrays, the second of which contains the second elements
+of the given arrays, and so on.
+
+**Arguments**
+
+- `...arrays: T`
+
+**Returns**
+
+`Transpose<T>`
+
+**Usage**
+
+```ts
+arr.zip([1, 2, 3], ["a", "b", "c"], [true, false, true]);
+// => [[1, "a", true], [2, "b", false], [3, "c", true]]
 ```
 
 ## Other docs

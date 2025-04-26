@@ -14,3 +14,4 @@ export * from "./sort";
 export * from "./transpose";
 export * from "./union";
 export * from "./unique";
+export * from "./zip";

@@ -154,4 +154,19 @@ describe("arr", () => {
     expect(arr.unique([3, 3, 1, 2, 2, 3])).toStrictEqual([3, 1, 2]);
     expect(arr.unique([2, 1, 2, 1, 3, 3])).toStrictEqual([2, 1, 3]);
   });
+
+  it("zip", () => {
+    expect.assertions(2);
+
+    const a = [1, 2, 3];
+    const b = ["a", "b", "c"];
+    const c = [true, false, true];
+
+    const x = [1, "a", true];
+    const y = [2, "b", false];
+    const z = [3, "c", true];
+
+    expect(arr.zip(a, b, c)).toStrictEqual([x, y, z]);
+    expect(arr.zip(x, y, z)).toStrictEqual([a, b, c]);
+  });
 });
