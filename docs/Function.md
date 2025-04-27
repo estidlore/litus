@@ -1,11 +1,8 @@
 # Function
 
-```ts
-import { func } from "litus";
-```
-
 ## Content
 
+- [Import](#import)
 - [func.apply](#funcapply)
 - [func.curry](#funccurry)
 - [func.debounce](#funcdebounce)
@@ -13,6 +10,26 @@ import { func } from "litus";
 - [func.throttle](#functhrottle)
 - [func.unapply](#funcunapply)
 - [Other docs](#other-docs)
+
+## Import
+
+**Import everything**
+
+```ts
+import * as _ from "litus";
+```
+
+**Import function utils only**
+
+```ts
+import { func } from "litus";
+```
+
+**Import needed utils only**
+
+```ts
+import { memo, throttle } from "litus";
+```
 
 ## func.apply
 
@@ -31,7 +48,7 @@ It's the opposite of [func.unapply](#funcunapply).
 **Usage**
 
 ```ts
-func.apply((...nums: number[]): void => {});
+_.apply((...nums: number[]): void => {});
 // => (nums: number[]): void => {}
 ```
 
@@ -56,7 +73,7 @@ all the args are passed, then it returns the response of original function.
 const fn = (a: string, b: number, c: boolean): string => {
   return `${a}.${b}-${c ? "T" : "F"}`;
 };
-let curried = func.curry(fn);
+let curried = _.curry(fn);
 curried = curried("Hi");
 // => (b: number, c: boolean): string => { ... }
 curried(1, true);
@@ -81,7 +98,7 @@ See also [func.throttle](#functhrottle).
 **Usage**
 
 ```ts
-const search = func.debounce((input: string) => { ... }, 300);
+const search = _.debounce((input: string) => { ... }, 300);
 search("C"); // ignored
 search("Co"); // ignored
 search("Com"); // ignored
@@ -111,7 +128,7 @@ optional ttl in ms to expire the cache.
 **Usage**
 
 ```ts
-const fibonacci = func.memo((n: number): number { ... });
+const fibonacci = _.memo((n: number): number { ... });
 fibonacci(99); // called
 fibonacci(99); // not called, output of 99 is cached
 ```
@@ -135,7 +152,7 @@ See also [func.debounce](#funcdebounce).
 **Usage**
 
 ```ts
-const handleMouseMove = func.throttle((ev) => { ... }, 100);
+const handleMouseMove = _.throttle((ev) => { ... }, 100);
 handleMouseMove(ev); // 0 ms - called
 handleMouseMove(ev); // 30 ms - ignored
 handleMouseMove(ev); // 60 ms - ignored
@@ -160,7 +177,7 @@ It's the opposite of [func.apply](#funcapply).
 **Usage**
 
 ```ts
-func.apply((nums: number[]): void => {});
+_.unapply((nums: number[]): void => {});
 // => (...nums: number[]): void => {}
 ```
 

@@ -51,7 +51,7 @@ For CommonJS
 var _ = require("litus");
 ```
 
-**Import what you need only**
+**Import only what you need**
 
 ```ts
 import { arr, func, math, obj } from "litus";
