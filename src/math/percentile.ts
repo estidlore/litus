@@ -1,7 +1,7 @@
-import { findIdx } from "arr/findIdx";
-import { range } from "arr/range";
-import { sort } from "arr/sort";
-import { transpose } from "arr/transpose";
+import { findIdx } from "/arr/findIdx";
+import { range } from "/arr/range";
+import { sort } from "/arr/sort";
+import { transpose } from "/arr/transpose";
 
 import { cumsum } from "./cumsum";
 import { divide } from "./divide";

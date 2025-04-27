@@ -1,4 +1,4 @@
-import { Time } from ".";
+import { Time } from "/time";
 
 describe("Time", () => {
   it("constructor", () => {

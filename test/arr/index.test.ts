@@ -1,4 +1,4 @@
-import * as arr from ".";
+import * as arr from "/arr";
 
 interface Ball {
   colors: string[];

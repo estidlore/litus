@@ -1,5 +1,5 @@
-import { union } from "arr/union";
-import { unapply } from "func/unapply";
+import { union } from "/arr/union";
+import { unapply } from "/func/unapply";
 
 import { isObj } from "./isObj";
 import { keys } from "./keys";

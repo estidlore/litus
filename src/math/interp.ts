@@ -1,4 +1,4 @@
-import { findIdx } from "arr/findIdx";
+import { findIdx } from "/arr/findIdx";
 
 export const interp = (x: number[], xp: number[], fp: number[]): number[] => {
   if (xp.length !== fp.length) {

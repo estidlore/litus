@@ -1,4 +1,4 @@
-import * as obj from ".";
+import * as obj from "/obj";
 
 interface Person {
   birth: {
