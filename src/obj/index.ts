@@ -1,6 +1,7 @@
 export * from "./copy";
 export * from "./entries";
 export * from "./equal";
+export * from "./get";
 export * from "./has";
 export * from "./isObj";
 export * from "./keys";

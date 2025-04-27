@@ -2,6 +2,7 @@
 
 ```ts
 import { obj } from "litus";
+import { copy, equal } from "litus";
 ```
 
 ## Content
@@ -9,6 +10,7 @@ import { obj } from "litus";
 - [obj.copy](#objcopy)
 - [obj.entries](#objentries)
 - [obj.equal](#objequal)
+- [obj.get](#objget)
 - [obj.has](#objhas)
 - [obj.isObj](#objisobj)
 - [obj.keys](#objkeys)
@@ -39,6 +41,8 @@ obj.copy({ age: 18, name: "John" });
 
 ## obj.entries
 
+Retrieves a strongly-typed array of the entries (key, value) of an object.
+
 **Arguments**
 
 - `obj: T`
@@ -58,7 +62,7 @@ obj.entries({ age: 18, name: "John" });
 
 Makes a deep comparison between the given objects
 
-**Arguments**Retrieves a strongly-typed array of the entries (key, value) of an object.
+**Arguments**
 
 - `...objs: unknown[]`
 
@@ -74,6 +78,36 @@ obj.equal(
   { age: 18, name: ["John", "Doe"] }
 );
 // => true
+```
+
+## obj.get
+
+Gets a value at nested path of object or array. Returns the fallback value if
+the path is not found.
+
+**Arguments**
+
+- `obj: object`
+- `path: string`
+- `fallback?: T`
+
+**Returns**
+
+`T`
+
+**Usage**
+
+```ts
+const person = {
+  birth: { day: 1, month: 2, year: 2000 },
+  name: ["John", "Doe"]
+};
+obj.get(person, "birth");
+// => { day: 1, month: 2, year: 2000 }
+obj.get(person, "name.0");
+// => "John"
+obj.get(person, "height", 0);
+// => 0
 ```
 
 ## obj.has
