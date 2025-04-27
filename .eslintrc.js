@@ -22,5 +22,24 @@ module.exports = {
     sourceType: "module",
     tsconfigRootDir: __dirname
   },
-  root: true
+  root: true,
+  rules: {
+    "simple-import-sort/imports": [
+      "error",
+      {
+        groups: [
+          // Side effect imports
+          ["^\\u0000"],
+          // Node.js builtins
+          ["^node:"],
+          // External packages
+          ["^@?\\w"],
+          // Internal packages
+          ["^/"],
+          // Relative imports
+          ["^\\."]
+        ]
+      }
+    ]
+  }
 };

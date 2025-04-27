@@ -1,5 +1,5 @@
 import { from } from "./from";
-import { Transpose } from "./types";
+import type { Transpose } from "./types";
 
 export const transpose = <T extends unknown[][]>(matrix: T): Transpose<T> => {
   const rows = matrix.length;
