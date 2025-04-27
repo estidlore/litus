@@ -65,6 +65,15 @@ describe("obj", () => {
     expect(obj.equal(person, person2)).toBe(false);
   });
 
+  it("get", () => {
+    expect.assertions(5);
+    expect(obj.get(person, "birth")).toStrictEqual(person.birth);
+    expect(obj.get(person, "birth.day")).toBe(1);
+    expect(obj.get(person, "birth.day", 0)).toBe(1);
+    expect(obj.get(person, "height", 0)).toBe(0);
+    expect(obj.get(person, "name.0")).toBe("John");
+  });
+
   it("has", () => {
     expect.assertions(2);
 
