@@ -5,13 +5,16 @@ module.exports = {
   coveragePathIgnorePatterns: ["src/index.ts", "src/.*types.*"],
   coverageThreshold: {
     global: {
-      branches: 90,
-      functions: 90,
-      lines: 90,
-      statements: 90
+      branches: 100,
+      functions: 100,
+      lines: 100,
+      statements: 100
     }
   },
   moduleDirectories: ["node_modules", "src"],
+  moduleNameMapper: {
+    "^/(.*)$": "<rootDir>/src/$1"
+  },
   preset: "ts-jest",
   testEnvironment: "node",
   transform: {
