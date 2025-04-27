@@ -10,7 +10,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ["src/**/index.test.ts"],
+      files: ["test/**"],
       rules: {
         "max-lines-per-function": "off"
       }
