@@ -1,4 +1,4 @@
-import type { Primitive } from "types";
+import type { Primitive } from "/types";
 
 import { sort } from "./sort";
 

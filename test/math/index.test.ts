@@ -1,6 +1,5 @@
-import * as arr from "arr";
-
-import * as math from ".";
+import * as arr from "/arr";
+import * as math from "/math";
 
 describe("math", () => {
   it("add", () => {

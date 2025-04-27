@@ -1,4 +1,4 @@
-import * as func from ".";
+import * as func from "/func";
 
 describe("func", () => {
   it("apply & unapply", () => {

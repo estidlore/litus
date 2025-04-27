@@ -1,4 +1,4 @@
-import { merge } from "obj/merge";
+import { merge } from "/obj/merge";
 
 import type { TimeFormat, TimeFormatOptions, TimeUnit } from "./types";
 

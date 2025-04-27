@@ -1,4 +1,4 @@
-import { unapply } from "func/unapply";
+import { unapply } from "/func/unapply";
 
 import { calc } from "./calc";
 

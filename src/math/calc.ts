@@ -1,6 +1,6 @@
-import { from } from "arr/from";
-import type { ConvertTuple } from "arr/types";
-import { unapply } from "func/unapply";
+import { from } from "/arr/from";
+import type { ConvertTuple } from "/arr/types";
+import { unapply } from "/func/unapply";
 
 import type { Calc, Quantity } from "./types";
 
