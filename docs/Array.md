@@ -1,11 +1,8 @@
 # Array
 
-```ts
-import { arr } from "litus";
-```
-
 ## Content
 
+- [Import](#import)
 - [arr.chunk](#arrchunk)
 - [arr.fill](#arrfill)
 - [arr.find](#arrfind)
@@ -24,6 +21,26 @@ import { arr } from "litus";
 - [arr.zip](#arrzip)
 - [Other docs](#other-docs)
 
+## Import
+
+**Import everything**
+
+```ts
+import * as _ from "litus";
+```
+
+**Import array utils only**
+
+```ts
+import { arr } from "litus";
+```
+
+**Import needed utils only**
+
+```ts
+import { group, zip } from "litus";
+```
+
 ## arr.chunk
 
 Splits an array in several sub-arrays of given size.
@@ -40,9 +57,9 @@ Splits an array in several sub-arrays of given size.
 **Usage**
 
 ```ts
-arr.chunk([1, 2, 3, 4], 2);
+_.chunk([1, 2, 3, 4], 2);
 // => [[1, 2], [3, 4]]
-arr.chunk([1, 2, 3], 2);
+_.chunk([1, 2, 3], 2);
 // => [[1, 2], [3]]
 ```
 
@@ -62,7 +79,7 @@ Creates an array with a value repeated n times.
 **Usage**
 
 ```ts
-arr.fill(2, "a");
+_.fill(2, "a");
 // => ["a", "a"]
 ```
 
@@ -87,11 +104,11 @@ const objs = [
   { color: "red", size: "XL" }
 ];
 
-arr.find(objs, (el) => el.color === "red");
+_.find(objs, (el) => el.color === "red");
 // => { color: "red", size: "S" }
-arr.find(objs, (el) => el.color === "red", 2);
+_.find(objs, (el) => el.color === "red", 2);
 // => { color: "red", size: "XL" }
-arr.find(objs, (el) => el.color === "red", 1, 3);
+_.find(objs, (el) => el.color === "red", 1, 3);
 // => undefined
 ```
 
@@ -121,7 +138,7 @@ const objs = [
   { color: "red", size: "XL" }
 ];
 
-arr.findAll(objs, (el) => el.color === "red");
+_.findAll(objs, (el) => el.color === "red");
 // => [{ color: "red", size: "S" }, { color: "red", size: "XL" }]
 ```
 
@@ -151,7 +168,7 @@ const objs = [
   { color: "red", size: "XL" }
 ];
 
-arr.findAllIdx(objs, (el) => el.color === "red");
+_.findAllIdx(objs, (el) => el.color === "red");
 // => [0, 3]
 ```
 
@@ -180,11 +197,11 @@ const objs = [
   { color: "red", size: "XL" }
 ];
 
-arr.findIdx(objs, (el) => el.color === "red");
+_.findIdx(objs, (el) => el.color === "red");
 // => 0
-arr.findIdx(objs, (el) => el.color === "red", 2);
+_.findIdx(objs, (el) => el.color === "red", 2);
 // => 3
-arr.findIdx(objs, (el) => el.color === "red", 1, 3);
+_.findIdx(objs, (el) => el.color === "red", 1, 3);
 // => -1
 ```
 
@@ -204,7 +221,7 @@ Creates an array of size n with a custom map function
 **Usage**
 
 ```ts
-arr.from(5, (i) => i % 3);
+_.from(5, (i) => i % 3);
 // => [0, 1, 2, 0, 1]
 ```
 
@@ -232,7 +249,7 @@ const objs = [
   { color: "red", size: "XL" }
 ];
 
-arr.group(objs, (el) => el.color);
+_.group(objs, (el) => el.color);
 // => { "red": [...], "green": [...], "blue": [...] }
 ```
 
@@ -257,7 +274,7 @@ const people = [
   { age: 30, name: "Jane" }
 ];
 
-arr.max(people, (el) => el.age);
+_.max(people, (el) => el.age);
 // => { age: 30, name: "Jane" }
 ```
 
@@ -282,7 +299,7 @@ const people = [
   { age: 30, name: "Jane" }
 ];
 
-arr.min(people, (el) => el.age);
+_.min(people, (el) => el.age);
 // => { age: 18, name: "John" }
 ```
 
@@ -304,9 +321,9 @@ optional `step`.
 **Usage**
 
 ```ts
-arr.range(0, 5);
+_.range(0, 5);
 // => [0, 1, 2, 3, 4]
-arr.range(0, 5, 2);
+_.range(0, 5, 2);
 // => [0, 2, 4]
 ```
 
@@ -331,9 +348,9 @@ const people = [
   { age: 30, name: "Jane" }
 ];
 
-arr.sort([3, 1, 2], (n) => n);
+_.sort([3, 1, 2], (n) => n);
 // => [1, 2, 3]
-arr.sort(people, (el) => -el.age);
+_.sort(people, (el) => -el.age);
 // => [{ age: 30, name: "Jane" }, { age: 18, name: "John" }]
 ```
 
@@ -356,7 +373,7 @@ const matrix = [
   [1, 2, 3],
   [4, 5, 6]
 ];
-arr.transpose(matrix);
+_.transpose(matrix);
 // => [[1, 4], [2, 5], [3, 6]]
 ```
 
@@ -375,7 +392,7 @@ Creates a set with the unique values of all given arrays
 **Usage**
 
 ```ts
-arr.union([1, 2], [2, 3]);
+_.union([1, 2], [2, 3]);
 // => {1, 2, 3}
 ```
 
@@ -394,7 +411,7 @@ Creates an array of the unique values of given array
 **Usage**
 
 ```ts
-arr.unique([3, 3, 1, 2, 2, 3]);
+_.unique([3, 3, 1, 2, 2, 3]);
 // => [3, 1, 2]
 ```
 
@@ -415,7 +432,7 @@ of the given arrays, and so on.
 **Usage**
 
 ```ts
-arr.zip([1, 2, 3], ["a", "b", "c"], [true, false, true]);
+_.zip([1, 2, 3], ["a", "b", "c"], [true, false, true]);
 // => [[1, "a", true], [2, "b", false], [3, "c", true]]
 ```
 

@@ -1,12 +1,8 @@
 # Object
 
-```ts
-import { obj } from "litus";
-import { copy, equal } from "litus";
-```
-
 ## Content
 
+- [Import](#import)
 - [obj.copy](#objcopy)
 - [obj.entries](#objentries)
 - [obj.equal](#objequal)
@@ -19,6 +15,26 @@ import { copy, equal } from "litus";
 - [obj.pick](#objpick)
 - [obj.vals](#objvals)
 - [Other docs](#other-docs)
+
+## Import
+
+**Import everything**
+
+```ts
+import * as _ from "litus";
+```
+
+**Import object utils only**
+
+```ts
+import { obj } from "litus";
+```
+
+**Import needed utils only**
+
+```ts
+import { copy, equal } from "litus";
+```
 
 ## obj.copy
 
@@ -35,7 +51,7 @@ Creates a deep copy of the provided object or array
 **Usage**
 
 ```ts
-obj.copy({ age: 18, name: "John" });
+_.copy({ age: 18, name: "John" });
 // => { age: 18, name: "John" }
 ```
 
@@ -54,7 +70,7 @@ Retrieves a strongly-typed array of the entries (key, value) of an object.
 **Usage**
 
 ```ts
-obj.entries({ age: 18, name: "John" });
+_.entries({ age: 18, name: "John" });
 // => [["age", 18], ["name", "John"]]
 ```
 
@@ -73,10 +89,7 @@ Makes a deep comparison between the given objects
 **Usage**
 
 ```ts
-obj.equal(
-  { age: 18, name: ["John", "Doe"] },
-  { age: 18, name: ["John", "Doe"] }
-);
+_.equal({ age: 18, name: ["John", "Doe"] }, { age: 18, name: ["John", "Doe"] });
 // => true
 ```
 
@@ -102,11 +115,11 @@ const person = {
   birth: { day: 1, month: 2, year: 2000 },
   name: ["John", "Doe"]
 };
-obj.get(person, "birth");
+_.get(person, "birth");
 // => { day: 1, month: 2, year: 2000 }
-obj.get(person, "name.0");
+_.get(person, "name.0");
 // => "John"
-obj.get(person, "height", 0);
+_.get(person, "height", 0);
 // => 0
 ```
 
@@ -126,9 +139,9 @@ Checks if an object has all the given properties
 **Usage**
 
 ```ts
-obj.has({ age: 18, name: "John Doe" }, "age", "name");
+_.has({ age: 18, name: "John Doe" }, "age", "name");
 // => true
-obj.has({ age: 18, name: "John Doe" }, "height");
+_.has({ age: 18, name: "John Doe" }, "height");
 // => false
 ```
 
@@ -147,11 +160,11 @@ Checks if the argument is an object
 **Usage**
 
 ```ts
-obj.isObj("");
+_.isObj("");
 // => false
-obj.isObj({});
+_.isObj({});
 // => true
-obj.isObj(null);
+_.isObj(null);
 // => false
 ```
 
@@ -170,7 +183,7 @@ Retrieves a strongly-typed array of the keys of an object.
 **Usage**
 
 ```ts
-obj.keys({ age: 18, name: "John" });
+_.keys({ age: 18, name: "John" });
 // => ["age", "name"]
 ```
 
@@ -180,10 +193,19 @@ Creates a strongly-typed object from the shallow merge of the deep copies of
 two objects.
 If both objects have the same property, the first value will be overwritten.
 
+**Arguments**
+
+- `a: A`
+- `b: B`
+
+**Returns**
+
+`A & B`
+
 **Usage**
 
 ```ts
-obj.merge({ age: 18, name: "John" }, { age: 20 });
+_.merge({ age: 18, name: "John" }, { age: 20 });
 // => { age: 20, name: "John" }
 ```
 
@@ -203,7 +225,7 @@ Creates a copy of an object without the specified keys.
 **Usage**
 
 ```ts
-obj.omit({ age: 18, name: "John", height: 170 }, ["height"]);
+_.omit({ age: 18, name: "John", height: 170 }, ["height"]);
 // => { age: 18, name: "John" }
 ```
 
@@ -223,7 +245,7 @@ Creates a copy of an object with the specified keys only.
 **Usage**
 
 ```ts
-obj.pick({ age: 18, name: "John", height: 170 }, ["height"]);
+_.pick({ age: 18, name: "John", height: 170 }, ["height"]);
 // => { height: 170 }
 ```
 
@@ -238,7 +260,7 @@ Retrieves a strongly-typed array of the values of an object.
 **Usage**
 
 ```ts
-obj.vals({ age: 18, name: "John" });
+_.vals({ age: 18, name: "John" });
 // => [18, "John"]
 ```
 

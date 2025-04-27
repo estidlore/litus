@@ -1,11 +1,8 @@
 # Math
 
-```ts
-import { math } from "litus";
-```
-
 ## Content
 
+- [Import](#import)
 - [math.add](#mathadd)
 - [math.aprox](#mathaprox)
 - [math.calc](#mathcalc)
@@ -24,6 +21,26 @@ import { math } from "litus";
 - [math.sum](#mathsum)
 - [Other docs](#other-docs)
 
+## Import
+
+**Import everything**
+
+```ts
+import * as _ from "litus";
+```
+
+**Import math utils only**
+
+```ts
+import { math } from "litus";
+```
+
+**Import needed utils only**
+
+```ts
+import { aprox, calc } from "litus";
+```
+
 ## math.add
 
 Calculates the sum of given quantities (vectors / scalars).
@@ -39,9 +56,9 @@ Calculates the sum of given quantities (vectors / scalars).
 **Usage**
 
 ```ts
-math.add([-4, 1, 0, 3, 2], 5);
+_.add([-4, 1, 0, 3, 2], 5);
 // => [1, 6, 5, 8, 7]
-math.add([1, 2], [3, 4]);
+_.add([1, 2], [3, 4]);
 // => [4, 6]
 ```
 
@@ -63,11 +80,11 @@ Useful to handle float precision issues.
 **Usage**
 
 ```ts
-math.aprox(3.1416, Math.PI);
+_.aprox(3.1416, Math.PI);
 // => true
-math.aprox(3.14, Math.PI);
+_.aprox(3.14, Math.PI);
 // => false
-math.aprox(3.14, Math.PI, 2);
+_.aprox(3.14, Math.PI, 2);
 // => true
 ```
 
@@ -89,7 +106,7 @@ It's the base of `add`, `divide`, `multiply` and `subtract`.
 
 ```ts
 // fn will receive 3 args (a, b, c). Each can be a vector or a scalar.
-const fn = math.calc((a, b, c) => a * b + c);
+const fn = _.calc((a, b, c) => a * b + c);
 fn([1, 2], 3, 4);
 // => [7, 10]
 fn(1, [2, 3, 4], [0, -1, -2]);
@@ -111,7 +128,7 @@ Calculates the cumulative sum of an array of numbers
 **Usage**
 
 ```ts
-arr.cumsum([-4, 1, 0, 3, 2]);
+_.cumsum([-4, 1, 0, 3, 2]);
 // => [-4, -3, -3, 0, 2]
 ```
 
@@ -131,9 +148,9 @@ Calculates the division of two quantities (vectors / scalars)
 **Usage**
 
 ```ts
-math.divide([-4, 1, 0, 3], 2);
+_.divide([-4, 1, 0, 3], 2);
 // => [-2, 0.5, 0, 1.5]
-math.divide([1, 2], [3, 4]);
+_.divide([1, 2], [3, 4]);
 // => [1 / 3, 0.5]
 ```
 
@@ -154,11 +171,11 @@ Checks if a number is in a half-open range `[a, b)`
 **Usage**
 
 ```ts
-math.inRange(3, 1, 5);
+_.inRange(3, 1, 5);
 // => true
-math.inRange(0, 5);
+_.inRange(0, 5);
 // => true
-math.inRange(5, 5);
+_.inRange(5, 5);
 // => false
 ```
 
@@ -177,7 +194,7 @@ Calculates the linear interpolation of monotolically increasing points (xp, fp).
 **Usage**
 
 ```ts
-const ix = math.interp([0, 1, 1.5, 2.72, 3.1], [1, 2, 3], [3, 2, 0]);
+const ix = _.interp([0, 1, 1.5, 2.72, 3.1], [1, 2, 3], [3, 2, 0]);
 // => aprox: [3, 3, 2.5, 0.56, 0]
 ```
 
@@ -198,9 +215,9 @@ Calculates the mean of an array of numbers
 
 ```ts
 const nums = [-4, 1, 0, 3, 2];
-math.mean(nums);
+_.mean(nums);
 // => 2 / 5
-const meanw = math.mean(nums, [1, 2, 3, 4, 5]);
+const meanw = _.mean(nums, [1, 2, 3, 4, 5]);
 // => 20 / 15
 ```
 
@@ -220,9 +237,9 @@ Calculates the median of an array of numbers
 **Usage**
 
 ```ts
-math.median([-4, 1, 0, 3, 2]);
+_.median([-4, 1, 0, 3, 2]);
 // => 1
-math.median([1, 0, 3, 2]);
+_.median([1, 0, 3, 2]);
 // => 1.5
 ```
 
@@ -242,9 +259,9 @@ Calculates the positive mod (%) of a number
 **Usage**
 
 ```ts
-math.mod(5, 3);
+_.mod(5, 3);
 // => 2
-math.mod(-5, 3);
+_.mod(-5, 3);
 // => 1
 ```
 
@@ -263,9 +280,9 @@ Calculates the multiplication of given quantities (vectors / scalars).
 **Usage**
 
 ```ts
-math.multiply([-4, 1, 0, 3, 2], 3);
+_.multiply([-4, 1, 0, 3, 2], 3);
 // => [-12, 3, 0, 9, 6]
-math.multiply([1, 2], [3, 4]);
+_.multiply([1, 2], [3, 4]);
 // => [3, 8]
 ```
 
@@ -288,7 +305,7 @@ otherwise, it returns the linear interpolation of percentiles.
 **Usage**
 
 ```ts
-math.percentile([1, 2, 3, 4, 5], [10, 25]);
+_.percentile([1, 2, 3, 4, 5], [10, 25]);
 // => [1.4, 2]
 ```
 
@@ -308,7 +325,7 @@ Calculates the power of array of numbers to the given exponent
 **Usage**
 
 ```ts
-math.pow([-4, 1, 0, 3, 2], 2);
+_.pow([-4, 1, 0, 3, 2], 2);
 // => [16, 1, 0, 9, 4]
 ```
 
@@ -328,9 +345,9 @@ Rounds a quantity (vector / scalar) to given precision decimals
 **Usage**
 
 ```ts
-math.round([-72, 57.6, -1.024]);
+_.round([-72, 57.6, -1.024]);
 // => [-72, 58, -1]
-math.round([-72, 57.6, -1.024], 2);
+_.round([-72, 57.6, -1.024], 2);
 // => [-72, 57.6, -1.02]
 ```
 
@@ -350,9 +367,9 @@ Calculates the subtraction of two quantities (vectors / scalars)
 **Usage**
 
 ```ts
-math.subtract([-4, 1, 0, 3, 2], 1);
+_.subtract([-4, 1, 0, 3, 2], 1);
 // => [-5, 0, -1, 2, 1]
-math.subtract([1, 2], [3, 4]);
+_.subtract([1, 2], [3, 4]);
 // => [-2, -2]
 ```
 
@@ -371,7 +388,7 @@ Calculates the sum of an array of numbers
 **Usage**
 
 ```ts
-math.sum([-4, 1, 0, 3, 2]);
+_.sum([-4, 1, 0, 3, 2]);
 // => 2
 ```
 
