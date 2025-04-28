@@ -1,7 +1,12 @@
 {
   "compilerOptions": {
+    "baseUrl": "./src",
+    "rootDir": "./src",
+    "paths": {
+      "/*": ["./*"]
+    },
     "removeComments": true
   },
   "extends": "./tsconfig.json",
-  "exclude": ["test"]
+  "include": ["src"]
 }
