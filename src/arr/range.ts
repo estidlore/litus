@@ -1,9 +1,9 @@
 import { from } from "./from";
 
 export const range = (a: number, b: number, step = 1): number[] => {
-  const n = Math.ceil((b - a) / step);
-  if (n <= 0) {
-    throw Error("Invalid range");
+  if (step === 0) {
+    throw new Error("Step cannot be 0");
   }
+  const n = Math.ceil((b - a) / step);
   return from(n, (i) => a + step * i);
 };
