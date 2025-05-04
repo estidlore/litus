@@ -1,3 +1,3 @@
-export const pow = (arr: number[], exp: number): number[] => {
-  return arr.map((el) => Math.pow(el, exp));
-};
+import { calc } from "./calc";
+
+export const pow = calc((base, exp) => Math.pow(base, exp));
