@@ -92,7 +92,7 @@ _.aprox(3.14, Math.PI, 2);
 
 Given an operation function, it creates a new function that calculates the
 result of that operation over any combination of quantities (vectors / scalars).
-It's the base of `add`, `divide`, `multiply` and `subtract`.
+It's the base of `add`, `divide`, `mod`, `multiply`, `pow` and `subtract`.
 
 **Arguments**
 
@@ -245,16 +245,16 @@ _.median([1, 0, 3, 2]);
 
 ## math.mod
 
-Calculates the positive mod (%) of a number
+Calculates the modulo of two quantities (vectors / scalars)
 
 **Arguments**
 
-- `x: number`
-- `m: number`
+- `x: Quantity`
+- `modulo: Quantity`
 
 **Returns**
 
-`number`
+`Calc<A>`
 
 **Usage**
 
@@ -263,6 +263,12 @@ _.mod(5, 3);
 // => 2
 _.mod(-5, 3);
 // => 1
+_.mod([2, 3, 4], 3);
+// => [2, 0, 1]
+_.mod(3, [2, 3, 4]);
+// => [1, 0, 3]
+_.mod([4, 5], [2, 3]);
+// => [0, 2]
 ```
 
 ## math.multiply
@@ -311,22 +317,28 @@ _.percentile([1, 2, 3, 4, 5], [10, 25]);
 
 ## math.pow
 
-Calculates the power of array of numbers to the given exponent
+Calculates the exponentiation of two quantities (vectors / scalars)
 
 **Arguments**
 
-- `arr: number[]`
-- `exp: number`
+- `base: Quantity`
+- `exp: Quantity`
 
 **Returns**
 
-`number[]`
+`Calc<A>`
 
 **Usage**
 
 ```ts
+_.pow(5, 2);
+// => 25
 _.pow([-4, 1, 0, 3, 2], 2);
 // => [16, 1, 0, 9, 4]
+_.pow(3, [0, 1, 2, 3]);
+// => [1, 3, 9, 27]
+_.pow([1, 2], [3, 4]);
+// => [1, 16]
 ```
 
 ## math.round
