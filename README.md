@@ -1,21 +1,18 @@
 <div align="center">
   <img src="https://raw.githubusercontent.com/estidlore/litus/main/Logo.svg" alt="Logo" width="80" height="80">
   
-  <h2 align="center">Litus</h2>
+  <h2>Litus</h2>
 
-  <p align="center">
-    Lightweight and powerful utils for Typescript with smart type inference
-    <br />
-    <a href="https://github.com/estidlore/litus/issues">Report Bug</a>
-  </p>
+  <p>Lightweight and powerful utils for Typescript with smart type inference</p>
+  <a href="https://github.com/estidlore/litus/blob/main/docs/docs.md">Docs</a>
 </div>
 
 Litus provides strongly-typed utils for:
 
-- [Arrays](https://github.com/estidlore/litus/blob/main/docs/Array.md)
-- [Functions](https://github.com/estidlore/litus/blob/main/docs/Function.md)
-- [Math](https://github.com/estidlore/litus/blob/main/docs/Math.md)
-- [Objects](https://github.com/estidlore/litus/blob/main/docs/Object.md)
+- Arrays
+- Functions
+- Math
+- Objects
 
 ## Why Litus?
 
