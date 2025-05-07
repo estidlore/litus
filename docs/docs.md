@@ -62,3 +62,7 @@
 - [omit](https://github.com/estidlore/litus/blob/main/docs/object/omit.md)
 - [pick](https://github.com/estidlore/litus/blob/main/docs/object/pick.md)
 - [vals](https://github.com/estidlore/litus/blob/main/docs/object/vals.md)
+
+**String**
+
+- [template](https://github.com/estidlore/litus/blob/main/docs/string/template.md)

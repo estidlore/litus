@@ -13,6 +13,7 @@ Litus provides strongly-typed utils for:
 - Functions
 - Math
 - Objects
+- Strings
 
 ## Why Litus?
 
