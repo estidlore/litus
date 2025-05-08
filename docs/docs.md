@@ -65,5 +65,6 @@
 
 **String**
 
+- [capitalize](https://github.com/estidlore/litus/blob/main/docs/string/capitalize.md)
 - [template](https://github.com/estidlore/litus/blob/main/docs/string/template.md)
 - [trim](https://github.com/estidlore/litus/blob/main/docs/string/trim.md)
