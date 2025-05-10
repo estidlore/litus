@@ -17,9 +17,9 @@ each word except the first one, and then joins them together without spaces.
 import * as _ from "litus";
 
 _.camel("Hello World");
-// => helloWorld
+// => "helloWorld"
 _.camel("HelloWorld");
-// => helloWorld
+// => "helloWorld"
 _.camel("hello_world");
 // => "helloWorld"
 _.camel("helloITWorld");

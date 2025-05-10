@@ -67,5 +67,6 @@
 
 - [camel](https://github.com/estidlore/litus/blob/main/docs/string/camel.md)
 - [capitalize](https://github.com/estidlore/litus/blob/main/docs/string/capitalize.md)
+- [pascal](https://github.com/estidlore/litus/blob/main/docs/string/pascal.md)
 - [template](https://github.com/estidlore/litus/blob/main/docs/string/template.md)
 - [trim](https://github.com/estidlore/litus/blob/main/docs/string/trim.md)
