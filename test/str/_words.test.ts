@@ -7,6 +7,7 @@ describe("_words", () => {
     expect(words("snake_case")).toStrictEqual(["snake", "case"]);
     expect(words("kebab-case")).toStrictEqual(["kebab", "case"]);
     expect(words("white spaces")).toStrictEqual(["white", "spaces"]);
+    expect(words("Hi12World34")).toStrictEqual(["Hi", "12", "World", "34"]);
     expect(words("UPPERPascal")).toStrictEqual(["UPPER", "Pascal"]);
   });
 
