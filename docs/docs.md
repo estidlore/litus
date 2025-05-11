@@ -67,6 +67,8 @@
 
 - [camel](https://github.com/estidlore/litus/blob/main/docs/string/camel.md)
 - [capitalize](https://github.com/estidlore/litus/blob/main/docs/string/capitalize.md)
+- [kebab](https://github.com/estidlore/litus/blob/main/docs/string/kebab.md)
 - [pascal](https://github.com/estidlore/litus/blob/main/docs/string/pascal.md)
+- [snake](https://github.com/estidlore/litus/blob/main/docs/string/snake.md)
 - [template](https://github.com/estidlore/litus/blob/main/docs/string/template.md)
 - [trim](https://github.com/estidlore/litus/blob/main/docs/string/trim.md)
