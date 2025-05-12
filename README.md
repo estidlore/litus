@@ -52,11 +52,11 @@ var _ = require("litus");
 **Import only what you need**
 
 ```ts
-import { arr, func, math, obj } from "litus";
+import { arr, func, math, obj, str } from "litus";
 ```
 
 ```ts
-import { aprox, copy, group, memo } from "litus";
+import { aprox, copy, group, memo, template } from "litus";
 ```
 
 ## Contributing
