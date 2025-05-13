@@ -27,6 +27,7 @@
 - [curry](https://github.com/estidlore/litus/blob/main/docs/function/curry.md)
 - [debounce](https://github.com/estidlore/litus/blob/main/docs/function/debounce.md)
 - [memo](https://github.com/estidlore/litus/blob/main/docs/function/memo.md)
+- [once](https://github.com/estidlore/litus/blob/main/docs/function/once.md)
 - [throttle](https://github.com/estidlore/litus/blob/main/docs/function/throttle.md)
 - [unapply](https://github.com/estidlore/litus/blob/main/docs/function/unapply.md)
 
