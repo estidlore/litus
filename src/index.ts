@@ -10,6 +10,7 @@ export * from "./obj";
 export * from "./str";
 export * from "./arr/types";
 export * from "./obj/types";
+export * from "./str/types";
 export * from "./time";
 export * from "./time/types";
 export * from "./types";
