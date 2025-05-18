@@ -62,6 +62,7 @@
 - [merge](https://github.com/estidlore/litus/blob/main/docs/object/merge.md)
 - [omit](https://github.com/estidlore/litus/blob/main/docs/object/omit.md)
 - [pick](https://github.com/estidlore/litus/blob/main/docs/object/pick.md)
+- [set](https://github.com/estidlore/litus/blob/main/docs/object/set.md)
 - [vals](https://github.com/estidlore/litus/blob/main/docs/object/vals.md)
 
 **String**

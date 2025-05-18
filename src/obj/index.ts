@@ -8,4 +8,5 @@ export * from "./keys";
 export * from "./merge";
 export * from "./omit";
 export * from "./pick";
+export * from "./set";
 export * from "./vals";
