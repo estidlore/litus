@@ -1,6 +1,3 @@
-import { unapply } from "/func/unapply";
-
 import { calc } from "./calc";
-import { sum } from "./sum";
 
-export const add = calc(unapply(sum));
+export const add = calc((...arr) => arr.reduce((acc, el) => acc + el, 0));

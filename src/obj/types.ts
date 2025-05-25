@@ -1,18 +1,17 @@
-import type { Split } from "/str/types";
-
 type Entry<T extends object> = [Key<T>, Val<T>];
 type Key<T extends object> = keyof T;
 type Val<T extends object> = T[keyof T];
 
-type SetPathArr<Obj, P extends string[], Val> = P extends [
-  infer K extends string,
-  ...infer Rest extends string[]
-]
+type SetPath<
+  Obj extends object,
+  P extends string,
+  Val
+> = P extends `${infer K}.${infer Rest}`
   ? {
       [Key in K | keyof Obj]: Key extends K
         ? Rest extends []
           ? Val
-          : SetPathArr<
+          : SetPath<
               Key extends keyof Obj
                 ? Obj[Key] extends object
                   ? Obj[Key]
@@ -26,7 +25,5 @@ type SetPathArr<Obj, P extends string[], Val> = P extends [
         : never;
     }
   : Obj;
-
-type SetPath<Obj, P extends string, Val> = SetPathArr<Obj, Split<P, ".">, Val>;
 
 export type { Entry, Key, SetPath, Val };
