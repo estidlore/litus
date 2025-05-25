@@ -1,11 +1,9 @@
-import { unapply } from "./unapply";
-
 export const throttle = <A extends unknown[]>(
   fn: (...args: A) => void,
   interval = 100
 ): ((...args: A) => void) => {
   let wait = false;
-  return unapply((args) => {
+  return (...args) => {
     if (wait) {
       return;
     }
@@ -14,5 +12,5 @@ export const throttle = <A extends unknown[]>(
     setTimeout(() => {
       wait = false;
     }, interval);
-  });
+  };
 };
