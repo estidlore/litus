@@ -3,5 +3,6 @@ export * from "./curry";
 export * from "./debounce";
 export * from "./memo";
 export * from "./once";
+export * from "./pipe";
 export * from "./throttle";
 export * from "./unapply";

@@ -1,13 +1,12 @@
 import { entries } from "./entries";
+import { isObj } from "./isObj";
 
 export const copy = <T>(obj: T): T => {
-  if (typeof obj !== "object" || obj === null) {
+  if (!isObj(obj)) {
     return obj;
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const res: any = Array.isArray(obj) ? [] : {};
-
+  const res = (Array.isArray(obj) ? [] : {}) as T;
   entries(obj).forEach(([key, val]) => {
     res[key] = copy(val);
   });
