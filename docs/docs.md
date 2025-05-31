@@ -66,6 +66,10 @@
 - [set](https://github.com/estidlore/litus/blob/main/docs/object/set.md)
 - [vals](https://github.com/estidlore/litus/blob/main/docs/object/vals.md)
 
+**Random**
+
+- [randInt](https://github.com/estidlore/litus/blob/main/docs/random/randInt.md)
+
 **String**
 
 - [camel](https://github.com/estidlore/litus/blob/main/docs/string/camel.md)
