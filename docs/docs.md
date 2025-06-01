@@ -26,6 +26,7 @@
 - [apply](https://github.com/estidlore/litus/blob/main/docs/function/apply.md)
 - [curry](https://github.com/estidlore/litus/blob/main/docs/function/curry.md)
 - [debounce](https://github.com/estidlore/litus/blob/main/docs/function/debounce.md)
+- [identity](https://github.com/estidlore/litus/blob/main/docs/function/identity.md)
 - [memo](https://github.com/estidlore/litus/blob/main/docs/function/memo.md)
 - [once](https://github.com/estidlore/litus/blob/main/docs/function/once.md)
 - [pipe](https://github.com/estidlore/litus/blob/main/docs/function/pipe.md)
