@@ -4,6 +4,7 @@
 
 **Array**
 
+- [binSearch](https://github.com/estidlore/litus/blob/main/docs/array/binSearch.md)
 - [chunk](https://github.com/estidlore/litus/blob/main/docs/array/chunk.md)
 - [fill](https://github.com/estidlore/litus/blob/main/docs/array/fill.md)
 - [find](https://github.com/estidlore/litus/blob/main/docs/array/find.md)
