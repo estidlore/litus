@@ -71,6 +71,7 @@
 **Random**
 
 - [randInt](https://github.com/estidlore/litus/blob/main/docs/random/randInt.md)
+- [randWeight](https://github.com/estidlore/litus/blob/main/docs/random/randWeight.md)
 
 **String**
 
