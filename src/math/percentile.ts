@@ -1,4 +1,4 @@
-import { findIdx } from "/arr/findIdx";
+import { binSearch } from "/arr/binSearch";
 import { range } from "/arr/range";
 import { sort } from "/arr/sort";
 import { transpose } from "/arr/transpose";
@@ -31,7 +31,7 @@ const _weighted = (x: number[], p: number[], w: number[]): number[] => {
 
   let i = 0;
   return Pnorm.map((pi) => {
-    i = findIdx(Wnorm, (el) => el >= pi, i);
+    i = binSearch(Wnorm, pi, (el) => el, i);
     return Xsorted[i];
   });
 };

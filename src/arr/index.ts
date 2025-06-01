@@ -1,3 +1,4 @@
+export * from "./binSearch";
 export * from "./chunk";
 export * from "./fill";
 export * from "./find";

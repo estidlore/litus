@@ -1,4 +1,4 @@
-import { findIdx } from "/arr/findIdx";
+import { binSearch } from "/arr/binSearch";
 
 export const interp = (x: number[], xp: number[], fp: number[]): number[] => {
   if (xp.length !== fp.length) {
@@ -9,7 +9,7 @@ export const interp = (x: number[], xp: number[], fp: number[]): number[] => {
     if (xi >= xp[xp.length - 1]) {
       return fp[fp.length - 1];
     }
-    const i = findIdx(xp, (el) => el >= xi);
+    const i = binSearch(xp, xi, (el) => el);
     if (i === 0) {
       return fp[0];
     }
