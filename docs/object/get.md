@@ -3,17 +3,17 @@
 Gets a value at nested path of object or array. Returns the fallback value if
 the path is not found.
 
-**Arguments**
+## Arguments
 
 - `obj: object`
 - `path: string`
 - `fallback?: T`
 
-**Returns**
+## Returns
 
 `T`
 
-**Usage**
+## Usage
 
 ```ts
 import * as _ from "litus";
@@ -29,3 +29,10 @@ _.get(person, "name.0");
 _.get(person, "height", 0);
 // => 0
 ```
+
+## Related Functions
+
+- [has](has.md) (dependency)
+- [isObj](isObj.md) (dependency)
+- [template](../string/template.md) (dependent)
+- [set](set.md)

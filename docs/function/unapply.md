@@ -2,17 +2,16 @@
 
 Given a function that receives an array arg (`arg: T[]`), it creates
 a new function with spread arg (`...args: T[]`).
-It's the opposite of [apply](https://github.com/estidlore/litus/blob/main/docs/function/apply.md).
 
-**Arguments**
+## Arguments
 
 - `fn: (arg: T[]) => R`
 
-**Returns**
+## Returns
 
 `(...args: T[]) => R`
 
-**Usage**
+## Usage
 
 ```ts
 import * as _ from "litus";
@@ -20,3 +19,8 @@ import * as _ from "litus";
 _.unapply((nums: number[]): void => {});
 // => (...nums: number[]): void => {}
 ```
+
+## Related Functions
+
+- [equal](../object/equal.md) (dependent)
+- [apply](apply.md)

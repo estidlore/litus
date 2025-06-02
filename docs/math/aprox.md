@@ -3,17 +3,17 @@
 Compares if two numbers are aproximately equal using a custom precision.
 Useful to handle float precision issues.
 
-**Arguments**
+## Arguments
 
 - `a: number`
 - `b: number`
 - `precision = 4`
 
-**Returns**
+## Returns
 
 `boolean`
 
-**Usage**
+## Usage
 
 ```ts
 import * as _ from "litus";
@@ -25,3 +25,7 @@ _.aprox(3.14, Math.PI);
 _.aprox(3.14, Math.PI, 2);
 // => true
 ```
+
+## Related Functions
+
+- [round](round.md) (dependency)

@@ -2,7 +2,7 @@
 
 Finds all the elements that match a given condition
 
-**Arguments**
+## Arguments
 
 - `arr: T[]`
 - `predicate: Predicate<T>`
@@ -10,11 +10,11 @@ Finds all the elements that match a given condition
 - `to = arr.length`
 - `limit = arr.length`
 
-**Returns**
+## Returns
 
 `T[]`
 
-**Usage**
+## Usage
 
 ```ts
 import * as _ from "litus";
@@ -29,3 +29,9 @@ const objs = [
 _.findAll(objs, (el) => el.color === "red");
 // => [{ color: "red", size: "S" }, { color: "red", size: "XL" }]
 ```
+
+## Related Functions
+
+- [findAllIdx](findAllIdx.md) (dependency)
+- [find](find.md)
+- [findIdx](findIdx.md)

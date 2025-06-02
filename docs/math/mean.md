@@ -2,16 +2,16 @@
 
 Calculates the mean of an array of numbers
 
-**Arguments**
+## Arguments
 
 - `arr: number[]`
 - `weights?: number[]`
 
-**Returns**
+## Returns
 
 `number`
 
-**Usage**
+## Usage
 
 ```ts
 import * as _ from "litus";
@@ -22,3 +22,9 @@ _.mean(nums);
 const meanw = _.mean(nums, [1, 2, 3, 4, 5]);
 // => 20 / 15
 ```
+
+## Related Functions
+
+- [multiply](multiply.md) (dependency)
+- [sum](sum.md) (dependency)
+- [median](median.md)

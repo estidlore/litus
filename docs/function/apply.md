@@ -2,17 +2,16 @@
 
 Given a function that receives a spread arg (`...args: T[]`), it creates
 a new function without spread arg (`args: T[]`).
-It's the opposite of [unapply](https://github.com/estidlore/litus/blob/main/docs/function/unapply.md).
 
-**Arguments**
+## Arguments
 
 - `fn: (...args: T[]) => R`
 
-**Returns**
+## Returns
 
 `(arg: T[]) => R`
 
-**Usage**
+## Usage
 
 ```ts
 import * as _ from "litus";
@@ -20,3 +19,7 @@ import * as _ from "litus";
 _.apply((...nums: number[]): void => {});
 // => (nums: number[]): void => {}
 ```
+
+## Related Functions
+
+- [unapply](unapply.md)

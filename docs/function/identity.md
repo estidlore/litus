@@ -3,15 +3,15 @@
 Returns the input value unchanged. This function is often used as a default
 or placeholder function.
 
-**Arguments**
+## Arguments
 
 - `value: T` - The value to return.
 
-**Returns**
+## Returns
 
 `T` - The same value that was provided as input.
 
-**Usage**
+## Usage
 
 ```ts
 import * as _ from "litus";

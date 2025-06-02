@@ -2,15 +2,15 @@
 
 Checks if the argument is an object
 
-**Arguments**
+## Arguments
 
 - `el: unknown`
 
-**Returns**
+## Returns
 
 `boolean`
 
-**Usage**
+## Usage
 
 ```ts
 import * as _ from "litus";
@@ -22,3 +22,10 @@ _.isObj({});
 _.isObj(null);
 // => false
 ```
+
+## Related Functions
+
+- [copy](copy.md) (dependent)
+- [equal](equal.md) (dependent)
+- [get](get.md) (dependent)
+- [set](set.md) (dependent)

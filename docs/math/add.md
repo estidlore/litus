@@ -2,15 +2,15 @@
 
 Calculates the sum of given quantities (vectors / scalars).
 
-**Arguments**
+## Arguments
 
 - `...q: Quantity[]`
 
-**Returns**
+## Returns
 
 `Calc<A>`
 
-**Usage**
+## Usage
 
 ```ts
 import * as _ from "litus";
@@ -20,3 +20,13 @@ _.add([-4, 1, 0, 3, 2], 5);
 _.add([1, 2], [3, 4]);
 // => [4, 6]
 ```
+
+## Related Functions
+
+- [calc](calc.md) (dependency)
+- [divide](divide.md)
+- [mod](mod.md)
+- [multiply](multiply.md)
+- [pow](pow.md)
+- [subtract](subtract.md)
+- [sum](sum.md)

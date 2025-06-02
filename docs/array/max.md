@@ -2,16 +2,16 @@
 
 Finds the element with the maximum value
 
-**Arguments**
+## Arguments
 
 - `arr: T[]`
 - `fn: (val: T) => number`
 
-**Returns**
+## Returns
 
 `T`
 
-**Usage**
+## Usage
 
 ```ts
 import * as _ from "litus";
@@ -24,3 +24,7 @@ const people = [
 _.max(people, (el) => el.age);
 // => { age: 30, name: "Jane" }
 ```
+
+## Related Functions
+
+- [min](min.md) (dependent)

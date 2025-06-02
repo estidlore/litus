@@ -2,15 +2,15 @@
 
 Capitalizes the first letter of a string and converts the rest to lowercase.
 
-**Arguments**
+## Arguments
 
 - `str: string` - The string to be capitalized.
 
-**Returns**
+## Returns
 
 `string` - The transformed string.
 
-**Usage**
+## Usage
 
 ```ts
 import * as _ from "litus";
@@ -20,3 +20,8 @@ _.capitalize("hello world");
 _.capitalize("hElLo");
 // => "Hello"
 ```
+
+## Related Functions
+
+- [camel](capitalize.md) (dependent)
+- [pascal](pascal.md) (dependent)

@@ -4,16 +4,16 @@ Given a function with several args, creates a new function that can be called
 with partial args and returns another function with remaining args until
 all the args are passed, then it returns the response of original function.
 
-**Arguments**
+## Arguments
 
 - `fn: (...args: T) => R`
 - `arity: number = fn.length`
 
-**Returns**
+## Returns
 
 `function`
 
-**Usage**
+## Usage
 
 ```ts
 import * as _ from "litus";

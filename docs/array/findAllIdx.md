@@ -2,7 +2,7 @@
 
 Finds the index of all the elements that match a given condition
 
-**Arguments**
+## Arguments
 
 - `arr: T[]`
 - `predicate: Predicate<T>`
@@ -10,11 +10,11 @@ Finds the index of all the elements that match a given condition
 - `to = arr.length`
 - `limit = arr.length`
 
-**Returns**
+## Returns
 
 `number[]`
 
-**Usage**
+## Usage
 
 ```ts
 import * as _ from "litus";
@@ -29,3 +29,9 @@ const objs = [
 _.findAllIdx(objs, (el) => el.color === "red");
 // => [0, 3]
 ```
+
+## Related Functions
+
+- [findAll](findAll.md) (dependent)
+- [find](find.md)
+- [findIdx](findIdx.md)

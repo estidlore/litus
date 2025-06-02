@@ -2,17 +2,17 @@
 
 Checks if a number is in a half-open range `[a, b)`
 
-**Arguments**
+## Arguments
 
 - `n: number`
 - `a: number`
 - `b = 0`
 
-**Returns**
+## Returns
 
 `boolean`
 
-**Usage**
+## Usage
 
 ```ts
 import * as _ from "litus";

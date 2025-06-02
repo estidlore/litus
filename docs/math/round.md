@@ -2,16 +2,16 @@
 
 Rounds a quantity (vector / scalar) to given precision decimals
 
-**Arguments**
+## Arguments
 
 - `q: Quantity`
 - `precision = 0`
 
-**Returns**
+## Returns
 
 `Quantity`
 
-**Usage**
+## Usage
 
 ```ts
 import * as _ from "litus";
@@ -21,3 +21,7 @@ _.round([-72, 57.6, -1.024]);
 _.round([-72, 57.6, -1.024], 2);
 // => [-72, 57.6, -1.02]
 ```
+
+## Related Functions
+
+- [aprox](aprox.md) (dependent)

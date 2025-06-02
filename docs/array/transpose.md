@@ -2,15 +2,15 @@
 
 Switches the axes of a 2D array. It also works as a "zip" function
 
-**Arguments**
+## Arguments
 
 - `matrix: T`
 
-**Returns**
+## Returns
 
 `Transpose<T>`
 
-**Usage**
+## Usage
 
 ```ts
 import * as _ from "litus";
@@ -22,3 +22,9 @@ const matrix = [
 _.transpose(matrix);
 // => [[1, 4], [2, 5], [3, 6]]
 ```
+
+## Related Functions
+
+- [from](from.md) (dependency)
+- [zip](zip.md) (dependent)
+- [percentile](../math/percentile.md) (dependent)

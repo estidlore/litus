@@ -2,16 +2,16 @@
 
 Calculates the division of two quantities (vectors / scalars)
 
-**Arguments**
+## Arguments
 
 - `a: Quantity`
 - `b: Quantity`
 
-**Returns**
+## Returns
 
 `Calc<A>`
 
-**Usage**
+## Usage
 
 ```ts
 import * as _ from "litus";
@@ -21,3 +21,13 @@ _.divide([-4, 1, 0, 3], 2);
 _.divide([1, 2], [3, 4]);
 // => [1 / 3, 0.5]
 ```
+
+## Related Functions
+
+- [calc](calc.md) (dependency)
+- [percentile](percentile.md) (dependent)
+- [add](add.md)
+- [mod](mod.md)
+- [multiply](multiply.md)
+- [pow](pow.md)
+- [subtract](subtract.md)

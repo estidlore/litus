@@ -2,15 +2,15 @@
 
 Calculates the cumulative sum of an array of numbers
 
-**Arguments**
+## Arguments
 
 - `arr: number[]`
 
-**Returns**
+## Returns
 
 - `number[]`
 
-**Usage**
+## Usage
 
 ```ts
 import * as _ from "litus";
@@ -18,3 +18,8 @@ import * as _ from "litus";
 _.cumsum([-4, 1, 0, 3, 2]);
 // => [-4, -3, -3, 0, 2]
 ```
+
+## Related Functions
+
+- [percentile](percentile.md) (dependent)
+- [randWeight](../random/randWeight.md) (dependent)

@@ -4,16 +4,16 @@ Given a function, creates a new function that if it's called multiple times
 consecutively, only the last call is executed.
 See also [func.throttle](#functhrottle).
 
-**Arguments**
+## Arguments
 
 - `fn: (...args: A) => void`
 - `delay: number = 100`
 
-**Returns**
+## Returns
 
 `(...args: A) => void`
 
-**Usage**
+## Usage
 
 ```ts
 import * as _ from "litus";
@@ -28,3 +28,7 @@ search("Comput"); // ignored
 search("Compute"); // ignored
 search("Computer"); // called after 300ms
 ```
+
+## Related Functions
+
+- [throttle](throttle.md)

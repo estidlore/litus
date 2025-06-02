@@ -2,16 +2,16 @@
 
 Checks if an object has all the given properties
 
-**Arguments**
+## Arguments
 
 - `obj: object`
 - `...keys: PropertyKey[]`
 
-**Returns**
+## Returns
 
 `boolean`
 
-**Usage**
+## Usage
 
 ```ts
 import * as _ from "litus";
@@ -21,3 +21,8 @@ _.has({ age: 18, name: "John Doe" }, "age", "name");
 _.has({ age: 18, name: "John Doe" }, "height");
 // => false
 ```
+
+## Related Functions
+
+- [get](get.md) (dependent)
+- [set](set.md)

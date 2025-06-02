@@ -2,15 +2,15 @@
 
 Retrieves a strongly-typed array of the keys of an object.
 
-**Arguments**
+## Arguments
 
 - `obj: T`
 
-**Returns**
+## Returns
 
 `Key<T>[]`
 
-**Usage**
+## Usage
 
 ```ts
 import * as _ from "litus";
@@ -18,3 +18,9 @@ import * as _ from "litus";
 _.keys({ age: 18, name: "John" });
 // => ["age", "name"]
 ```
+
+## Related Functions
+
+- [equal](equal.md) (dependent)
+- [entries](entries.md)
+- [vals](vals.md)

@@ -2,16 +2,16 @@
 
 Calculates the subtraction of two quantities (vectors / scalars)
 
-**Arguments**
+## Arguments
 
 - `a: Quantity`
 - `b: Quantity`
 
-**Returns**
+## Returns
 
 `Calc<A>`
 
-**Usage**
+## Usage
 
 ```ts
 import * as _ from "litus";
@@ -21,3 +21,12 @@ _.subtract([-4, 1, 0, 3, 2], 1);
 _.subtract([1, 2], [3, 4]);
 // => [-2, -2]
 ```
+
+## Related Functions
+
+- [calc](calc.md) (dependency)
+- [add](add.md)
+- [divide](divide.md)
+- [mod](mod.md)
+- [multiply](multiply.md)
+- [pow](pow.md)
