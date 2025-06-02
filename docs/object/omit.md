@@ -2,16 +2,16 @@
 
 Creates a copy of an object without the specified keys.
 
-**Arguments**
+## Arguments
 
 - `obj: T`
 - `keys: K[]`
 
-**Returns**
+## Returns
 
 `Omit<T, K>`
 
-**Usage**
+## Usage
 
 ```ts
 import * as _ from "litus";
@@ -19,3 +19,8 @@ import * as _ from "litus";
 _.omit({ age: 18, name: "John", height: 170 }, ["height"]);
 // => { age: 18, name: "John" }
 ```
+
+## Related Functions
+
+- [copy](copy.md) (dependency)
+- [pick](pick.md)

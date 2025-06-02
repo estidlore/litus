@@ -3,15 +3,15 @@
 Ensures that a function is only executed once. Subsequent calls to the function
 will return the result of the first execution.
 
-**Arguments**
+## Arguments
 
 - `fn: () => T` - The function to be executed only once.
 
-**Returns**
+## Returns
 
 `() => T` - A new function that will execute the original function only once.
 
-**Usage**
+## Usage
 
 ```ts
 import * as _ from "litus";

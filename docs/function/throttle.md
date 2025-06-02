@@ -5,16 +5,16 @@ consecutively, it executes the original function only when it's called after
 `interval` ms since last execution, the calls between them are ignored.
 See also [func.debounce](#funcdebounce).
 
-**Arguments**
+## Arguments
 
 - `fn: (...args: A) => void`
 - `interval = 100`
 
-**Returns**
+## Returns
 
 `(...args: A) => void`
 
-**Usage**
+## Usage
 
 ```ts
 import * as _ from "litus";
@@ -26,3 +26,7 @@ handleMouseMove(ev); // 60 ms - ignored
 handleMouseMove(ev); // 90 ms - ignored
 handleMouseMove(ev); // 120 ms - called
 ```
+
+## Related Functions
+
+- [debounce](debounce.md)

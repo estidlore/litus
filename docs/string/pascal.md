@@ -3,15 +3,15 @@
 Converts a string to PascalCase by capitalizing the first letter of each word
 and removing spaces or delimiters.
 
-**Arguments**
+## Arguments
 
 - `str: string` - The input string to be converted to PascalCase.
 
-**Returns**
+## Returns
 
 `string` - The PascalCase version of the input string.
 
-**Usage**
+## Usage
 
 ```ts
 import * as _ from "litus";
@@ -25,3 +25,10 @@ _.pascal("hello_world");
 _.pascal("helloITWorld");
 // => "HelloItWorld"
 ```
+
+## Related Functions
+
+- [capitalize](capitalize.md) (dependency)
+- [camel](camel.md)
+- [kebab](kebab.md)
+- [snake](snake.md)

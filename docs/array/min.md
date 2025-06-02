@@ -2,16 +2,16 @@
 
 Finds the element with the minimum value
 
-**Arguments**
+## Arguments
 
 - `arr: T[]`
 - `fn: (val: T) => number`
 
-**Returns**
+## Returns
 
 `T`
 
-**Usage**
+## Usage
 
 ```ts
 import * as _ from "litus";
@@ -24,3 +24,7 @@ const people = [
 _.min(people, (el) => el.age);
 // => { age: 18, name: "John" }
 ```
+
+## Related Functions
+
+- [max](max.md) (dependency)

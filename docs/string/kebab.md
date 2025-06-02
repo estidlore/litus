@@ -3,15 +3,15 @@
 Converts a string to kebab-case. It splits the string into words, turns them
 into lowercase and then joins them together with the "-" separator.
 
-**Arguments**
+## Arguments
 
 - `str: string` - The input string to be converted to kebab-case.
 
-**Returns**
+## Returns
 
 `string` - The kebab-case version of the input string.
 
-**Usage**
+## Usage
 
 ```ts
 import * as _ from "litus";
@@ -25,3 +25,9 @@ _.kebab("hello_world");
 _.kebab("helloITWorld");
 // => "hello-it-world"
 ```
+
+## Related Functions
+
+- [camel](camel.md)
+- [pascal](pascal.md)
+- [snake](snake.md)

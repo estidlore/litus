@@ -2,16 +2,16 @@
 
 Calculates the modulo of two quantities (vectors / scalars)
 
-**Arguments**
+## Arguments
 
 - `x: Quantity`
 - `modulo: Quantity`
 
-**Returns**
+## Returns
 
 `Calc<A>`
 
-**Usage**
+## Usage
 
 ```ts
 import * as _ from "litus";
@@ -27,3 +27,12 @@ _.mod(3, [2, 3, 4]);
 _.mod([4, 5], [2, 3]);
 // => [0, 2]
 ```
+
+## Related Functions
+
+- [calc](calc.md) (dependency)
+- [add](add.md)
+- [divide](divide.md)
+- [multiply](multiply.md)
+- [pow](pow.md)
+- [subtract](subtract.md)

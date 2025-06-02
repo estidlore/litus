@@ -3,17 +3,17 @@
 Takes a string containing placeholders in the format `{{path.to.value}}` and
 replaces them with corresponding values from the provided data object
 
-**Arguments**
+## Arguments
 
 - `str: string` - The string containing placeholders to be replaced.
 - `data: object` - The object containing values to replace the placeholders.
 
-**Returns**
+## Returns
 
 `string` - The transformed string with placeholders replaced by their
 corresponding values.
 
-**Usage**
+## Usage
 
 ```ts
 import * as _ from "litus";
@@ -24,3 +24,7 @@ _.template("{{name.first}} {{name.last}} is {{age}}", {
 });
 // => "John Doe is 18"
 ```
+
+## Related Functions
+
+- [get](../object/get.md) (dependency)

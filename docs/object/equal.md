@@ -2,15 +2,15 @@
 
 Makes a deep comparison between the given objects
 
-**Arguments**
+## Arguments
 
 - `...objs: unknown[]`
 
-**Returns**
+## Returns
 
 `boolean`
 
-**Usage**
+## Usage
 
 ```ts
 import * as _ from "litus";
@@ -18,3 +18,11 @@ import * as _ from "litus";
 _.equal({ age: 18, name: ["John", "Doe"] }, { age: 18, name: ["John", "Doe"] });
 // => true
 ```
+
+## Related Functions
+
+- [isObj](isObj.md) (dependency)
+- [keys](keys.md) (dependency)
+- [union](../array/union.md) (dependency)
+- [unapply](../function/unapply.md) (dependency)
+- [copy](copy.md)

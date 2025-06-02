@@ -2,16 +2,16 @@
 
 Calculates the exponentiation of two quantities (vectors / scalars)
 
-**Arguments**
+## Arguments
 
 - `base: Quantity`
 - `exp: Quantity`
 
-**Returns**
+## Returns
 
 `Calc<A>`
 
-**Usage**
+## Usage
 
 ```ts
 import * as _ from "litus";
@@ -25,3 +25,12 @@ _.pow(3, [0, 1, 2, 3]);
 _.pow([1, 2], [3, 4]);
 // => [1, 16]
 ```
+
+## Related Functions
+
+- [calc](calc.md) (dependency)
+- [add](add.md)
+- [divide](divide.md)
+- [mod](mod.md)
+- [multiply](multiply.md)
+- [subtract](subtract.md)

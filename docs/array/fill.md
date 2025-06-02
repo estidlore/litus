@@ -2,16 +2,16 @@
 
 Creates an array with a value repeated n times.
 
-**Arguments**
+## Arguments
 
 - `n: number`
 - `val: T`
 
-**Returns**
+## Returns
 
 `T[]`
 
-**Usage**
+## Usage
 
 ```ts
 import * as _ from "litus";
@@ -19,3 +19,7 @@ import * as _ from "litus";
 _.fill(2, "a");
 // => ["a", "a"]
 ```
+
+## Related Functions
+
+- [from](from.md) (dependency)

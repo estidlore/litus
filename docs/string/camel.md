@@ -3,15 +3,15 @@
 Converts a string to camelCase. It splits the string into words, capitalizes
 each word except the first one, and then joins them together without spaces.
 
-**Arguments**
+## Arguments
 
 - `str: string` - The input string to be converted to camelCase.
 
-**Returns**
+## Returns
 
 `string` - The camelCase version of the input string.
 
-**Usage**
+## Usage
 
 ```ts
 import * as _ from "litus";
@@ -25,3 +25,10 @@ _.camel("hello_world");
 _.camel("helloITWorld");
 // => "helloItWorld"
 ```
+
+## Related Functions
+
+- [capitalize](capitalize.md) (dependency)
+- [kebab](kebab.md)
+- [pascal](pascal.md)
+- [snake](snake.md)

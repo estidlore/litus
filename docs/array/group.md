@@ -3,16 +3,16 @@
 Converts an array into an object where each key is a group and its value is an
 array of their items
 
-**Arguments**
+## Arguments
 
 - `arr: T[]`
 - `getKey: (obj: T) => K`
 
-**Returns**
+## Returns
 
 `Record<K, T[]>`
 
-**Usage**
+## Usage
 
 ```ts
 import * as _ from "litus";

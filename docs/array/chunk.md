@@ -2,16 +2,16 @@
 
 Splits an array in several sub-arrays of given size.
 
-**Arguments**
+## Arguments
 
 - `arr: T[]`
 - `size: number`
 
-**Returns**
+## Returns
 
 `T[][]`
 
-**Usage**
+## Usage
 
 ```ts
 import * as _ from "litus";
@@ -21,3 +21,7 @@ _.chunk([1, 2, 3, 4], 2);
 _.chunk([1, 2, 3], 2);
 // => [[1, 2], [3]]
 ```
+
+## Related Functions
+
+- [range](range.md) (dependency)

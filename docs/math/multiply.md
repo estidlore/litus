@@ -2,15 +2,15 @@
 
 Calculates the multiplication of given quantities (vectors / scalars).
 
-**Arguments**
+## Arguments
 
 - `...q: Quantity[]`
 
-**Returns**
+## Returns
 
 `Calc<A>`
 
-**Usage**
+## Usage
 
 ```ts
 import * as _ from "litus";
@@ -20,3 +20,13 @@ _.multiply([-4, 1, 0, 3, 2], 3);
 _.multiply([1, 2], [3, 4]);
 // => [3, 8]
 ```
+
+## Related Functions
+
+- [calc](calc.md) (dependency)
+- [mean](mean.md) (dependent)
+- [add](add.md)
+- [divide](divide.md)
+- [mod](mod.md)
+- [pow](pow.md)
+- [subtract](subtract.md)

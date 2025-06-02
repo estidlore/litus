@@ -2,16 +2,16 @@
 
 Sorts an array with a given score function
 
-**Arguments**
+## Arguments
 
 - `arr: T[]`
 - `mapFn: (el: T) => number | string`
 
-**Returns**
+## Returns
 
 `T[]`
 
-**Usage**
+## Usage
 
 ```ts
 import * as _ from "litus";
@@ -26,3 +26,8 @@ _.sort([3, 1, 2], (n) => n);
 _.sort(people, (el) => -el.age);
 // => [{ age: 30, name: "Jane" }, { age: 18, name: "John" }]
 ```
+
+## Related Functions
+
+- [unique](unique.md) (dependent)
+- [percentile](../math/percentile.md) (dependent)

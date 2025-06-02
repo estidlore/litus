@@ -3,16 +3,16 @@
 Returns a random integer between two numbers, inclusive. Handles both ascending
 and descending ranges, as well as floating point inputs.
 
-**Arguments**
+## Arguments
 
 - `a: number = 1` - The lower or upper bound (inclusive).
 - `b: number = 0` - The upper or lower bound (inclusive).
 
-**Returns**
+## Returns
 
 `number`
 
-**Usage**
+## Usage
 
 ```ts
 import * as _ from "litus";

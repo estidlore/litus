@@ -3,15 +3,15 @@
 Creates a function by composing multiple unary functions from left to right.
 The output of each function is passed as the input to the next.
 
-**Arguments**
+## Arguments
 
 - `...fns: UnaryFn[]` – A sequence of unary functions to compose.
 
-**Returns**
+## Returns
 
 `(input: FirstFnArg) => LastFnReturn` – A composed function from left to right.
 
-**Usage**
+## Usage
 
 ```ts
 import * as _ from "litus";

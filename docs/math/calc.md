@@ -4,15 +4,15 @@ Given an operation function, it creates a new function that calculates the
 result of that operation over any combination of quantities (vectors / scalars).
 It's the base of `add`, `divide`, `mod`, `multiply`, `pow` and `subtract`.
 
-**Arguments**
+## Arguments
 
 - `opFn: (...nums: T) => number`
 
-**Returns**
+## Returns
 
 - `(...q: Quantity[]) => Calc<T>`
 
-**Usage**
+## Usage
 
 ```ts
 import * as _ from "litus";
@@ -24,3 +24,13 @@ fn([1, 2], 3, 4);
 fn(1, [2, 3, 4], [0, -1, -2]);
 // => [2, 2, 2]
 ```
+
+## Related Functions
+
+- [from](../array/from.md) (dependency)
+- [add](add.md) (dependent)
+- [divide](divide.md) (dependent)
+- [mod](mod.md) (dependent)
+- [multiply](multiply.md) (dependent)
+- [pow](pow.md) (dependent)
+- [subtract](subtract.md) (dependent)

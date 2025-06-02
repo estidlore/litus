@@ -2,18 +2,18 @@
 
 Finds the index of the first element that matches a given condition
 
-**Arguments**
+## Arguments
 
 - `arr: T[]`
 - `predicate: Predicate<T>`
 - `from = 0`
 - `to = arr.length`
 
-**Returns**
+## Returns
 
 `number`
 
-**Usage**
+## Usage
 
 ```ts
 import * as _ from "litus";
@@ -32,3 +32,9 @@ _.findIdx(objs, (el) => el.color === "red", 2);
 _.findIdx(objs, (el) => el.color === "red", 1, 3);
 // => -1
 ```
+
+## Related Functions
+
+- [find](find.md) (dependent)
+- [findAll](findAll.md)
+- [findAllIdx](findAllIdx.md)
