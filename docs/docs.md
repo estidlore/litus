@@ -72,6 +72,7 @@
 
 - [randInt](random/randInt.md)
 - [randWeight](random/randWeight.md)
+- [sample](random/sample.md)
 - [shuffle](random/shuffle.md)
 
 ### String
