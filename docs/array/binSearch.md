@@ -4,6 +4,8 @@ Performs a binary search on a sorted array and returns the index at which the
 target value should be inserted to maintain order. The function uses a custom
 accessor `getVal` to extract the value for comparison from each element.
 
+`Since v1.5.0`
+
 ## Arguments
 
 - `arr: T[]` - The sorted array to search.

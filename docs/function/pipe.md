@@ -3,6 +3,8 @@
 Creates a function by composing multiple unary functions from left to right.
 The output of each function is passed as the input to the next.
 
+`Since v1.5.0`
+
 ## Arguments
 
 - `...fns: UnaryFn[]` – A sequence of unary functions to compose.

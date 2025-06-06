@@ -2,6 +2,8 @@
 
 Creates a set with the unique values of all given arrays
 
+`Since v1.2.1`
+
 ## Arguments
 
 - `...arrs: T[][]`

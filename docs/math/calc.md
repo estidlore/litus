@@ -2,7 +2,8 @@
 
 Given an operation function, it creates a new function that calculates the
 result of that operation over any combination of quantities (vectors / scalars).
-It's the base of `add`, `divide`, `mod`, `multiply`, `pow` and `subtract`.
+
+`Since v1.1.0`
 
 ## Arguments
 

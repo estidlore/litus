@@ -3,6 +3,8 @@
 Converts a string to camelCase. It splits the string into words, capitalizes
 each word except the first one, and then joins them together without spaces.
 
+`Since v1.4.0`
+
 ## Arguments
 
 - `str: string` - The input string to be converted to camelCase.

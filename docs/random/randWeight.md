@@ -2,6 +2,8 @@
 
 Generates a random index based on the provided weights.
 
+`Since v1.5.0`
+
 ## Arguments
 
 - `weights: number[]` - Array of weights, where each weight corresponds to the likelihood of selecting the respective index.

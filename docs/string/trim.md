@@ -2,6 +2,8 @@
 
 Removes leading and trailing whitespace or specified characters from a string.
 
+`Since v1.4.0`
+
 ## Arguments
 
 - `str: string` - The string to trim.

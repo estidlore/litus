@@ -3,6 +3,8 @@
 Returns a random integer between two numbers, inclusive. Handles both ascending
 and descending ranges, as well as floating point inputs.
 
+`Since v1.5.0`
+
 ## Arguments
 
 - `a: number = 1` - The lower or upper bound (inclusive).

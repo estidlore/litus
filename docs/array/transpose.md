@@ -2,6 +2,8 @@
 
 Switches the axes of a 2D array. It also works as a "zip" function
 
+`Since v1.2.1`
+
 ## Arguments
 
 - `matrix: T`

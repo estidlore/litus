@@ -2,6 +2,8 @@
 
 Retrieves a strongly-typed array of the keys of an object.
 
+`Since v1.0.0`
+
 ## Arguments
 
 - `obj: T`

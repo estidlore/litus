@@ -3,6 +3,8 @@
 Sets a value at a nested path of an object, creating nested objects if the path
 does not exist.
 
+`Since v1.5.0`
+
 ## Arguments
 
 - `obj: T` — The target object to modify.

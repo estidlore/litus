@@ -2,6 +2,8 @@
 
 Checks if a number is in a half-open range `[a, b)`
 
+`Since v1.2.1`
+
 ## Arguments
 
 - `n: number`

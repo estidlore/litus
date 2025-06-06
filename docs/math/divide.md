@@ -2,6 +2,8 @@
 
 Calculates the division of two quantities (vectors / scalars)
 
+`Since v1.0.0`
+
 ## Arguments
 
 - `a: Quantity`

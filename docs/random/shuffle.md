@@ -3,6 +3,8 @@
 Shuffles an array randomly, optionally using weights to influence the
 likelihood of selecting elements first.
 
+`Since v1.5.0`
+
 ## Arguments
 
 - `data: T[]` - The array to shuffle.

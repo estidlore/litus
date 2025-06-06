@@ -2,6 +2,8 @@
 
 Calculates the cumulative sum of an array of numbers
 
+`Since v1.2.1`
+
 ## Arguments
 
 - `arr: number[]`

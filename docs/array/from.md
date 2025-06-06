@@ -2,6 +2,8 @@
 
 Creates an array of size n with a custom map function
 
+`Since v1.0.0`
+
 ## Arguments
 
 - `n: number`

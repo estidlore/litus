@@ -2,6 +2,8 @@
 
 Capitalizes the first letter of a string and converts the rest to lowercase.
 
+`Since v1.4.0`
+
 ## Arguments
 
 - `str: string` - The string to be capitalized.

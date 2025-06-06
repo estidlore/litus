@@ -2,6 +2,8 @@
 
 Sorts an array with a given score function
 
+`Since v1.1.0`
+
 ## Arguments
 
 - `arr: T[]`

@@ -2,6 +2,8 @@
 
 Finds the element with the maximum value
 
+`Since v1.3.1`
+
 ## Arguments
 
 - `arr: T[]`

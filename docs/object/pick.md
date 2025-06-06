@@ -2,6 +2,8 @@
 
 Creates a copy of an object with the specified keys only.
 
+`Since v1.2.1`
+
 ## Arguments
 
 - `obj: T`
