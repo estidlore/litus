@@ -3,6 +3,8 @@
 Given a function that receives an array arg (`arg: T[]`), it creates
 a new function with spread arg (`...args: T[]`).
 
+`Since v1.1.0`
+
 ## Arguments
 
 - `fn: (arg: T[]) => R`

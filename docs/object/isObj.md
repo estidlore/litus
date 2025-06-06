@@ -2,6 +2,8 @@
 
 Checks if the argument is an object
 
+`Since v1.2.1`
+
 ## Arguments
 
 - `el: unknown`

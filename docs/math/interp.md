@@ -2,6 +2,8 @@
 
 Calculates the linear interpolation of monotolically increasing points (xp, fp).
 
+`Since v1.2.1`
+
 ## Arguments
 
 - `x: number[]`

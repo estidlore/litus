@@ -2,6 +2,8 @@
 
 Calculates the sum of given quantities (vectors / scalars).
 
+`Since v1.0.0`
+
 ## Arguments
 
 - `...q: Quantity[]`

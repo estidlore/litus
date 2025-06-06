@@ -2,6 +2,8 @@
 
 Finds the first element that matches a given condition
 
+`Since v1.2.1`
+
 ## Arguments
 
 - `arr: T[]`

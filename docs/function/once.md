@@ -3,6 +3,8 @@
 Ensures that a function is only executed once. Subsequent calls to the function
 will return the result of the first execution.
 
+`Since v1.5.0`
+
 ## Arguments
 
 - `fn: () => T` - The function to be executed only once.

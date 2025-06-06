@@ -3,6 +3,8 @@
 Converts a string to kebab-case. It splits the string into words, turns them
 into lowercase and then joins them together with the "-" separator.
 
+`Since v1.4.0`
+
 ## Arguments
 
 - `str: string` - The input string to be converted to kebab-case.

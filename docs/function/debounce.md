@@ -2,7 +2,8 @@
 
 Given a function, creates a new function that if it's called multiple times
 consecutively, only the last call is executed.
-See also [func.throttle](#functhrottle).
+
+`Since v1.1.0`
 
 ## Arguments
 

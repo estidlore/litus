@@ -2,6 +2,8 @@
 
 Creates a deep copy of the provided object or array
 
+`Since v1.0.0`
+
 ## Arguments
 
 - `obj: T`

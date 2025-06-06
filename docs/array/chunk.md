@@ -2,6 +2,8 @@
 
 Splits an array in several sub-arrays of given size.
 
+`Since v1.0.0`
+
 ## Arguments
 
 - `arr: T[]`

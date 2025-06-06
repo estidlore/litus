@@ -3,6 +3,8 @@
 Converts an array into an object where each key is a group and its value is an
 array of their items
 
+`Since v1.0.0`
+
 ## Arguments
 
 - `arr: T[]`

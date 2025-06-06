@@ -2,6 +2,8 @@
 
 Makes a deep comparison between the given objects
 
+`Since v1.2.1`
+
 ## Arguments
 
 - `...objs: unknown[]`

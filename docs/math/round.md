@@ -2,6 +2,8 @@
 
 Rounds a quantity (vector / scalar) to given precision decimals
 
+`Since v1.0.0`
+
 ## Arguments
 
 - `q: Quantity`

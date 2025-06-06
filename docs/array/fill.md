@@ -2,6 +2,8 @@
 
 Creates an array with a value repeated n times.
 
+`Since v1.0.0`
+
 ## Arguments
 
 - `n: number`

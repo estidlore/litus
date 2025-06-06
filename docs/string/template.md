@@ -3,6 +3,8 @@
 Takes a string containing placeholders in the format `{{path.to.value}}` and
 replaces them with corresponding values from the provided data object
 
+`Since v1.4.0`
+
 ## Arguments
 
 - `str: string` - The string containing placeholders to be replaced.

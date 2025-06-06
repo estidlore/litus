@@ -2,6 +2,8 @@
 
 Checks if an object has all the given properties
 
+`Since v1.0.0`
+
 ## Arguments
 
 - `obj: object`

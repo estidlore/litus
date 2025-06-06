@@ -2,6 +2,8 @@
 
 Finds all the elements that match a given condition
 
+`Since v1.3.1`
+
 ## Arguments
 
 - `arr: T[]`

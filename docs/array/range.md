@@ -3,6 +3,8 @@
 Creates an array of numbers between `start` and `end` (`[start, end)`) with
 optional `step`.
 
+`Since v1.0.0`
+
 ## Arguments
 
 - `a: number`
