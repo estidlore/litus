@@ -14,7 +14,7 @@ export const memo = <T extends unknown[], R>(
         return cached.val;
       }
     }
-    const val = fn.apply(this, args);
+    const val = fn.apply(undefined, args);
     const exp = ttl <= 0 ? undefined : Date.now() + ttl;
     cache.set(key, { exp, val });
     return val;

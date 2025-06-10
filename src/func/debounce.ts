@@ -6,7 +6,7 @@ export const debounce = <A extends unknown[]>(
   return (...args: A): void => {
     clearTimeout(timer);
     timer = setTimeout(() => {
-      fn.apply(this, args);
+      fn.apply(undefined, args);
     }, delay);
   };
 };

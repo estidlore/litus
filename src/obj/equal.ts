@@ -16,7 +16,7 @@ const deepEqual = (args: unknown[]): boolean => {
   if (!deepEqual(objsKeys.map((key) => key.length))) {
     return false;
   }
-  const keysUnion = union.apply(this, objsKeys);
+  const keysUnion = union.apply(undefined, objsKeys);
   if (keysUnion.size !== objsKeys[0].length) {
     return false;
   }

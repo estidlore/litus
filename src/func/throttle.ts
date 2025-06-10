@@ -8,7 +8,7 @@ export const throttle = <A extends unknown[]>(
       return;
     }
     wait = true;
-    fn.apply(this, args);
+    fn.apply(undefined, args);
     setTimeout(() => {
       wait = false;
     }, interval);
