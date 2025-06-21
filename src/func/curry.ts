@@ -1,5 +1,11 @@
 import type { CurryArgs, CurryFn, CurryFnRes, CurryRest } from "./types";
 
+/**
+ * Creates a curried version of a function, allowing partial application of arguments
+ * @param fn Function to curry
+ * @param arity Number of arguments the function expects. Default: fn.length
+ * @returns Curried function
+ */
 export const curry = <R, T extends unknown[]>(
   fn: (...args: T) => R,
   arity = fn.length

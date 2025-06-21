@@ -1,5 +1,13 @@
 import type { Primitive } from "/types";
 
+/**
+ * Creates a memoized version of a function, caching its output for faster repeated calls.
+ * Optionally accepts a custom cache key generator and a TTL (time-to-live) in milliseconds
+ * @param fn Function to memoize
+ * @param idFn Function to generate a cache key from arguments. Default: JSON.stringify
+ * @param ttl Optional cache expiration time in milliseconds. Default: 0 (no expiration)
+ * @returns Memoized function
+ */
 export const memo = <T extends unknown[], R>(
   fn: (...args: T) => R,
   idFn: (arg: T) => Primitive = JSON.stringify,

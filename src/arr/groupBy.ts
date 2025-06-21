@@ -1,5 +1,8 @@
 import { group } from "./group";
 
+/**
+ * @deprecated Use `group` instead
+ */
 export const groupBy = <T extends object, K extends keyof T>(
   arr: T[],
   key: T[K] extends PropertyKey ? K : never

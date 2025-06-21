@@ -4,7 +4,7 @@
     "rootDir": "./src",
     "paths": {
       "/*": ["./*"]
-    },
+    }
   },
   "extends": "./tsconfig.json",
   "include": ["src"]

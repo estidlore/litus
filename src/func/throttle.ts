@@ -1,3 +1,9 @@
+/**
+ * Creates a throttled version of the given function that only executes once per specified interval
+ * @param fn Function to throttle
+ * @param interval Minimum time (ms) between calls. Default: 100
+ * @returns Throttled function
+ */
 export const throttle = <A extends unknown[]>(
   fn: (...args: A) => void,
   interval = 100

@@ -5,6 +5,12 @@ const _round = (n: number, p: number): number => {
   return Math.round(n * k) / k;
 };
 
+/**
+ * Rounds a quantity (vector or scalar) to the specified number of decimal places
+ * @param q Quantity to round
+ * @param precision Number of decimal places to round to. Default: 0
+ * @returns Rounded quantity
+ */
 export const round = <T extends Quantity>(q: T, precision = 0): T => {
   if (typeof q === "number") {
     return _round(q, precision) as T;
