@@ -2,6 +2,9 @@ import { merge } from "/obj/merge";
 
 import type { TimeFormat, TimeFormatOptions, TimeUnit } from "./types";
 
+/**
+ * @deprecated Time module is deprecated and may be removed in future releases
+ */
 export class Time {
   public static UNITS: Record<TimeUnit, number> = {
     d: 864e5,

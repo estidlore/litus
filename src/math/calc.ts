@@ -3,6 +3,15 @@ import type { ConvertTuple } from "/arr/types";
 
 import type { Calc, Quantity } from "./types";
 
+/**
+ * Creates a function that applies the given operation to any combination of scalars and vectors
+ * @template T Tuple or array of numbers for the operation
+ * @param opFn Operation function to apply to the inputs
+ * @returns Function that takes quantities (scalars or vectors) and returns the calculated result
+ * @example
+ * const fn = calc((a, b, c) => a * b + c);
+ * fn([1, 2], 3, 4); // [7, 10]
+ */
 export const calc = <T extends number[]>(
   opFn: (...nums: T) => number
 ): (<A extends ConvertTuple<T, Quantity>>(...q: A) => Calc<A>) => {

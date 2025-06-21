@@ -1,3 +1,12 @@
+/**
+ * Binary search for insertion index in a sorted array using a custom accessor
+ * @param arr Sorted array to search
+ * @param target Value to search for
+ * @param getVal Function to extract comparison value from each element
+ * @param start Start index (inclusive)
+ * @param end End index (exclusive)
+ * @returns Index to insert target to maintain order
+ */
 export const binSearch = <T>(
   arr: T[],
   target: number,

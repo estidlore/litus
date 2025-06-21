@@ -26,4 +26,9 @@ const deepEqual = (args: unknown[]): boolean => {
   });
 };
 
+/**
+ * Performs a deep comparison between multiple objects to determine if they are equal
+ * @param objs Objects to compare
+ * @returns True if all objects are deeply equal, false otherwise
+ */
 export const equal = unapply(deepEqual);

@@ -1,6 +1,11 @@
 import { from } from "./from";
 import type { Transpose } from "./types";
 
+/**
+ * Transposes a 2D array (matrix), switching its rows and columns
+ * @param matrix The 2D array to transpose
+ * @returns Transposed matrix
+ */
 export const transpose = <T extends unknown[][]>(matrix: T): Transpose<T> => {
   const rows = matrix.length;
   const cols = matrix[0].length;

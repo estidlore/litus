@@ -1,6 +1,13 @@
 import { isObj } from "./isObj";
 import type { SetPath } from "./types";
 
+/**
+ * Sets a value at a nested path of an object, creating nested objects if needed
+ * @param obj Target object to modify
+ * @param path Dot-separated string path where the value should be set
+ * @param value Value to set at the specified path
+ * @returns Modified object with the value set at the given path
+ */
 export const set = <T extends object, P extends string, V>(
   obj: T,
   path: P,
