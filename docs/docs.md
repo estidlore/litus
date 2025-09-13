@@ -6,6 +6,7 @@
 
 - [binSearch](array/binSearch.md)
 - [chunk](array/chunk.md)
+- [countBy](array/countBy.md)
 - [fill](array/fill.md)
 - [find](array/find.md)
 - [findAll](array/findAll.md)

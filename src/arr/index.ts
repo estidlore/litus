@@ -1,5 +1,6 @@
 export * from "./binSearch";
 export * from "./chunk";
+export * from "./countBy";
 export * from "./fill";
 export * from "./find";
 export * from "./findIdx";
