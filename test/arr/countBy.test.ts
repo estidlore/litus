@@ -10,8 +10,8 @@ describe("countBy", () => {
   it("works with computed keys", () => {
     const arr = [1, 2, 3, 4, 5];
     expect(countBy(arr, (x) => (x % 2 === 0 ? "even" : "odd"))).toEqual({
-      odd: 3,
-      even: 2
+      even: 2,
+      odd: 3
     });
   });
 });
