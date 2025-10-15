@@ -9,6 +9,7 @@ export * from "./findAllIdx";
 export * from "./from";
 export * from "./group";
 export * from "./groupBy";
+export * from "./last";
 export * from "./max";
 export * from "./min";
 export * from "./range";
