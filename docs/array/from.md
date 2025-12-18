@@ -24,7 +24,4 @@ _.from(5, (i) => i % 3);
 
 ## Related Functions
 
-- [fill](fill.md) (dependent)
-- [range](range.md) (dependent)
-- [transpose](transpose.md) (dependent)
 - [calc](../math/calc.md) (dependent)

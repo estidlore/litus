@@ -27,6 +27,5 @@ const meanw = _.mean(nums, [1, 2, 3, 4, 5]);
 
 ## Related Functions
 
-- [multiply](multiply.md) (dependency)
 - [sum](sum.md) (dependency)
 - [median](median.md)

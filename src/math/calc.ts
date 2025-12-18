@@ -21,8 +21,10 @@ export const calc = <T extends number[]>(
       return opFn.apply(undefined, arr as unknown as T) as Calc<A>;
     }
     const size = vectors[0].length;
-    if (vectors.some((v) => v.length !== size)) {
-      throw new Error("All vectors must have same length");
+    for (let i = 1; i < vectors.length; i++) {
+      if (vectors[i].length !== size) {
+        throw new Error("All vectors must have same length");
+      }
     }
     return from(size, (i) => {
       const input = arr.map((el) => (typeof el === "number" ? el : el[i]));

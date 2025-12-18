@@ -4,5 +4,9 @@
  * @returns Sum of all numbers in the array
  */
 export const sum = (arr: number[]): number => {
-  return arr.reduce((acc, el) => acc + el, 0);
+  let res = 0;
+  for (let i = 0; i < arr.length; i++) {
+    res += arr[i];
+  }
+  return res;
 };

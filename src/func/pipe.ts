@@ -8,6 +8,10 @@ import type { PipedFn, PipeOps, UnaryFn } from "./types";
  */
 export const pipe = <T extends UnaryFn[]>(...fns: PipeOps<T>): PipedFn<T> => {
   return ((input) => {
-    return fns.reduce((acc: unknown, fn: UnaryFn) => fn(acc), input);
+    let res: unknown = input;
+    for (let i = 0; i < fns.length; i++) {
+      res = (fns[i] as UnaryFn)(res);
+    }
+    return res;
   }) as PipedFn<T>;
 };

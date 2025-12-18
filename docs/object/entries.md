@@ -23,6 +23,5 @@ _.entries({ age: 18, name: "John" });
 
 ## Related Functions
 
-- [copy](copy.md) (dependent)
 - [keys](keys.md)
 - [vals](vals.md)

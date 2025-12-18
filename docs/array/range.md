@@ -28,6 +28,4 @@ _.range(0, 5, 2);
 
 ## Related Functions
 
-- [from](from.md) (dependency)
-- [chunk](chunk.md) (dependent)
 - [percentile](../math/percentile.md) (dependent)

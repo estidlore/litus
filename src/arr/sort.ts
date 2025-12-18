@@ -15,8 +15,8 @@ export const sort = <T>(arr: T[], mapFn: (el: T) => number | string): T[] => {
     }
     return 0;
   });
-  mapped.forEach(([, el], i) => {
-    arr[i] = el;
-  });
+  for (let i = 0; i < mapped.length; i++) {
+    arr[i] = mapped[i][1];
+  }
   return arr;
 };

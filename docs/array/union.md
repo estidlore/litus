@@ -20,7 +20,3 @@ import * as _ from "litus";
 _.union([1, 2], [2, 3]);
 // => {1, 2, 3}
 ```
-
-## Related Functions
-
-- [equal](../object/equal.md) (dependent)

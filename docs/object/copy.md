@@ -23,8 +23,8 @@ _.copy({ age: 18, name: "John" });
 
 ## Related Functions
 
-- [entries](entries.md) (dependency)
 - [isObj](isObj.md) (dependency)
+- [keys](keys.md) (dependency)
 - [merge](merge.md) (dependent)
 - [omit](omit.md) (dependent)
 - [pick](pick.md) (dependent)

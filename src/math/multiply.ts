@@ -8,4 +8,10 @@ import { calc } from "./calc";
  * multiply([-4, 1, 0, 3], 3); // => [-12, 3, 0, 9]
  * multiply([1, 2], [3, 4]); // => [3, 8]
  */
-export const multiply = calc((...arr) => arr.reduce((acc, el) => acc * el, 1));
+export const multiply = calc((...arr) => {
+  let res = 1;
+  for (let i = 0; i < arr.length; i++) {
+    res *= arr[i];
+  }
+  return res;
+});

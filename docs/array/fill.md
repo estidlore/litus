@@ -21,7 +21,3 @@ import * as _ from "litus";
 _.fill(2, "a");
 // => ["a", "a"]
 ```
-
-## Related Functions
-
-- [from](from.md) (dependency)

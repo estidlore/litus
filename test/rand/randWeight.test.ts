@@ -23,10 +23,9 @@ describe("randWeight", () => {
     const res = from(100, () => randWeight(weights));
 
     const counts = [0, 0, 0];
-    res.forEach((idx) => {
-      counts[idx]++;
-    });
-
+    for (let i = 0; i < res.length; i++) {
+      counts[res[i]]++;
+    }
     expect(counts[0]).toBeLessThan(counts[1]);
     expect(counts[1]).toBeLessThan(counts[2]);
   });

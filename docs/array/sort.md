@@ -31,5 +31,4 @@ _.sort(people, (el) => -el.age);
 
 ## Related Functions
 
-- [unique](unique.md) (dependent)
 - [percentile](../math/percentile.md) (dependent)

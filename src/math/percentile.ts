@@ -2,6 +2,7 @@ import { binSearch } from "/arr/binSearch";
 import { range } from "/arr/range";
 import { sort } from "/arr/sort";
 import { transpose } from "/arr/transpose";
+import { identity } from "/func/identity";
 
 import { cumsum } from "./cumsum";
 import { divide } from "./divide";
@@ -18,8 +19,11 @@ const _linear = (x: number[], p: number[]): number[] => {
 const _weighted = (x: number[], p: number[], w: number[]): number[] => {
   if (w.length !== x.length) {
     throw new Error("Weights must be the same length as the array");
-  } else if (w.some((v) => v < 0)) {
-    throw new Error("Weights must be non-negative");
+  }
+  for (let i = 0; i < w.length; i++) {
+    if (w[i] < 0) {
+      throw new Error("Weights must be non-negative");
+    }
   }
 
   const X = sort(transpose([x, w]), (el) => el[0]);
@@ -31,7 +35,7 @@ const _weighted = (x: number[], p: number[], w: number[]): number[] => {
 
   let i = 0;
   return Pnorm.map((pi) => {
-    i = binSearch(Wnorm, pi, (el) => el, i);
+    i = binSearch(Wnorm, pi, identity, i);
     return Xsorted[i];
   });
 };
@@ -52,8 +56,10 @@ export const percentile = <T extends Quantity>(
   if (typeof p === "number") {
     return percentile(x, [p], weights)[0] as QuantityT<T>;
   }
-  if (p.some((v) => v < 0 || v > 100)) {
-    throw new Error("Percentiles must be between 0 and 100");
+  for (let i = 0; i < p.length; i++) {
+    if (p[i] < 0 || p[i] > 100) {
+      throw new Error("Percentiles must be between 0 and 100");
+    }
   }
   if (weights === undefined) {
     return _linear(x, p) as QuantityT<T>;

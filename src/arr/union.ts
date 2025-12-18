@@ -4,5 +4,12 @@
  * @returns Set of unique values
  */
 export const union = <T>(...arrs: T[][]): Set<T> => {
-  return new Set(arrs.flat(1));
+  const res = new Set<T>();
+  for (let i = 0; i < arrs.length; i++) {
+    const arr = arrs[i];
+    for (let j = 0; j < arr.length; j++) {
+      res.add(arr[j]);
+    }
+  }
+  return res;
 };
