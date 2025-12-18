@@ -1,5 +1,5 @@
-import { entries } from "./entries";
 import { isObj } from "./isObj";
+import { keys } from "./keys";
 
 /**
  * Creates a deep copy of the provided object or array
@@ -11,10 +11,19 @@ export const copy = <T>(obj: T): T => {
     return obj;
   }
 
-  const res = (Array.isArray(obj) ? [] : {}) as T;
-  entries(obj).forEach(([key, val]) => {
-    res[key] = copy(val);
-  });
+  if (Array.isArray(obj)) {
+    const res = [];
+    for (let i = 0; i < obj.length; i++) {
+      res[i] = copy(obj[i]);
+    }
+    return res as T;
+  }
 
+  const res = {} as T;
+  const mKeys = keys(obj);
+  for (let i = 0; i < mKeys.length; i++) {
+    const key = mKeys[i];
+    res[key] = copy(obj[key]);
+  }
   return res;
 };

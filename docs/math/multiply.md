@@ -26,7 +26,6 @@ _.multiply([1, 2], [3, 4]);
 ## Related Functions
 
 - [calc](calc.md) (dependency)
-- [mean](mean.md) (dependent)
 - [add](add.md)
 - [divide](divide.md)
 - [mod](mod.md)

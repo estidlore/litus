@@ -34,4 +34,5 @@ _.percentile([1, 2, 3, 4, 5], [10, 25]);
 - [range](../array/range.md) (dependency)
 - [sort](../array/sort.md) (dependency)
 - [transpose](../array/transpose.md) (dependency)
+- [identity](../function/identity.md) (dependency)
 - [median](median.md) (dependent)

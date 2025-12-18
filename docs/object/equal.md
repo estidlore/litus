@@ -25,6 +25,5 @@ _.equal({ age: 18, name: ["John", "Doe"] }, { age: 18, name: ["John", "Doe"] });
 
 - [isObj](isObj.md) (dependency)
 - [keys](keys.md) (dependency)
-- [union](../array/union.md) (dependency)
 - [unapply](../function/unapply.md) (dependency)
 - [copy](copy.md)

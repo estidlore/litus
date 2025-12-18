@@ -13,5 +13,10 @@ describe("entries", () => {
       ["0", "John"],
       ["1", "Doe"]
     ]);
+    expect(entries(["a", "b", , , "c"])).toStrictEqual([
+      ["0", "a"],
+      ["1", "b"],
+      ["4", "c"]
+    ]);
   });
 });

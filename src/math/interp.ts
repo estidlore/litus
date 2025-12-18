@@ -1,4 +1,5 @@
 import { binSearch } from "/arr/binSearch";
+import { identity } from "/func/identity";
 
 /**
  * Calculates the linear interpolation of monotonic increasing points (xp, fp) at given x values
@@ -16,7 +17,7 @@ export const interp = (x: number[], xp: number[], fp: number[]): number[] => {
     if (xi >= xp[xp.length - 1]) {
       return fp[fp.length - 1];
     }
-    const i = binSearch(xp, xi, (el) => el);
+    const i = binSearch(xp, xi, identity);
     if (i === 0) {
       return fp[0];
     }

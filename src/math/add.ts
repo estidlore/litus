@@ -8,4 +8,10 @@ import { calc } from "./calc";
  * add([-4, 1, 0, 3], 5); // [1, 6, 5, 8]
  * add([1, 2], [3, 4]); // [4, 6]
  */
-export const add = calc((...arr) => arr.reduce((acc, el) => acc + el, 0));
+export const add = calc((...arr) => {
+  let res = 0;
+  for (let i = 0; i < arr.length; i++) {
+    res += arr[i];
+  }
+  return res;
+});

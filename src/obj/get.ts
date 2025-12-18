@@ -10,7 +10,9 @@ import { isObj } from "./isObj";
  */
 export const get = <T>(obj: object, path: string, fallback?: T): T => {
   let val: unknown = obj;
-  for (const key of path.split(".")) {
+  const keys = path.split(".");
+  for (let i = 0; i < keys.length; i++) {
+    const key = keys[i];
     if (isObj(val) && has(val, key)) {
       val = val[key];
     } else {

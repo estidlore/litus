@@ -8,7 +8,8 @@ import { copy } from "./copy";
  */
 export const pick = <T, K extends keyof T>(obj: T, keys: K[]): Pick<T, K> => {
   const res: Partial<T> = {};
-  for (const key of keys) {
+  for (let i = 0; i < keys.length; i++) {
+    const key = keys[i];
     res[key] = copy(obj[key]);
   }
   return res as Pick<T, K>;

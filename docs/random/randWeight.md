@@ -25,4 +25,5 @@ const index = _.randWeight(weights);
 ## Related Functions
 
 - [binSearch](../array/binSearch.md) (dependency)
+- [identity](../function/identity.md) (dependency)
 - [cumsum](../math/cumsum.md) (dependency)

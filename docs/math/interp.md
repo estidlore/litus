@@ -26,4 +26,5 @@ const ix = _.interp([0, 1, 1.5, 2.72, 3.1], [1, 2, 3], [3, 2, 0]);
 ## Related Functions
 
 - [binSearch](../array/binSearch.md) (dependency)
+- [identity](../function/identity.md) (dependency)
 - [percentile](percentile.md) (dependent)

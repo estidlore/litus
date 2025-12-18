@@ -11,6 +11,8 @@ const op = <T>(arr: T[], size: number, pick: (n: number) => number): T[] => {
   return n === arr.length ? res : res.slice(0, n);
 };
 
+const randInt = (n: number): number => Math.floor(Math.random() * n);
+
 export const fisherYates = <T>(
   data: T[],
   size: number,
@@ -20,13 +22,15 @@ export const fisherYates = <T>(
     return [];
   }
   if (weights === undefined) {
-    return op(data, size, (n) => Math.floor(Math.random() * n));
+    return op(data, size, randInt);
   }
   if (weights.length !== data.length) {
     throw new Error("Weights must have the same length as the data array");
   }
-  if (weights.some((w) => w < 0)) {
-    throw new Error("Weights cannot contain negative values.");
+  for (let i = 0; i < weights.length; i++) {
+    if (weights[i] < 0) {
+      throw new Error("Weights cannot contain negative values.");
+    }
   }
   const w = weights.slice();
   return op(data, size, () => {

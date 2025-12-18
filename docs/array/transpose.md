@@ -27,6 +27,5 @@ _.transpose(matrix);
 
 ## Related Functions
 
-- [from](from.md) (dependency)
 - [zip](zip.md) (dependent)
 - [percentile](../math/percentile.md) (dependent)

@@ -9,12 +9,13 @@ export const group = <T, K extends PropertyKey>(
   getKey: (obj: T) => K
 ): Record<K, T[]> => {
   const res = {} as Record<K, T[]>;
-  arr.forEach((el) => {
+  for (let i = 0; i < arr.length; i++) {
+    const el = arr[i];
     const val = getKey(el);
     if (res[val] === undefined) {
       res[val] = [];
     }
     res[val].push(el);
-  });
+  }
   return res;
 };

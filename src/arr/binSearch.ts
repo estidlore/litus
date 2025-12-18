@@ -20,7 +20,7 @@ export const binSearch = <T>(
   let a = start;
   let b = end;
   while (a < b) {
-    const mid = Math.floor((a + b) / 2);
+    const mid = (a + b) >> 1;
     const midVal = getVal(arr[mid]);
     if (midVal < target) {
       a = mid + 1;

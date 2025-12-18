@@ -1,4 +1,5 @@
 import { binSearch } from "/arr/binSearch";
+import { identity } from "/func/identity";
 import { cumsum } from "/math/cumsum";
 
 /**
@@ -10,8 +11,10 @@ export const randWeight = (weights: number[]): number => {
   if (weights.length === 0) {
     throw new Error("Weights array cannot be empty");
   }
-  if (weights.some((w) => w < 0)) {
-    throw new Error("Weights array cannot contain negative values");
+  for (let i = 0; i < weights.length; i++) {
+    if (weights[i] < 0) {
+      throw new Error("Weights array cannot contain negative values");
+    }
   }
   const wAccum = cumsum(weights);
   const wTotal = wAccum[wAccum.length - 1];
@@ -19,5 +22,5 @@ export const randWeight = (weights: number[]): number => {
     throw new Error("Total weight must be greater than zero");
   }
   const r = Math.random() * wTotal;
-  return binSearch(wAccum, r, (el) => el);
+  return binSearch(wAccum, r, identity);
 };

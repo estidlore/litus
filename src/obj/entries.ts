@@ -5,4 +5,15 @@ import type { Entry } from "./types";
  * @param obj Object whose entries are to be retrieved
  * @returns Array of key-value pairs from the object
  */
-export const entries: <T extends object>(obj: T) => Entry<T>[] = Object.entries;
+export const entries = <T extends object>(obj: T): Entry<T>[] => {
+  if (Array.isArray(obj)) {
+    const res: Entry<T>[] = [];
+    for (let i = 0; i < obj.length; i++) {
+      if (Object.prototype.hasOwnProperty.call(obj, i)) {
+        res.push([i + "", obj[i]] as Entry<T>);
+      }
+    }
+    return res;
+  }
+  return Object.entries(obj) as Entry<T>[];
+};

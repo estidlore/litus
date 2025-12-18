@@ -25,3 +25,9 @@ _.identity("hello");
 _.identity([1, 2, 3]);
 // => [1, 2, 3]
 ```
+
+## Related Functions
+
+- [interp](../math/interp.md) (dependent)
+- [percentile](../math/percentile.md) (dependent)
+- [randWeight](../random/randWeight.md) (dependent)

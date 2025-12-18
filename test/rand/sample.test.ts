@@ -6,8 +6,8 @@ describe("sample", () => {
     const arr = range(0, 50);
     const res = sample(arr, 3);
     expect(res).toHaveLength(3);
-    res.forEach((el) => {
-      expect(arr).toContain(el);
-    });
+    for (let i = 0; i < res.length; i++) {
+      expect(arr).toContain(res[i]);
+    }
   });
 });

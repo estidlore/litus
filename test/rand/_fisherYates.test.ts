@@ -24,9 +24,9 @@ describe("_fisherYates", () => {
     const arr = range(0, 50);
     const res = fisherYates(arr, 3);
     expect(res).toHaveLength(3);
-    res.forEach((el) => {
-      expect(arr).toContain(el);
-    });
+    for (let i = 0; i < res.length; i++) {
+      expect(arr).toContain(res[i]);
+    }
   });
 
   it("returns weighted shuffled array", () => {
@@ -34,9 +34,9 @@ describe("_fisherYates", () => {
     const weights = [0, 1, 2];
     const res = fisherYates(arr, 2, weights);
     expect(res).toHaveLength(2);
-    res.forEach((el) => {
-      expect(arr).toContain(el);
-    });
+    for (let i = 0; i < res.length; i++) {
+      expect(arr).toContain(res[i]);
+    }
   });
 
   it("throws if weights are invalid", () => {
