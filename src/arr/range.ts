@@ -9,7 +9,7 @@ export const range = (a: number, b: number, step = 1): number[] => {
   if (step === 0) {
     throw new Error("Step cannot be 0");
   }
-  const res = Array(Math.ceil((b - a) / step));
+  const res = Array(Math.ceil((b - a - Number.EPSILON) / step));
   for (let i = 0; i < res.length; i++) {
     res[i] = a + step * i;
   }

@@ -6,7 +6,7 @@
  */
 export const randInt = (a: number, b = 0): number => {
   if (!Number.isInteger(a) || !Number.isInteger(b)) {
-    throw Error("a and b must be integers");
+    throw new Error("a and b must be integers");
   }
   return Math.floor(Math.random() * (b - a) + a);
 };

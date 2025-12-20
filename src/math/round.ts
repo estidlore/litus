@@ -2,7 +2,7 @@ import type { Quantity } from "./types";
 
 const _round = (n: number, p: number): number => {
   const k = Math.pow(10, p);
-  return Math.round(n * k) / k;
+  return Math.round((n + Number.EPSILON) * k) / k;
 };
 
 /**
