@@ -28,11 +28,9 @@ _.percentile([1, 2, 3, 4, 5], [10, 25]);
 ## Related Functions
 
 - [cumsum](cumsum.md) (dependency)
-- [divide](divide.md) (dependency)
 - [interp](interp.md) (dependency)
 - [binSearch](../array/binSearch.md) (dependency)
 - [range](../array/range.md) (dependency)
-- [sort](../array/sort.md) (dependency)
 - [transpose](../array/transpose.md) (dependency)
 - [identity](../function/identity.md) (dependency)
 - [median](median.md) (dependent)

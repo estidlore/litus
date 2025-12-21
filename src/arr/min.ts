@@ -1,5 +1,3 @@
-import { max } from "./max";
-
 /**
  * Returns the element with the minimum value based on the provided map function
  * @param arr Array to search
@@ -7,5 +5,14 @@ import { max } from "./max";
  * @returns Element with the minimum value
  */
 export const min = <T>(arr: T[], fn: (val: T) => number): T => {
-  return max(arr, (val) => -fn(val));
+  let minIdx = 0;
+  let minVal = Number.POSITIVE_INFINITY;
+  for (let i = 0; i < arr.length; i++) {
+    const val = fn(arr[i]);
+    if (val < minVal) {
+      minIdx = i;
+      minVal = val;
+    }
+  }
+  return arr[minIdx];
 };

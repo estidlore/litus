@@ -27,7 +27,6 @@ _.divide([1, 2], [3, 4]);
 ## Related Functions
 
 - [calc](calc.md) (dependency)
-- [percentile](percentile.md) (dependent)
 - [add](add.md)
 - [mod](mod.md)
 - [multiply](multiply.md)

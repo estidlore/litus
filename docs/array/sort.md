@@ -28,7 +28,3 @@ _.sort([3, 1, 2], (n) => n);
 _.sort(people, (el) => -el.age);
 // => [{ age: 30, name: "Jane" }, { age: 18, name: "John" }]
 ```
-
-## Related Functions
-
-- [percentile](../math/percentile.md) (dependent)
