@@ -5,11 +5,13 @@
  * @returns Element with the maximum value
  */
 export const max = <T>(arr: T[], fn: (val: T) => number): T => {
-  const scores = arr.map(fn);
   let maxIdx = 0;
-  for (let i = 1; i < scores.length; i++) {
-    if (scores[i] > scores[maxIdx]) {
+  let maxVal = Number.NEGATIVE_INFINITY;
+  for (let i = 0; i < arr.length; i++) {
+    const val = fn(arr[i]);
+    if (val > maxVal) {
       maxIdx = i;
+      maxVal = val;
     }
   }
   return arr[maxIdx];

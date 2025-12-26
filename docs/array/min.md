@@ -29,4 +29,4 @@ _.min(people, (el) => el.age);
 
 ## Related Functions
 
-- [max](max.md) (dependency)
+- [max](max.md)

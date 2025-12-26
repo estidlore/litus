@@ -1,19 +1,16 @@
 import { binSearch } from "/arr/binSearch";
 import { range } from "/arr/range";
-import { sort } from "/arr/sort";
 import { transpose } from "/arr/transpose";
 import { identity } from "/func/identity";
 
 import { cumsum } from "./cumsum";
-import { divide } from "./divide";
 import { interp } from "./interp";
 import type { Quantity, QuantityT } from "./types";
 
 const _linear = (x: number[], p: number[]): number[] => {
-  const Pnorm = divide(p, 100);
-  const step = 1 / (x.length - 1);
-  const xp = range(0, 1 + step, step);
-  return interp(Pnorm, xp, x.sort());
+  const step = 100 / (x.length - 1);
+  const xp = range(0, 100 + step, step);
+  return interp(p, xp, x.slice().sort());
 };
 
 const _weighted = (x: number[], p: number[], w: number[]): number[] => {
@@ -26,18 +23,19 @@ const _weighted = (x: number[], p: number[], w: number[]): number[] => {
     }
   }
 
-  const X = sort(transpose([x, w]), (el) => el[0]);
+  const X = transpose([x, w]).sort(([a], [b]) => a - b);
   const [Xsorted, Wsorted] = transpose(X);
-  const Wcum = cumsum(Wsorted);
-  const Wtotal = Wcum[Wcum.length - 1];
-  const Wnorm = divide(Wcum, Wtotal);
-  const Pnorm = divide(p, 100);
-
-  let i = 0;
-  return Pnorm.map((pi) => {
-    i = binSearch(Wnorm, pi, identity, i);
-    return Xsorted[i];
-  });
+  const Wnorm = cumsum(Wsorted);
+  const Wtotal100th = Wnorm[Wnorm.length - 1] / 100;
+  for (let i = 0; i < Wnorm.length; i++) {
+    Wnorm[i] /= Wtotal100th;
+  }
+  const res = Array(p.length);
+  for (let i = 0, j = 0; i < p.length; i++) {
+    j = binSearch(Wnorm, p[i], identity, j);
+    res[i] = Xsorted[j];
+  }
+  return res;
 };
 
 /**
