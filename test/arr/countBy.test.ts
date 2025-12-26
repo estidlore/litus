@@ -1,4 +1,4 @@
-import { countBy } from "/arr/countBy";
+import { countBy } from "/arr";
 
 describe("countBy", () => {
   it("counts elements by key", () => {
