@@ -31,3 +31,4 @@ _.identity([1, 2, 3]);
 - [interp](../math/interp.md) (dependent)
 - [percentile](../math/percentile.md) (dependent)
 - [randWeight](../random/randWeight.md) (dependent)
+- [noop](noop.md)
