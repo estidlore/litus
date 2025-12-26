@@ -31,6 +31,7 @@
 - [debounce](function/debounce.md)
 - [identity](function/identity.md)
 - [memo](function/memo.md)
+- [noop](function/noop.md)
 - [once](function/once.md)
 - [pipe](function/pipe.md)
 - [throttle](function/throttle.md)
