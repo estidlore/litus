@@ -42,6 +42,7 @@
 - [add](math/add.md)
 - [aprox](math/aprox.md)
 - [calc](math/calc.md)
+- [clamp](math/clamp.md)
 - [cumsum](math/cumsum.md)
 - [divide](math/divide.md)
 - [inRange](math/inRange.md)

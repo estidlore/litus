@@ -30,3 +30,4 @@ _.min(people, (el) => el.age);
 ## Related Functions
 
 - [max](max.md)
+- [clamp](../math/clamp.md)
