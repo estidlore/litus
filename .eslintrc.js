@@ -24,6 +24,7 @@ module.exports = {
   },
   root: true,
   rules: {
+    "@typescript-eslint/prefer-for-of": "off",
     "simple-import-sort/imports": [
       "error",
       {

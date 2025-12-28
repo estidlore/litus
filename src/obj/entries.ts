@@ -10,7 +10,7 @@ export const entries = <T extends object>(obj: T): Entry<T>[] => {
     const res: Entry<T>[] = [];
     for (let i = 0; i < obj.length; i++) {
       if (Object.prototype.hasOwnProperty.call(obj, i)) {
-        res.push([i + "", obj[i]] as Entry<T>);
+        res.push([String(i), obj[i]] as Entry<T>);
       }
     }
     return res;

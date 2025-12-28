@@ -1,7 +1,9 @@
 import { from } from "/arr/from";
 import type { ConvertTuple } from "/arr/types";
 
-import type { Calc, Quantity } from "./types";
+import type { Quantity } from "./types";
+
+export type Calc<A extends Quantity[]> = A extends number[] ? number : number[];
 
 /**
  * Creates a function that applies the given operation to any combination of scalars and vectors
