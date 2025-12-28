@@ -86,5 +86,6 @@
 - [kebab](string/kebab.md)
 - [pascal](string/pascal.md)
 - [snake](string/snake.md)
+- [split](string/split.md)
 - [template](string/template.md)
 - [trim](string/trim.md)
