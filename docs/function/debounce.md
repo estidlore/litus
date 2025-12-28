@@ -1,18 +1,18 @@
 # debounce
 
 Given a function, creates a new function that if it's called multiple times
-consecutively, only the last call is executed.
+consecutively, only the last call is executed
 
 `Since v1.1.0`
 
 ## Arguments
 
-- `fn: (...args: A) => void`
-- `delay: number = 100`
+- `fn: (...args: A) => void` - Function to debounce
+- `delay?: number = 100` Delay in milliseconds
 
 ## Returns
 
-`(...args: A) => void`
+`(...args: A) => void` - Debounced function
 
 ## Usage
 

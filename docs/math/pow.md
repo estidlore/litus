@@ -6,12 +6,12 @@ Calculates the exponentiation of two quantities (vectors / scalars)
 
 ## Arguments
 
-- `base: Quantity`
-- `exp: Quantity`
+- `base: Quantity` - Base number or array
+- `exp: Quantity` - Exponent number or array
 
 ## Returns
 
-`Calc<A>`
+`Calc<A>` - `base` raised to the power of `exp`
 
 ## Usage
 

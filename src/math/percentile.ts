@@ -42,8 +42,8 @@ const _weighted = (x: number[], p: number[], w: number[]): number[] => {
  * Calculates the given percentile(s) of an array of numbers
  * Supports both linear interpolation and weighted percentiles
  * @param x Array of numbers
- * @param p Percentile(s) to compute (number or array of numbers, 0–100)
- * @param weights Optional array of weights (same length as x)
+ * @param p Percentile number or array to compute (0–100)
+ * @param weights Optional array of weights (same size as x)
  * @returns Computed percentile value(s)
  */
 export const percentile = <T extends Quantity>(

@@ -1,19 +1,19 @@
 # set
 
 Sets a value at a nested path of an object, creating nested objects if the path
-does not exist.
+does not exist
 
 `Since v1.5.0`
 
 ## Arguments
 
-- `obj: T` — The target object to modify.
-- `path: P` — The dot-separated string path where the value should be set.
-- `value: V` — The value to set at the specified path.
+- `obj: T` - The target object to modify
+- `path: P` - The dot-separated string path where the value should be set
+- `value: V` - The value to set at the specified path
 
 ## Returns
 
-`SetPath<T, P, V>` — The modified object with the value set at the given path.
+`SetPath<T, P, V>` - The modified object with the value set at the given path
 
 ## Usage
 

@@ -2,18 +2,18 @@
 
 Given a function with several args, creates a new function that can be called
 with partial args and returns another function with remaining args until
-all the args are passed, then it returns the response of original function.
+all the args are passed, then it returns the response of original functions
 
 `Since v1.1.0`
 
 ## Arguments
 
-- `fn: (...args: T) => R`
-- `arity: number = fn.length`
+- `fn: (...args: T) => R` - Function to curry
+- `arity?: number = fn.length` - Number of arguments the function expects
 
 ## Returns
 
-`function`
+`function` - Curried function
 
 ## Usage
 

@@ -1,17 +1,17 @@
 # trim
 
-Removes leading and trailing whitespace or specified characters from a string.
+Removes leading and trailing whitespace or specified characters from a string
 
 `Since v1.4.0`
 
 ## Arguments
 
-- `str: string` - The string to trim.
-- `chars?: string` - Optional. The characters to trim from the string. Defaults to whitespace.
+- `str: string` - The string to trim
+- `chars?: string = " "` - Optional. The characters to trim from the string
 
 ## Returns
 
-`string` - The trimmed string.
+`string` - The trimmed string
 
 ## Usage
 

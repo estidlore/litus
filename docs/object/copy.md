@@ -6,11 +6,11 @@ Creates a deep copy of the provided object or array
 
 ## Arguments
 
-- `obj: T`
+- `obj: T` - Object or array to copy
 
 ## Returns
 
-`T`
+`T` - Deep copy of the input
 
 ## Usage
 

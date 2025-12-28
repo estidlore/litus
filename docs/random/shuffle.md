@@ -1,19 +1,19 @@
 # shuffle
 
 Shuffles an array randomly, optionally using weights to influence the
-likelihood of selecting elements first.
+likelihood of selecting elements first
 
 `Since v1.5.0`
 
 ## Arguments
 
-- `data: T[]` - The array to shuffle.
+- `data: T[]` - The array to shuffle
 - `weights?: number[]` (optional) - Array of weights, where each weight
   corresponds to the likelihood of selecting the respective element first
 
 ## Returns
 
-`T[]` - A new array with the elements shuffled.
+`T[]` - A new array with the elements shuffled
 
 ## Usage
 

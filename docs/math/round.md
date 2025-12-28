@@ -6,12 +6,12 @@ Rounds a quantity (vector / scalar) to given precision decimals
 
 ## Arguments
 
-- `q: Quantity`
-- `precision = 0`
+- `q: Quantity` - Number or array to round
+- `precision?: number = 0` - Number of decimal places to round to
 
 ## Returns
 
-`Quantity`
+`Quantity` - Rounded quantity
 
 ## Usage
 

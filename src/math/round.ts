@@ -7,7 +7,7 @@ const _round = (n: number, p: number): number => {
 
 /**
  * Rounds a quantity (vector or scalar) to the specified number of decimal places
- * @param q Quantity to round
+ * @param q Number or array to round
  * @param precision Number of decimal places to round to. Default: 0
  * @returns Rounded quantity
  */

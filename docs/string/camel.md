@@ -1,17 +1,17 @@
 # camel
 
 Converts a string to camelCase. It splits the string into words, capitalizes
-each word except the first one, and then joins them together without spaces.
+each word except the first one, and then joins them together without spaces
 
 `Since v1.4.0`
 
 ## Arguments
 
-- `str: string` - The input string to be converted to camelCase.
+- `str: string` - The input string to be converted to camelCase
 
 ## Returns
 
-`string` - The camelCase version of the input string.
+`string` - The camelCase version of the input string
 
 ## Usage
 

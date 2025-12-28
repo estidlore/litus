@@ -2,9 +2,9 @@ import { calc } from "./calc";
 
 /**
  * Calculates the modulo of two quantities (vectors or scalars)
- * @param x Dividend(s)
- * @param modulo Divisor(s)
- * @returns Modulo, matching the input shape
+ * @param x Dividend number or array
+ * @param modulo Divisor number or array
+ * @returns Remainder of division
  * @example
  * mod(5, 3); // 2
  * mod([2, 3, 4], 3); // [2, 0, 1]

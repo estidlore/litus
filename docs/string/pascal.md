@@ -1,17 +1,17 @@
 # pascal
 
 Converts a string to PascalCase by capitalizing the first letter of each word
-and removing spaces or delimiters.
+and removing spaces or delimiters
 
 `Since v1.4.0`
 
 ## Arguments
 
-- `str: string` - The input string to be converted to PascalCase.
+- `str: string` - The input string to be converted to PascalCase
 
 ## Returns
 
-`string` - The PascalCase version of the input string.
+`string` - The PascalCase version of the input string
 
 ## Usage
 

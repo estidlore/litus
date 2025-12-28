@@ -6,13 +6,13 @@ Checks if a number is in a half-open range `[a, b)`
 
 ## Arguments
 
-- `n: number`
-- `a: number`
-- `b = 0`
+- `n: number` - The number to check
+- `a: number` - Start of the range (inclusive)
+- `b?: number = 0` - End of the range (exclusive)
 
 ## Returns
 
-`boolean`
+`boolean` - True if `n` is in `[a, b)`, false otherwise
 
 ## Usage
 

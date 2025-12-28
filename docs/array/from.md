@@ -6,12 +6,12 @@ Creates an array of size n with a custom map function
 
 ## Arguments
 
-- `n: number`
-- `mapFn: (i: number) => T`
+- `n: number` - Size of the array to create
+- `mapFn: (i: number) => T` - Function that maps each index to an array element
 
 ## Returns
 
-`T[]`
+`T[]` - Array of mapped values
 
 ## Usage
 

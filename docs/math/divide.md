@@ -6,12 +6,12 @@ Calculates the division of two quantities (vectors / scalars)
 
 ## Arguments
 
-- `a: Quantity`
-- `b: Quantity`
+- `a: Quantity` - Dividend (number or array)
+- `b: Quantity` - Divisor (number or array)
 
 ## Returns
 
-`Calc<A>`
+`Calc<A>` - Division of the input quantities
 
 ## Usage
 

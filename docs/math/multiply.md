@@ -1,16 +1,16 @@
 # multiply
 
-Calculates the multiplication of given quantities (vectors / scalars).
+Calculates the multiplication of given quantities (vectors / scalars)
 
 `Since v1.0.0`
 
 ## Arguments
 
-- `...q: Quantity[]`
+- `...q: Quantity[]` - Quantities to multiply
 
 ## Returns
 
-`Calc<A>`
+`Calc<A>` - Product of the input quantities
 
 ## Usage
 

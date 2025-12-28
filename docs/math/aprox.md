@@ -1,19 +1,19 @@
 # aprox
 
 Compares if two numbers are aproximately equal using a custom precision.
-Useful to handle float precision issues.
+Useful to handle float precision issues
 
 `Since v1.2.1`
 
 ## Arguments
 
-- `a: number`
-- `b: number`
-- `precision = 4`
+- `a: number` - First number to compare
+- `b: number` - Second number to compare
+- `precision?: number = 4` - Number of decimal places to consider
 
 ## Returns
 
-`boolean`
+`boolean` - True if numbers are approximately equal, false otherwise
 
 ## Usage
 

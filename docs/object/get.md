@@ -1,19 +1,19 @@
 # get
 
 Gets a value at nested path of object or array. Returns the fallback value if
-the path is not found.
+the path is not found
 
 `Since v1.3.1`
 
 ## Arguments
 
-- `obj: object`
-- `path: string`
-- `fallback?: T`
+- `obj: object` - Source object
+- `path: string` - Dot-separated path string
+- `fallback?: T` - Value to return if the path is not found
 
 ## Returns
 
-`T`
+`T` - Value at the specified path or the fallback
 
 ## Usage
 

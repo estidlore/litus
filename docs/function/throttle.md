@@ -2,18 +2,18 @@
 
 Given a function, creates a new function that if it's called multiple times
 consecutively, it executes the original function only when it's called after
-`interval` ms since last execution, the calls between them are ignored.
+`interval` ms since last execution, the calls between them are ignored
 
 `Since v1.3.1`
 
 ## Arguments
 
-- `fn: (...args: A) => void`
-- `interval = 100`
+- `fn: (...args: A) => void` - Function to throttle
+- `interval?: number = 100` - Minimum time (ms) between calls
 
 ## Returns
 
-`(...args: A) => void`
+`(...args: A) => void` - Throttled function
 
 ## Usage
 

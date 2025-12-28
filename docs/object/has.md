@@ -6,12 +6,12 @@ Checks if an object has all the given properties
 
 ## Arguments
 
-- `obj: object`
-- `...keys: PropertyKey[]`
+- `obj: object` - Object to check
+- `...keys: PropertyKey[]` - Property keys to look for
 
 ## Returns
 
-`boolean`
+`boolean` - True if all keys exist on the object, false otherwise
 
 ## Usage
 

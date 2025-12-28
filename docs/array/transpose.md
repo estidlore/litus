@@ -6,11 +6,11 @@ Switches the axes of a 2D array. It also works as a "zip" function
 
 ## Arguments
 
-- `matrix: T`
+- `matrix: T` - The 2D array to transpose
 
 ## Returns
 
-`Transpose<T>`
+`Transpose<T>` - Transposed matrix
 
 ## Usage
 

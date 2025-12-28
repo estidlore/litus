@@ -1,17 +1,17 @@
 # pick
 
-Creates a copy of an object with the specified keys only.
+Creates a copy of an object with the specified keys only
 
 `Since v1.2.1`
 
 ## Arguments
 
-- `obj: T`
-- `keys: K[]`
+- `obj: T` - Source object
+- `keys: K[]` - Array of keys to pick from the object
 
 ## Returns
 
-`Pick<T, K>`
+`Pick<T, K>` - New object with only the picked keys
 
 ## Usage
 

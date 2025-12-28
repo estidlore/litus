@@ -1,17 +1,17 @@
 # unapply
 
 Given a function that receives an array arg (`arg: T[]`), it creates
-a new function with spread arg (`...args: T[]`).
+a new function with spread arg (`...args: T[]`)
 
 `Since v1.1.0`
 
 ## Arguments
 
-- `fn: (arg: T[]) => R`
+- `fn: (arg: T[]) => R` - Function accepting an array of arguments
 
 ## Returns
 
-`(...args: T[]) => R`
+`(...args: T[]) => R` - Function accepting spread arguments
 
 ## Usage
 

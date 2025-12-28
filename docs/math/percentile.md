@@ -2,19 +2,19 @@
 
 Calculates given percentile(s) of an array of numbers.
 If weights (occurrences) are provided, it returns weighted percentiles;
-otherwise, it returns the linear interpolation of percentiles.
+otherwise, it returns the linear interpolation of percentiles
 
 `Since v1.2.1`
 
 ## Arguments
 
-- `x: number[]`
-- `p: T`
-- `weights?: number[]`
+- `x: number[]` - Array of numbers
+- `p: T` - Percentile number or array to compute (0–100)
+- `weights?: number[]` - Array of weights (same size as x)
 
 ## Returns
 
-`number[]`
+`QuantityT<T>` - Computed percentile value(s)
 
 ## Usage
 

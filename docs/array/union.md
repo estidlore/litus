@@ -6,11 +6,11 @@ Creates a set with the unique values of all given arrays
 
 ## Arguments
 
-- `...arrs: T[][]`
+- `...arrs: T[][]` - Arrays to union
 
 ## Returns
 
-`Set<T>`
+`Set<T>` - Set of unique values
 
 ## Usage
 

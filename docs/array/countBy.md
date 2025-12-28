@@ -1,6 +1,6 @@
 # countBy
 
-Counts the occurrences of items in an array, grouping them by a key.
+Counts the occurrences of items in an array, grouping them by a key
 
 `Since v1.6.0`
 

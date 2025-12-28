@@ -1,16 +1,16 @@
 # keys
 
-Retrieves a strongly-typed array of the keys of an object.
+Retrieves a strongly-typed array of the keys of an object
 
 `Since v1.0.0`
 
 ## Arguments
 
-- `obj: T`
+- `obj: T` - Object whose keys are to be retrieved
 
 ## Returns
 
-`Key<T>[]`
+`Key<T>[]` - Array of the object's keys
 
 ## Usage
 

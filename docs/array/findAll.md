@@ -6,15 +6,15 @@ Finds all the elements that match a given condition
 
 ## Arguments
 
-- `arr: T[]`
-- `predicate: Predicate<T>`
-- `from = 0`
-- `to = arr.length`
-- `limit = arr.length`
+- `arr: T[]` - Array to search in
+- `predicate: Predicate<T>` - Function to test each element
+- `from?: number = 0` - Start index (inclusive)
+- `to?: number = arr.length` - End index (exclusive)
+- `limit?: number = arr.length` - Maximum number of matches to return
 
 ## Returns
 
-`T[]`
+`T[]` - Array of matching elements
 
 ## Usage
 

@@ -1,19 +1,19 @@
 # range
 
 Creates an array of numbers between `start` and `end` (`[start, end)`) with
-optional `step`.
+optional `step`
 
 `Since v1.0.0`
 
 ## Arguments
 
-- `a: number`
-- `b: number`
-- `step = 1`
+- `a: number` - Start of the range (inclusive)
+- `b: number` - End of the range (exclusive)
+- `step?: number = 1` - Step between elements
 
 ## Returns
 
-`number[]`
+`number[]` - Array of numbers in the specified range
 
 ## Usage
 

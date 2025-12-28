@@ -1,16 +1,16 @@
 # add
 
-Calculates the sum of given quantities (vectors / scalars).
+Calculates the sum of given quantities (vectors / scalars)
 
 `Since v1.0.0`
 
 ## Arguments
 
-- `...q: Quantity[]`
+- `...q: Quantity[]` - Quantities to add
 
 ## Returns
 
-`Calc<A>`
+`Calc<A>` - Sum of the input quantities
 
 ## Usage
 

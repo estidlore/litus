@@ -1,17 +1,17 @@
 # fill
 
-Creates an array with a value repeated n times.
+Creates an array with a value repeated n times
 
 `Since v1.0.0`
 
 ## Arguments
 
-- `n: number`
-- `val: T`
+- `n: number` - Array size
+- `val: T` - Value to fill the array with
 
 ## Returns
 
-`T[]`
+`T[]` - Array containing `val` repeated `n` times
 
 ## Usage
 

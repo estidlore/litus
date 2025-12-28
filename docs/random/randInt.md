@@ -8,11 +8,11 @@ and descending ranges
 ## Arguments
 
 - `a: number` - The lower bound (inclusive)
-- `b: number = 0` - The upper bound (exclusive)
+- `b?: number = 0` - The upper bound (exclusive)
 
 ## Returns
 
-`number`
+`number` - Random integer between a and b
 
 ## Usage
 

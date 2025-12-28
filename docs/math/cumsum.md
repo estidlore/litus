@@ -6,11 +6,11 @@ Calculates the cumulative sum of an array of numbers
 
 ## Arguments
 
-- `arr: number[]`
+- `arr: number[]` - Array of numbers to sum
 
 ## Returns
 
-- `number[]`
+- `number[]` - Array of cumulative sums
 
 ## Usage
 
