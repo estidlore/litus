@@ -5,7 +5,7 @@ import { identity } from "/func/identity";
  * Calculates the linear interpolation of monotonic increasing points (xp, fp) at given x values
  * @param x Points to interpolate
  * @param xp Known x-coordinates (must be increasing)
- * @param fp Known y-coordinates (must be increasing, same length as xp)
+ * @param fp Known y-coordinates (must be increasing, same size as xp)
  * @returns Interpolated values at each x
  */
 export const interp = (x: number[], xp: number[], fp: number[]): number[] => {

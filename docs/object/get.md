@@ -7,13 +7,13 @@ the path is not found
 
 ## Arguments
 
-- `obj: object`
-- `path: string`
-- `fallback?: T`
+- `obj: object` - Source object
+- `path: string` - Dot-separated path string
+- `fallback?: T` - Value to return if the path is not found
 
 ## Returns
 
-`T`
+`T` - Value at the specified path or the fallback
 
 ## Usage
 

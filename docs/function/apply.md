@@ -7,11 +7,11 @@ a new function without spread arg (`args: T[]`)
 
 ## Arguments
 
-- `fn: (...args: T[]) => R`
+- `fn: (...args: T[]) => R` - Function accepting spread arguments
 
 ## Returns
 
-`(arg: T[]) => R`
+`(arg: T[]) => R` - Function accepting an array of arguments
 
 ## Usage
 

@@ -1,6 +1,6 @@
 /**
  * Returns the element with the maximum value based on the provided map function
- * @param arr Array to search
+ * @param arr Array to search in
  * @param fn Function to extract the value for comparison
  * @returns Element with the maximum value
  */

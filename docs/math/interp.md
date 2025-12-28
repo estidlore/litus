@@ -6,13 +6,13 @@ Calculates the linear interpolation of monotolically increasing points (xp, fp)
 
 ## Arguments
 
-- `x: number[]`
-- `xp: number[]` - Must be increasing
-- `fp: number[]` - Must be increasing and same size of `xp`
+- `x: number[]` - Points to interpolate
+- `xp: number[]` - Known x-coordinates (must be increasing)
+- `fp: number[]` - Known y-coordinates (must be increasing, same size as xp)
 
 ## Returns
 
-`number[]`
+`number[]` - Interpolated values at each x
 
 ## Usage
 

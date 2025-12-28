@@ -6,11 +6,11 @@ Checks if the argument is an object
 
 ## Arguments
 
-- `el: unknown`
+- `el: unknown` - Value to check
 
 ## Returns
 
-`boolean`
+`boolean` - True if `el` is a non-null object, otherwise false
 
 ## Usage
 

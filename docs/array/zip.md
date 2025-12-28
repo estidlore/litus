@@ -8,11 +8,11 @@ of the given arrays, and so on
 
 ## Arguments
 
-- `...arrays: T`
+- `...arrays: T` - Arrays to process
 
 ## Returns
 
-`Transpose<T>`
+`Transpose<T>` - Array of grouped elements
 
 ## Usage
 

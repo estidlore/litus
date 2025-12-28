@@ -7,7 +7,7 @@ Removes leading and trailing whitespace or specified characters from a string
 ## Arguments
 
 - `str: string` - The string to trim
-- `chars?: string` - Optional. The characters to trim from the string. Defaults to whitespace
+- `chars?: string = " "` - Optional. The characters to trim from the string
 
 ## Returns
 

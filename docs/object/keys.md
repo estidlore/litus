@@ -6,11 +6,11 @@ Retrieves a strongly-typed array of the keys of an object
 
 ## Arguments
 
-- `obj: T`
+- `obj: T` - Object whose keys are to be retrieved
 
 ## Returns
 
-`Key<T>[]`
+`Key<T>[]` - Array of the object's keys
 
 ## Usage
 

@@ -6,12 +6,12 @@ Calculates the mean of an array of numbers
 
 ## Arguments
 
-- `arr: number[]`
-- `weights?: number[]`
+- `arr: number[]` - Array of numbers
+- `weights?: number[]` - Array of weights
 
 ## Returns
 
-`number`
+`number` - Mean of the given numbers
 
 ## Usage
 

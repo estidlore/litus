@@ -8,13 +8,13 @@ optional ttl in ms to expire the cache
 
 ## Arguments
 
-- `fn: (...args: T) => R`
-- `idFn: (arg: T) => Primitive = JSON.stringify`
-- `ttl?: number`
+- `fn: (...args: T) => R` - Function to memoize
+- `idFn?: (arg: T) => Primitive = JSON.stringify` - Function to generate a cache key from arguments
+- `ttl?: number = 0` - Cache expiration time in milliseconds
 
 ## Returns
 
-`(...args: T) => R`
+`(...args: T) => R` - Memoized function
 
 ## Usage
 

@@ -6,12 +6,12 @@ Splits an array in several sub-arrays of given size
 
 ## Arguments
 
-- `arr: T[]`
-- `size: number`
+- `arr: T[]` - Array to split
+- `size: number` - Size of each chunk
 
 ## Returns
 
-`T[][]`
+`T[][]` - Array of chunks
 
 ## Usage
 

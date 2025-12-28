@@ -6,11 +6,11 @@ Makes a deep comparison between the given objects
 
 ## Arguments
 
-- `...objs: unknown[]`
+- `...objs: unknown[]` - Objects to compare
 
 ## Returns
 
-`boolean`
+`boolean` - True if all objects are deeply equal, false otherwise
 
 ## Usage
 

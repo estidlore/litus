@@ -6,12 +6,12 @@ Sorts an array with a given score function
 
 ## Arguments
 
-- `arr: T[]`
-- `mapFn: (el: T) => number | string`
+- `arr: T[]` - Array to sort
+- `mapFn: (el: T) => number | string` - Function to map each element to a sortable value
 
 ## Returns
 
-`T[]`
+`T[]` - Sorted array in-place
 
 ## Usage
 

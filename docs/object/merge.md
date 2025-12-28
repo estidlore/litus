@@ -8,12 +8,12 @@ If both objects have the same property, the first value will be overwritten
 
 ## Arguments
 
-- `a: A`
-- `b: B`
+- `a: A` - First object to merge
+- `b: B` - Second object to merge
 
 ## Returns
 
-`A & B`
+`A & B` - The merged object with properties from both a and b
 
 ## Usage
 

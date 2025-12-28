@@ -7,12 +7,12 @@ consecutively, only the last call is executed
 
 ## Arguments
 
-- `fn: (...args: A) => void`
-- `delay: number = 100`
+- `fn: (...args: A) => void` - Function to debounce
+- `delay?: number = 100` Delay in milliseconds
 
 ## Returns
 
-`(...args: A) => void`
+`(...args: A) => void` - Debounced function
 
 ## Usage
 

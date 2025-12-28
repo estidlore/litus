@@ -6,12 +6,12 @@ Calculates the subtraction of two quantities (vectors / scalars)
 
 ## Arguments
 
-- `a: Quantity`
-- `b: Quantity`
+- `a: Quantity` - Minuend number or array
+- `b: Quantity` - Subtrahend number or array
 
 ## Returns
 
-`Calc<A>`
+`Calc<A>` - Subtraction of `b` from `a`
 
 ## Usage
 

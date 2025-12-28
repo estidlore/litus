@@ -6,11 +6,11 @@ Retrieves a strongly-typed array of the values of an object
 
 ## Arguments
 
-- `obj: T`
+- `obj: T` - Source object
 
 ## Returns
 
-`Val<T>[]`
+`Val<T>[]` - Array of the object's values
 
 ## Usage
 

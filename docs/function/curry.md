@@ -8,12 +8,12 @@ all the args are passed, then it returns the response of original functions
 
 ## Arguments
 
-- `fn: (...args: T) => R`
-- `arity: number = fn.length`
+- `fn: (...args: T) => R` - Function to curry
+- `arity?: number = fn.length` - Number of arguments the function expects
 
 ## Returns
 
-`function`
+`function` - Curried function
 
 ## Usage
 

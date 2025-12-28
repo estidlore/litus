@@ -6,12 +6,12 @@ Creates a copy of an object without the specified keys
 
 ## Arguments
 
-- `obj: T`
-- `keys: K[]`
+- `obj: T` - Source object
+- `keys: K[]` - Array of keys to omit from the result
 
 ## Returns
 
-`Omit<T, K>`
+`Omit<T, K>` - New object without the specified keys
 
 ## Usage
 

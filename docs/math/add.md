@@ -6,11 +6,11 @@ Calculates the sum of given quantities (vectors / scalars)
 
 ## Arguments
 
-- `...q: Quantity[]`
+- `...q: Quantity[]` - Quantities to add
 
 ## Returns
 
-`Calc<A>`
+`Calc<A>` - Sum of the input quantities
 
 ## Usage
 

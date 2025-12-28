@@ -6,12 +6,12 @@ Finds the element with the maximum value
 
 ## Arguments
 
-- `arr: T[]`
-- `fn: (val: T) => number`
+- `arr: T[]` - Array to search in
+- `fn: (val: T) => number` - Function to extract the value for comparison
 
 ## Returns
 
-`T`
+`T` - Element with the maximum value
 
 ## Usage
 

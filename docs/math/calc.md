@@ -7,11 +7,11 @@ result of that operation over any combination of quantities (vectors / scalars)
 
 ## Arguments
 
-- `opFn: (...nums: T) => number`
+- `opFn: (...nums: T) => number` - Operation function to apply to the inputs
 
 ## Returns
 
-- `(...q: Quantity[]) => Calc<T>`
+- `(...q: Quantity[]) => Calc<T>` - Function that takes quantities (scalars or vectors) and returns the calculated result
 
 ## Usage
 

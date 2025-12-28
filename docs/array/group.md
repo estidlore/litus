@@ -7,12 +7,12 @@ array of their items
 
 ## Arguments
 
-- `arr: T[]`
-- `getKey: (obj: T) => K`
+- `arr: T[]` - Array to group
+- `getKey: (obj: T) => K` - Function to extract the group key from each item
 
 ## Returns
 
-`Record<K, T[]>`
+`Record<K, T[]>` - Object with keys as group ids and values as arrays of grouped items
 
 ## Usage
 

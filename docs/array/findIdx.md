@@ -6,14 +6,14 @@ Finds the index of the first element that matches a given condition
 
 ## Arguments
 
-- `arr: T[]`
-- `predicate: Predicate<T>`
-- `from = 0`
-- `to = arr.length`
+- `arr: T[]` - Array to search in
+- `predicate: Predicate<T>` - Function to test each element
+- `from?: number = 0` - Start index (inclusive)
+- `to?: number = arr.length` - End index (exclusive)
 
 ## Returns
 
-`number`
+`number` - Index of the first matching element, or -1 if none found
 
 ## Usage
 

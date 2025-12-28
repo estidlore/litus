@@ -6,11 +6,11 @@ Retrieves a strongly-typed array of the entries (key, value) of an object
 
 ## Arguments
 
-- `obj: T`
+- `obj: T` - Object whose entries are to be retrieved
 
 ## Returns
 
-`Entry<T>[]`
+`Entry<T>[]` - Array of key-value pairs from the object
 
 ## Usage
 

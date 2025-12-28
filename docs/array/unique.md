@@ -6,11 +6,11 @@ Creates an array of the unique values of given array
 
 ## Arguments
 
-- `arr: T[]`
+- `arr: T[]` - Array of primitive values
 
 ## Returns
 
-`T[]`
+`T[]` - Array of unique values
 
 ## Usage
 

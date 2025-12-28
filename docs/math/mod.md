@@ -6,12 +6,12 @@ Calculates the modulo of two quantities (vectors / scalars)
 
 ## Arguments
 
-- `x: Quantity`
-- `modulo: Quantity`
+- `x: Quantity` - Dividend number or array
+- `modulo: Quantity` - Divisor number or array
 
 ## Returns
 
-`Calc<A>`
+`Calc<A>` - Remainder of division
 
 ## Usage
 
