@@ -1,5 +1,28 @@
 import { isObj } from "./isObj";
-import type { SetPath } from "./types";
+
+export type SetPath<
+  Obj extends object,
+  P extends string,
+  Val
+> = P extends `${infer K}.${infer Rest}`
+  ? {
+      [Key in K | keyof Obj]: Key extends K
+        ? Rest extends []
+          ? Val
+          : SetPath<
+              Key extends keyof Obj
+                ? Obj[Key] extends object
+                  ? Obj[Key]
+                  : object
+                : object,
+              Rest,
+              Val
+            >
+        : Key extends keyof Obj
+        ? Obj[Key]
+        : never;
+    }
+  : Obj;
 
 /**
  * Sets a value at a nested path of an object, creating nested objects if needed

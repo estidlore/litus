@@ -10,7 +10,7 @@ export const keys = <T extends object>(obj: T): Key<T>[] => {
     const res: string[] = [];
     for (let i = 0; i < obj.length; i++) {
       if (Object.prototype.hasOwnProperty.call(obj, i)) {
-        res.push(i + "");
+        res.push(String(i));
       }
     }
     return res as Key<T>[];

@@ -9,7 +9,9 @@ export const has = <K extends PropertyKey>(
   ...keys: K[]
 ): obj is Record<K, unknown> => {
   for (let i = 0; i < keys.length; i++) {
-    if (!Object.prototype.hasOwnProperty.call(obj, keys[i])) return false;
+    if (!Object.prototype.hasOwnProperty.call(obj, keys[i])) {
+      return false;
+    }
   }
   return true;
 };

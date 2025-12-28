@@ -1,4 +1,10 @@
-import type { Transpose } from "./types";
+export type Transpose<T extends unknown[][]> = T[number] extends infer U
+  ? {
+      [K in keyof U]: {
+        [J in keyof T]: T[J][K & keyof T[J]];
+      };
+    }
+  : never;
 
 /**
  * Transposes a 2D array (matrix), switching its rows and columns

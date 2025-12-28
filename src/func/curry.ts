@@ -1,4 +1,26 @@
-import type { CurryArgs, CurryFn, CurryFnRes, CurryRest } from "./types";
+type CurryArgs<T extends unknown[]> = T extends [...infer Ti, unknown]
+  ? CurryArgs<Ti> | T
+  : [];
+
+type CurryRest<T extends unknown[], A extends CurryArgs<T>> = T extends [
+  unknown,
+  ...infer Ti
+]
+  ? A extends [unknown, ...infer Ai extends CurryArgs<Ti>]
+    ? CurryRest<Ti, Ai>
+    : T
+  : [];
+
+type CurryFnRes<R, T extends unknown[], A extends CurryArgs<T>> = CurryRest<
+  T,
+  A
+> extends []
+  ? R
+  : CurryFn<R, CurryRest<T, A>>;
+
+export type CurryFn<R, T extends unknown[]> = <A extends CurryArgs<T>>(
+  ...args: A
+) => CurryFnRes<R, T, A>;
 
 /**
  * Creates a curried version of a function, allowing partial application of arguments

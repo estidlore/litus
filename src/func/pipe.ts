@@ -1,4 +1,27 @@
-import type { PipedFn, PipeOps, UnaryFn } from "./types";
+import type { UnaryFn } from "./types";
+
+type FirstFnArg<T> = T extends [(arg: infer A) => unknown, ...unknown[]]
+  ? A
+  : never;
+type LastFnReturn<T> = T extends [...unknown[], (arg: unknown) => infer R]
+  ? R
+  : never;
+
+type PipeOps<T extends UnaryFn[] = UnaryFn[]> = T extends [
+  infer F1 extends UnaryFn,
+  infer F2 extends UnaryFn,
+  ...infer Rest extends UnaryFn[]
+]
+  ? F2 extends (arg: ReturnType<F1>) => unknown
+    ? [F1, ...PipeOps<[F2, ...Rest]>]
+    : []
+  : T extends [UnaryFn]
+  ? T
+  : [];
+
+export type PipedFn<T extends UnaryFn[]> = (
+  arg: FirstFnArg<T>
+) => LastFnReturn<T>;
 
 /**
  * Creates a function by composing multiple unary functions from left to right.
