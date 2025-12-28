@@ -1,7 +1,7 @@
 # range
 
 Creates an array of numbers between `start` and `end` (`[start, end)`) with
-optional `step`.
+optional `step`
 
 `Since v1.0.0`
 

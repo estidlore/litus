@@ -1,6 +1,6 @@
 # multiply
 
-Calculates the multiplication of given quantities (vectors / scalars).
+Calculates the multiplication of given quantities (vectors / scalars)
 
 `Since v1.0.0`
 

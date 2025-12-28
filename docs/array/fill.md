@@ -1,6 +1,6 @@
 # fill
 
-Creates an array with a value repeated n times.
+Creates an array with a value repeated n times
 
 `Since v1.0.0`
 

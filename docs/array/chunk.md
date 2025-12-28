@@ -1,6 +1,6 @@
 # chunk
 
-Splits an array in several sub-arrays of given size.
+Splits an array in several sub-arrays of given size
 
 `Since v1.0.0`
 

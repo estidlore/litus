@@ -23,6 +23,7 @@ Litus provides strongly-typed utils for:
 - Smart type inference
 - Lightweight
 - 100% test coverage
+- High performance
 - Well-documented
 
 ## Installation

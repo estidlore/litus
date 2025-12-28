@@ -2,7 +2,7 @@
 
 Creates a strongly-typed object from the shallow merge of the deep copies of
 two objects.
-If both objects have the same property, the first value will be overwritten.
+If both objects have the same property, the first value will be overwritten
 
 `Since v1.0.0`
 

@@ -1,7 +1,7 @@
 # aprox
 
 Compares if two numbers are aproximately equal using a custom precision.
-Useful to handle float precision issues.
+Useful to handle float precision issues
 
 `Since v1.2.1`
 

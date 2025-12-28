@@ -1,20 +1,20 @@
 # sample
 
 Samples elements from an array randomly, optionally using weights to influence
-the likelihood of selecting elements.
+the likelihood of selecting elements
 
 `Since v1.5.0`
 
 ## Arguments
 
-- `data: T[]` - The array to sample from.
-- `size: number` - The number of elements to sample.
+- `data: T[]` - The array to sample from
+- `size: number` - The number of elements to sample
 - `weights?: number[]` (optional) - Array of weights, where each weight
-  corresponds to the likelihood of selecting the respective element.
+  corresponds to the likelihood of selecting the respective element
 
 ## Returns
 
-`T[]` - A new array containing the sampled elements.
+`T[]` - A new array containing the sampled elements
 
 ## Usage
 

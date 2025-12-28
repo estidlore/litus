@@ -1,6 +1,6 @@
 # omit
 
-Creates a copy of an object without the specified keys.
+Creates a copy of an object without the specified keys
 
 `Since v1.2.1`
 

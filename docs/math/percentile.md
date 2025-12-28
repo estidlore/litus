@@ -2,7 +2,7 @@
 
 Calculates given percentile(s) of an array of numbers.
 If weights (occurrences) are provided, it returns weighted percentiles;
-otherwise, it returns the linear interpolation of percentiles.
+otherwise, it returns the linear interpolation of percentiles
 
 `Since v1.2.1`
 

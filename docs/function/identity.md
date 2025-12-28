@@ -1,17 +1,17 @@
 # identity
 
 Returns the input value unchanged. This function is often used as a default
-or placeholder function.
+or placeholder function
 
 `Since v1.5.0`
 
 ## Arguments
 
-- `value: T` - The value to return.
+- `value: T` - The value to return
 
 ## Returns
 
-`T` - The same value that was provided as input.
+`T` - The same value that was provided as input
 
 ## Usage
 

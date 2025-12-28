@@ -1,7 +1,7 @@
 # debounce
 
 Given a function, creates a new function that if it's called multiple times
-consecutively, only the last call is executed.
+consecutively, only the last call is executed
 
 `Since v1.1.0`
 

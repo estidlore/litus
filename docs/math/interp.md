@@ -1,6 +1,6 @@
 # interp
 
-Calculates the linear interpolation of monotolically increasing points (xp, fp).
+Calculates the linear interpolation of monotolically increasing points (xp, fp)
 
 `Since v1.2.1`
 
@@ -8,7 +8,7 @@ Calculates the linear interpolation of monotolically increasing points (xp, fp).
 
 - `x: number[]`
 - `xp: number[]` - Must be increasing
-- `fp: number[]` - Must be increasing and same size of `xp`.
+- `fp: number[]` - Must be increasing and same size of `xp`
 
 ## Returns
 

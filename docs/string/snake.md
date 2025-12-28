@@ -1,17 +1,17 @@
 # snake
 
 Converts a string to snake_case. It splits the string into words, turns them
-into lowercase and then joins them together with the "\_" separator.
+into lowercase and then joins them together with the "\_" separator
 
 `Since v1.4.0`
 
 ## Arguments
 
-- `str: string` - The input string to be converted to snake_case.
+- `str: string` - The input string to be converted to snake_case
 
 ## Returns
 
-`string` - The snake_case version of the input string.
+`string` - The snake_case version of the input string
 
 ## Usage
 

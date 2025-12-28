@@ -1,6 +1,6 @@
 # pick
 
-Creates a copy of an object with the specified keys only.
+Creates a copy of an object with the specified keys only
 
 `Since v1.2.1`
 

@@ -1,6 +1,6 @@
 # entries
 
-Retrieves a strongly-typed array of the entries (key, value) of an object.
+Retrieves a strongly-typed array of the entries (key, value) of an object
 
 `Since v1.0.0`
 

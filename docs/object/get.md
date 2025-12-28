@@ -1,7 +1,7 @@
 # get
 
 Gets a value at nested path of object or array. Returns the fallback value if
-the path is not found.
+the path is not found
 
 `Since v1.3.1`
 

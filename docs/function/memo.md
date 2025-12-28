@@ -2,7 +2,7 @@
 
 Creates a function that caches the output to speed up complex computations. It
 also receives an optional function to get the cache id of given args and an
-optional ttl in ms to expire the cache.
+optional ttl in ms to expire the cache
 
 `Since v1.2.1`
 

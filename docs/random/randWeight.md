@@ -1,16 +1,16 @@
 # randWeight
 
-Generates a random index based on the provided weights.
+Generates a random index based on the provided weights
 
 `Since v1.5.0`
 
 ## Arguments
 
-- `weights: number[]` - Array of weights, where each weight corresponds to the likelihood of selecting the respective index.
+- `weights: number[]` - Array of weights, where each weight corresponds to the likelihood of selecting the respective index
 
 ## Returns
 
-`number` - The index selected based on the weights.
+`number` - The index selected based on the weights
 
 ## Usage
 

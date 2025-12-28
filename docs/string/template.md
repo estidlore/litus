@@ -7,13 +7,13 @@ replaces them with corresponding values from the provided data object
 
 ## Arguments
 
-- `str: string` - The string containing placeholders to be replaced.
-- `data: object` - The object containing values to replace the placeholders.
+- `str: string` - The string containing placeholders to be replaced
+- `data: object` - The object containing values to replace the placeholders
 
 ## Returns
 
 `string` - The transformed string with placeholders replaced by their
-corresponding values.
+corresponding values
 
 ## Usage
 
