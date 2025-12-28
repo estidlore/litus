@@ -23,3 +23,8 @@ _.trim("  hello  ");
 _.trim("-_hello--", "-_");
 // => "hello"
 ```
+
+## Related Functions
+
+- [split](split.md)
+- [template](template.md)

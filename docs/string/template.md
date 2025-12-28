@@ -30,3 +30,5 @@ _.template("{{name.first}} {{name.last}} is {{age}}", {
 ## Related Functions
 
 - [get](../object/get.md) (dependency)
+- [split](split.md)
+- [trim](trim.md)
