@@ -6,11 +6,11 @@ Returns the last element of an array
 
 ## Arguments
 
-- `arr: T[]` – The array
+- `arr: A` – The array
 
 ## Returns
 
-`T | undefined` – The last element, or undefined if the array is empty
+`Last<A>` – The last element, or undefined if the array is empty
 
 ## Usage
 
@@ -22,3 +22,7 @@ _.last(["a", "b", "c"]);
 _.last([]);
 // => undefined
 ```
+
+## Related Functions
+
+- [first](first.md)
