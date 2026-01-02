@@ -12,6 +12,7 @@
 - [findAll](array/findAll.md)
 - [findAllIdx](array/findAllIdx.md)
 - [findIdx](array/findIdx.md)
+- [first](array/first.md)
 - [from](array/from.md)
 - [group](array/group.md)
 - [last](array/last.md)
