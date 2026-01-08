@@ -11,6 +11,7 @@ export * from "./from";
 export * from "./group";
 export * from "./groupBy";
 export * from "./last";
+export * from "./map";
 export * from "./max";
 export * from "./min";
 export * from "./range";

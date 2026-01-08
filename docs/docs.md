@@ -16,6 +16,7 @@
 - [from](array/from.md)
 - [group](array/group.md)
 - [last](array/last.md)
+- [map](array/map.md)
 - [max](array/max.md)
 - [min](array/min.md)
 - [range](array/range.md)
