@@ -1,4 +1,4 @@
-type MapFn<T, U> = (el: T, idx: number, arr: ArrayLike<T>) => U;
+export type MapFn<T, U> = (el: T, idx: number, arr: ArrayLike<T>) => U;
 
 /**
  * Creates an array with the results of calling a mapping function on each

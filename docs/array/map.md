@@ -22,3 +22,7 @@ import * as _ from "litus";
 _.map(["a", "b", "c"], (el) => el.toUpperCase());
 // => ["A", "B", "C"]
 ```
+
+## Related Functions
+
+- [reduce](reduce.md)
