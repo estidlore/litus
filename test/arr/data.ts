@@ -22,5 +22,7 @@ const balls: Ball[] = [
   }
 ];
 
-export { balls };
+const abcArrLike = { 0: "a", 1: "b", 2: "c", length: 3 };
+
+export { abcArrLike, balls };
 export type { Ball };

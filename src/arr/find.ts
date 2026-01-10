@@ -10,7 +10,7 @@ import type { Predicate } from "./types";
  * @returns First matching element, or undefined if none found
  */
 export const find = <T>(
-  arr: T[],
+  arr: ArrayLike<T>,
   predicate: Predicate<T>,
   from = 0,
   to = arr.length

@@ -1,6 +1,6 @@
 import { findIdx } from "/arr";
 
-import { balls } from "./data";
+import { abcArrLike, balls } from "./data";
 
 describe("findIdx", () => {
   it("returns index of first matching item", () => {
@@ -11,5 +11,10 @@ describe("findIdx", () => {
   it("returns -1 when there are no matches", () => {
     expect(findIdx(balls, (el) => el.name === "Soccer")).toBe(-1);
     expect(findIdx(balls, (el) => el.size === "small", 1)).toBe(-1);
+  });
+
+  it("works with array-like objects", () => {
+    expect(findIdx(abcArrLike, (el) => el === "b")).toBe(1);
+    expect(findIdx(abcArrLike, (el) => el === "A")).toBe(-1);
   });
 });

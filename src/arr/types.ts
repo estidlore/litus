@@ -1,4 +1,4 @@
-type Predicate<T, R = boolean> = (val: T, idx: number, arr: T[]) => R;
+type Predicate<T, R = boolean> = (val: T, idx: number, arr: ArrayLike<T>) => R;
 
 type Tuple<T, N extends number, R extends T[] = []> = R["length"] extends N
   ? R
