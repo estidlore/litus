@@ -7,6 +7,7 @@ export * from "./findIdx";
 export * from "./findAll";
 export * from "./findAllIdx";
 export * from "./first";
+export * from "./forEach";
 export * from "./from";
 export * from "./group";
 export * from "./groupBy";

@@ -25,4 +25,5 @@ _.map(["a", "b", "c"], (el) => el.toUpperCase());
 
 ## Related Functions
 
+- [forEach](forEach.md)
 - [reduce](reduce.md)
