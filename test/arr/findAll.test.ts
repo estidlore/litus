@@ -1,6 +1,6 @@
 import { findAll } from "/arr";
 
-import { balls } from "./data";
+import { abcArrLike, balls } from "./data";
 
 describe("findAll", () => {
   it("returns matching items", () => {
@@ -8,5 +8,10 @@ describe("findAll", () => {
       balls[0],
       balls[2]
     ]);
+  });
+
+  it("works with array-like objects", () => {
+    expect(findAll(abcArrLike, (el) => el !== "b")).toStrictEqual(["a", "c"]);
+    expect(findAll(abcArrLike, (el) => el === "d")).toStrictEqual([]);
   });
 });

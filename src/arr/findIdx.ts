@@ -9,7 +9,7 @@ import type { Predicate } from "./types";
  * @returns Index of the first matching element, or -1 if none found
  */
 export const findIdx = <T>(
-  arr: T[],
+  arr: ArrayLike<T>,
   predicate: Predicate<T>,
   from = 0,
   to = arr.length

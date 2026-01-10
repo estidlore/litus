@@ -10,7 +10,7 @@ import type { Predicate } from "./types";
  * @returns Array of matching indices
  */
 export const findAllIdx = <T>(
-  arr: T[],
+  arr: ArrayLike<T>,
   predicate: Predicate<T>,
   from = 0,
   to = arr.length,
