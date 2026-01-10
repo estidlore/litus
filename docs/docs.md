@@ -13,6 +13,7 @@
 - [findAllIdx](array/findAllIdx.md)
 - [findIdx](array/findIdx.md)
 - [first](array/first.md)
+- [forEach](array/forEach.md)
 - [from](array/from.md)
 - [group](array/group.md)
 - [last](array/last.md)
