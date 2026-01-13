@@ -7,7 +7,6 @@ export type ReduceFn<T, U> = (
 
 /**
  * Applies a reducer function to each element accumulating a single value
- *
  * @param arr - The array-like object to reduce
  * @param fn - The reducer function
  * @param initial - The initial accumulator value

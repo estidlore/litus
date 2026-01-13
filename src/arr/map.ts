@@ -3,7 +3,6 @@ export type MapFn<T, U> = (el: T, idx: number, arr: ArrayLike<T>) => U;
 /**
  * Creates an array with the results of calling a mapping function on each
  * element
- *
  * @param arr - The array-like object to map over
  * @param fn - Function to apply to each element
  * @returns A new array with the results of calling `fn` on each element

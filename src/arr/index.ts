@@ -15,6 +15,7 @@ export * from "./last";
 export * from "./map";
 export * from "./max";
 export * from "./min";
+export * from "./none";
 export * from "./range";
 export * from "./reduce";
 export * from "./sort";

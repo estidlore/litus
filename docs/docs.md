@@ -20,6 +20,7 @@
 - [map](array/map.md)
 - [max](array/max.md)
 - [min](array/min.md)
+- [none](array/none.md)
 - [range](array/range.md)
 - [reduce](array/reduce.md)
 - [sort](array/sort.md)
