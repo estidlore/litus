@@ -12,3 +12,16 @@ Returns `true` if no element satisfies the predicate, false otherwise
 ## Returns
 
 `boolean` - `true` if no element satisfies the predicate, otherwise `false`
+
+## Usage
+
+```ts
+import * as _ from "litus";
+
+_.none([1, 2, 3], (x) => x > 5); // true
+_.none([1, 2, 3], (x) => x === 2); // false
+```
+
+## Related Functions
+
+- [all](all.md)
