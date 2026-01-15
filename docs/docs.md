@@ -5,6 +5,7 @@
 ### Array
 
 - [all](array/all.md)
+- [any](array/any.md)
 - [binSearch](array/binSearch.md)
 - [chunk](array/chunk.md)
 - [countBy](array/countBy.md)
