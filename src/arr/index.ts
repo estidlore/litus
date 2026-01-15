@@ -1,4 +1,5 @@
 export * from "./all";
+export * from "./any";
 export * from "./binSearch";
 export * from "./chunk";
 export * from "./countBy";

@@ -1,7 +1,7 @@
 import type { Predicate } from "./types";
 
 /**
- * Returns `true` if no element satisfies the predicate, false otherwise
+ * Returns `true` if no element satisfies the predicate, `false` otherwise
  * @param arr - The array-like object to check
  * @param predicate - Function to test each element
  * @returns `true` if no element satisfies the predicate, otherwise `false`

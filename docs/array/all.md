@@ -1,6 +1,6 @@
 # all
 
-Returns `true` if all the elements satisfy the predicate, false otherwise
+Returns `true` if all the elements satisfy the predicate, `false` otherwise
 
 `Since v1.7.0`
 
@@ -24,4 +24,5 @@ _.all([1, 2, 3], (x) => x === 2); // false
 
 ## Related Functions
 
+- [any](any.md)
 - [none](none.md)

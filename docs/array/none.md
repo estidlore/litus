@@ -1,6 +1,6 @@
 # none
 
-Returns `true` if no element satisfies the predicate, false otherwise
+Returns `true` if no element satisfies the predicate, `false` otherwise
 
 `Since v1.7.0`
 
@@ -25,3 +25,4 @@ _.none([1, 2, 3], (x) => x === 2); // false
 ## Related Functions
 
 - [all](all.md)
+- [any](any.md)
