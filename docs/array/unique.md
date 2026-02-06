@@ -20,3 +20,9 @@ import * as _ from "litus";
 _.unique([3, 3, 1, 2, 2, 3]);
 // => [3, 1, 2]
 ```
+
+## Related Functions
+
+- [difference](difference.md)
+- [intersection](intersection.md)
+- [union](union.md)

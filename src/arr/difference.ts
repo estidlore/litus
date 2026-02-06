@@ -19,7 +19,7 @@ export const difference = <T>(arr: T[], arr2: T[]): T[] => {
   }
   const res = new Array(size);
   for (let i = 0, j = 0; i < arr.length; i++) {
-    const count = map.get(arr[i]) ?? 0;
+    const count = map.get(arr[i])!;
     if (count > 0) {
       res[j++] = arr[i];
       map.set(arr[i], count - 1);

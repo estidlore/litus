@@ -14,6 +14,7 @@ export * from "./forEach";
 export * from "./from";
 export * from "./group";
 export * from "./groupBy";
+export * from "./intersection";
 export * from "./last";
 export * from "./map";
 export * from "./max";

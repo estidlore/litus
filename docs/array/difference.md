@@ -21,3 +21,9 @@ import * as _ from "litus";
 _.difference([1, 2, 2, 1, 3], [1, 2]);
 // => [1, 2, 3]
 ```
+
+## Related Functions
+
+- [intersection](intersection.md)
+- [union](union.md)
+- [unique](unique.md)
