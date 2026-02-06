@@ -19,6 +19,7 @@
 - [forEach](array/forEach.md)
 - [from](array/from.md)
 - [group](array/group.md)
+- [intersection](array/intersection.md)
 - [last](array/last.md)
 - [map](array/map.md)
 - [max](array/max.md)
