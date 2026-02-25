@@ -15,6 +15,7 @@ export * from "./from";
 export * from "./group";
 export * from "./groupBy";
 export * from "./intersection";
+export * from "./isArrLike";
 export * from "./last";
 export * from "./map";
 export * from "./max";

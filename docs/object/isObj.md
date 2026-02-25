@@ -31,3 +31,4 @@ _.isObj(null);
 - [equal](equal.md) (dependent)
 - [get](get.md) (dependent)
 - [set](set.md) (dependent)
+- [isArrLike](../array/isArrLike.md) (dependent)
