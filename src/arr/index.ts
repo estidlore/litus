@@ -23,6 +23,7 @@ export * from "./min";
 export * from "./none";
 export * from "./range";
 export * from "./reduce";
+export * from "./size";
 export * from "./sort";
 export * from "./transpose";
 export * from "./union";

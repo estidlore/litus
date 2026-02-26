@@ -28,6 +28,7 @@
 - [none](array/none.md)
 - [range](array/range.md)
 - [reduce](array/reduce.md)
+- [size](array/size.md)
 - [sort](array/sort.md)
 - [transpose](array/transpose.md)
 - [union](array/union.md)

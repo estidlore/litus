@@ -32,3 +32,4 @@ _.isObj(null);
 - [get](get.md) (dependent)
 - [set](set.md) (dependent)
 - [isArrLike](../array/isArrLike.md) (dependent)
+- [size](../array/size.md) (dependent)
