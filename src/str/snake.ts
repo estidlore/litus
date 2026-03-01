@@ -1,4 +1,5 @@
 import { words } from "./_words";
+import { lower } from "./lower";
 
 /**
  * Converts a string to snake_case
@@ -6,7 +7,5 @@ import { words } from "./_words";
  * @returns snake_case version of the input string
  */
 export const snake = (str: string): string => {
-  return words(str)
-    .map((str) => str.toLowerCase())
-    .join("_");
+  return words(str).map(lower).join("_");
 };

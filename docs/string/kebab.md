@@ -30,6 +30,7 @@ _.kebab("helloITWorld");
 
 ## Related Functions
 
+- [lower](lower.md) (dependency)
 - [camel](camel.md)
 - [pascal](pascal.md)
 - [snake](snake.md)
