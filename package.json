@@ -1,6 +1,6 @@
 {
   "name": "litus",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "description": "Commonly used utilities for JS and TS",
   "author": {
     "email": "estidlore@outlook.com",
@@ -38,7 +38,7 @@
     "access": "public"
   },
   "repository": {
-    "url": "https://github.com/estidlore/litus",
+    "url": "git+https://github.com/estidlore/litus.git",
     "type": "git"
   },
   "scripts": {
