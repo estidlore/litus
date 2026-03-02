@@ -25,5 +25,6 @@ _.capitalize("hElLo");
 
 ## Related Functions
 
-- [camel](capitalize.md) (dependent)
+- [camel](camel.md) (dependent)
 - [pascal](pascal.md) (dependent)
+- [lower](lower.md)

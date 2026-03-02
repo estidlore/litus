@@ -95,6 +95,7 @@
 - [camel](string/camel.md)
 - [capitalize](string/capitalize.md)
 - [kebab](string/kebab.md)
+- [lower](string/lower.md)
 - [pascal](string/pascal.md)
 - [snake](string/snake.md)
 - [split](string/split.md)

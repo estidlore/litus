@@ -1,6 +1,7 @@
 export * from "./camel";
 export * from "./capitalize";
 export * from "./kebab";
+export * from "./lower";
 export * from "./pascal";
 export * from "./snake";
 export * from "./split";
