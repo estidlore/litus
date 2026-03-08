@@ -101,3 +101,4 @@
 - [split](string/split.md)
 - [template](string/template.md)
 - [trim](string/trim.md)
+- [upper](string/upper.md)

@@ -28,3 +28,4 @@ _.capitalize("hElLo");
 - [camel](camel.md) (dependent)
 - [pascal](pascal.md) (dependent)
 - [lower](lower.md)
+- [upper](upper.md)

@@ -7,3 +7,4 @@ export * from "./snake";
 export * from "./split";
 export * from "./template";
 export * from "./trim";
+export * from "./upper";
