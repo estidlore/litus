@@ -100,5 +100,6 @@
 - [snake](string/snake.md)
 - [split](string/split.md)
 - [template](string/template.md)
+- [title](string/title.md)
 - [trim](string/trim.md)
 - [upper](string/upper.md)

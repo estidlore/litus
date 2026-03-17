@@ -6,5 +6,6 @@ export * from "./pascal";
 export * from "./snake";
 export * from "./split";
 export * from "./template";
+export * from "./title";
 export * from "./trim";
 export * from "./upper";
