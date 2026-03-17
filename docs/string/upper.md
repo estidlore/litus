@@ -25,3 +25,4 @@ _.upper("Hello World!");
 
 - [capitalize](capitalize.md)
 - [lower](lower.md)
+- [title](title.md)

@@ -26,4 +26,5 @@ _.lower("Hello World!");
 - [kebab](kebab.md) (dependent)
 - [snake](snake.md) (dependent)
 - [capitalize](capitalize.md)
+- [title](title.md)
 - [upper](upper.md)
