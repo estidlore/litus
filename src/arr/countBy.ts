@@ -6,7 +6,7 @@
  */
 export const countBy = <T, K extends PropertyKey>(
   arr: T[],
-  getKey: (obj: T) => K
+  getKey: (obj: T) => K,
 ): Record<K, number> => {
   const res = {} as Record<K, number>;
   for (let i = 0; i < arr.length; i++) {

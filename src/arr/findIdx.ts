@@ -12,7 +12,7 @@ export const findIdx = <T>(
   arr: ArrayLike<T>,
   predicate: Predicate<T>,
   from = 0,
-  to = arr.length
+  to = arr.length,
 ): number => {
   for (let i = from; i < to; i++) {
     if (predicate(arr[i], i, arr)) {

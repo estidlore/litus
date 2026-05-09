@@ -2,10 +2,10 @@ export type Last<A extends readonly [] | readonly unknown[]> =
   A extends readonly [...unknown[], infer L]
     ? L
     : A extends readonly []
-    ? undefined
-    : A extends readonly [unknown, infer F, ...infer L]
-    ? Last<[F, ...L]>
-    : A[number];
+      ? undefined
+      : A extends readonly [unknown, infer F, ...infer L]
+        ? Last<[F, ...L]>
+        : A[number];
 
 /**
  * Gets the last element of an array
@@ -13,7 +13,7 @@ export type Last<A extends readonly [] | readonly unknown[]> =
  * @returns The last element
  */
 export const last = <A extends readonly [] | readonly unknown[]>(
-  arr: A
+  arr: A,
 ): Last<A> => {
   return arr[arr.length - 1] as Last<A>;
 };

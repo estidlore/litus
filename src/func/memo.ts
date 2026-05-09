@@ -11,7 +11,7 @@ import type { Primitive } from "/types";
 export const memo = <T extends unknown[], R>(
   fn: (...args: T) => R,
   idFn: (arg: T) => Primitive = JSON.stringify,
-  ttl = 0
+  ttl = 0,
 ): ((...args: T) => R) => {
   const cache = new Map<Primitive, { val: R; exp?: number }>();
   return (...args: T): R => {
@@ -22,7 +22,7 @@ export const memo = <T extends unknown[], R>(
         return cached.val;
       }
     }
-    const val = fn.apply(undefined, args);
+    const val = fn(...args);
     const exp = ttl <= 0 ? undefined : Date.now() + ttl;
     cache.set(key, { exp, val });
     return val;

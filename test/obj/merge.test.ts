@@ -6,7 +6,7 @@ describe("merge", () => {
   it("returns object from shallow merge of objects", () => {
     const extra = {
       gender: "Male",
-      height: 175
+      height: 175,
     };
     const union = merge(person, extra);
     const expected = Object.assign({}, person, extra);

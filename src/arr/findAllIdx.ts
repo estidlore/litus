@@ -14,7 +14,7 @@ export const findAllIdx = <T>(
   predicate: Predicate<T>,
   from = 0,
   to = arr.length,
-  limit = arr.length
+  limit = arr.length,
 ): number[] => {
   const res: number[] = [];
   for (let i = from; i < to; i++) {

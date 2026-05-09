@@ -22,6 +22,7 @@ accessor `getVal` to extract the value for comparison from each element
 
 ```ts
 import * as _ from "litus";
+
 const arr = [{ v: 2 }, { v: 4 }, { v: 6 }];
 
 binSearch(arr, 2, (el) => el.v);

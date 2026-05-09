@@ -11,7 +11,7 @@ describe("countBy", () => {
     const arr = [1, 2, 3, 4, 5];
     expect(countBy(arr, (x) => (x % 2 === 0 ? "even" : "odd"))).toEqual({
       even: 2,
-      odd: 3
+      odd: 3,
     });
   });
 });

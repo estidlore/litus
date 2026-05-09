@@ -12,7 +12,7 @@ export const binSearch = <T>(
   target: number,
   getVal: (el: T) => number,
   start = 0,
-  end = arr.length
+  end = arr.length,
 ): number => {
   if (start < 0 || end > arr.length || start > end) {
     throw new Error("Invalid start or end of search");

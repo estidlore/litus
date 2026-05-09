@@ -8,18 +8,18 @@ const balls: Ball[] = [
   {
     colors: ["black", "white"],
     name: "Baseball",
-    size: "small"
+    size: "small",
   },
   {
     colors: ["green", "red", "blue"],
     name: "Beach",
-    size: "big"
+    size: "big",
   },
   {
     colors: ["black", "orange"],
     name: "Basketball",
-    size: "big"
-  }
+    size: "big",
+  },
 ];
 
 const abcArrLike = { 0: "a", 1: "b", 2: "c", length: 3 };

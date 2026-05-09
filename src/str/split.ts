@@ -1,6 +1,6 @@
 export type Split<
   S extends string,
-  D extends string
+  D extends string,
 > = S extends `${infer T}${D}${infer U}` ? [T, ...Split<U, D>] : [S];
 
 /**
@@ -12,7 +12,7 @@ export type Split<
  */
 export const split = <S extends string, D extends string>(
   str: S,
-  delimiter: D
+  delimiter: D,
 ): Split<S, D> => {
   return str.split(delimiter) as Split<S, D>;
 };

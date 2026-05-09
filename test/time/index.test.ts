@@ -32,24 +32,24 @@ describe("Time", () => {
     const t = new Time(Math.random() * 1000, "d");
 
     expect(t.format()).toMatch(
-      /^\d{1,2}\/\d{1,2}\/\d{2}, \d{1,2}:\d{2} (A|P)M$/
+      /^\d{1,2}\/\d{1,2}\/\d{2}, \d{1,2}:\d{2} (A|P)M$/,
     );
     expect(t.format("date")).toMatch(/^\b[A-Za-z]{3} \d{1,2}, \d{4}\b$/);
     expect(t.format("time")).toMatch(/^\d{1,2}:\d{2}:\d{2} (A|P)M$/);
     Time.formatOptions = {
       date: {
-        dateStyle: "short"
+        dateStyle: "short",
       },
       full: {
         dateStyle: "medium",
-        timeStyle: "medium"
+        timeStyle: "medium",
       },
       time: {
-        timeStyle: "short"
-      }
+        timeStyle: "short",
+      },
     };
     expect(t.format("full", "en-US")).toMatch(
-      /^\b[A-Za-z]{3} \d{1,2}, \d{4}\b, \d{1,2}:\d{2}:\d{2} (A|P)M$/
+      /^\b[A-Za-z]{3} \d{1,2}, \d{4}\b, \d{1,2}:\d{2}:\d{2} (A|P)M$/,
     );
     expect(t.format("date")).toMatch(/^\d{1,2}\/\d{1,2}\/\d{2}$/);
     expect(t.format("time")).toMatch(/^\d{1,2}:\d{2} (A|P)M$/);

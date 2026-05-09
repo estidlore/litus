@@ -22,7 +22,7 @@ import * as _ from "litus";
 
 _.template("{{name.first}} {{name.last}} is {{age}}", {
   age: 18,
-  name: { first: "John", last: "Doe" }
+  name: { first: "John", last: "Doe" },
 });
 // => "John Doe is 18"
 ```

@@ -4,7 +4,7 @@
  * @returns Function accepting an array of arguments
  */
 export const apply = <T extends unknown[], R>(
-  fn: (...args: T) => R
+  fn: (...args: T) => R,
 ): ((arg: T) => R) => {
-  return (arg: T): R => fn.apply(undefined, arg);
+  return (arg: T): R => fn(...arg);
 };

@@ -8,16 +8,16 @@ module.exports = {
       branches: 100,
       functions: 100,
       lines: 100,
-      statements: 100
-    }
+      statements: 100,
+    },
   },
   moduleDirectories: ["node_modules", "src"],
   moduleNameMapper: {
-    "^/(.*)$": "<rootDir>/src/$1"
+    "^/(.*)$": "<rootDir>/src/$1",
   },
   preset: "ts-jest",
   testEnvironment: "node",
   transform: {
-    "^.+\\.ts$": "ts-jest"
-  }
+    "^.+\\.ts$": "ts-jest",
+  },
 };

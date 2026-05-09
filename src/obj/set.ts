@@ -3,7 +3,7 @@ import { isObj } from "./isObj";
 export type SetPath<
   Obj extends object,
   P extends string,
-  Val
+  Val,
 > = P extends `${infer K}.${infer Rest}`
   ? {
       [Key in K | keyof Obj]: Key extends K
@@ -19,8 +19,8 @@ export type SetPath<
               Val
             >
         : Key extends keyof Obj
-        ? Obj[Key]
-        : never;
+          ? Obj[Key]
+          : never;
     }
   : Obj;
 
@@ -34,7 +34,7 @@ export type SetPath<
 export const set = <T extends object, P extends string, V>(
   obj: T,
   path: P,
-  value: V
+  value: V,
 ): SetPath<T, P, V> => {
   let val = obj as Record<string, unknown>;
   const keys = path.split(".");

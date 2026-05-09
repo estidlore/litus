@@ -13,7 +13,7 @@ export const find = <T>(
   arr: ArrayLike<T>,
   predicate: Predicate<T>,
   from = 0,
-  to = arr.length
+  to = arr.length,
 ): T | undefined => {
   return arr[findIdx(arr, predicate, from, to)];
 };

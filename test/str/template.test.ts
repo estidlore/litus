@@ -6,8 +6,8 @@ describe("template", () => {
       age: 18,
       name: {
         first: "John",
-        last: "Doe"
-      }
+        last: "Doe",
+      },
     });
     expect(res).toBe("John Doe is 18");
   });

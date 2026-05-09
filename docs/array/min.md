@@ -20,7 +20,7 @@ import * as _ from "litus";
 
 const people = [
   { age: 18, name: "John" },
-  { age: 30, name: "Jane" }
+  { age: 30, name: "Jane" },
 ];
 
 _.min(people, (el) => el.age);
