@@ -12,10 +12,10 @@ const person: Person = {
   birth: {
     day: 1,
     month: 2,
-    year: 2000
+    year: 2000,
   },
   id: 12,
-  name: ["John", "Doe"]
+  name: ["John", "Doe"],
 };
 
 export type { Person };

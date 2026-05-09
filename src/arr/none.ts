@@ -8,7 +8,7 @@ import type { Predicate } from "./types";
  */
 export const none = <T>(
   arr: ArrayLike<T>,
-  predicate: Predicate<T>
+  predicate: Predicate<T>,
 ): boolean => {
   for (let i = 0; i < arr.length; i++) {
     if (predicate(arr[i], i, arr)) {

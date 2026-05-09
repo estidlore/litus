@@ -16,7 +16,7 @@ const randInt = (n: number): number => Math.floor(Math.random() * n);
 export const fisherYates = <T>(
   data: T[],
   size: number,
-  weights?: number[]
+  weights?: number[],
 ): T[] => {
   if (size <= 0) {
     return [];

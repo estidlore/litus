@@ -22,25 +22,25 @@ describe("set", () => {
     const data2 = set(data1, "b.c.d", "Hi");
     expect(data2).toStrictEqual({
       a: 3,
-      b: { c: { d: "Hi" } }
+      b: { c: { d: "Hi" } },
     });
 
     const data3 = set(data2, "b.e", true);
     expect(data3).toStrictEqual({
       a: 3,
-      b: { c: { d: "Hi" }, e: true }
+      b: { c: { d: "Hi" }, e: true },
     });
 
     const data4 = set(data3, "b.c", 4);
     expect(data4).toStrictEqual({
       a: 3,
-      b: { c: 4, e: true }
+      b: { c: 4, e: true },
     });
 
     const data5 = set(data4, "a.d", 2);
     expect(data5).toStrictEqual({
       a: { d: 2 },
-      b: { c: 4, e: true }
+      b: { c: 4, e: true },
     });
   });
 });

@@ -23,7 +23,7 @@ const arr = [
   { type: "fruit", name: "banana" },
   { type: "vegetable", name: "carrot" },
   { type: "fruit", name: "orange" },
-  { type: "vegetable", name: "lettuce" }
+  { type: "vegetable", name: "lettuce" },
 ];
 
 _.countBy(arr, (el) => el.type);

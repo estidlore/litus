@@ -2,7 +2,7 @@ export type ReduceFn<T, U> = (
   acc: U,
   val: T,
   idx: number,
-  arr: ArrayLike<T>
+  arr: ArrayLike<T>,
 ) => U;
 
 /**
@@ -15,7 +15,7 @@ export type ReduceFn<T, U> = (
 export const reduce = <T, U>(
   arr: ArrayLike<T>,
   fn: ReduceFn<T, U>,
-  initial: U
+  initial: U,
 ): U => {
   let res = initial;
   for (let i = 0; i < arr.length; i++) {

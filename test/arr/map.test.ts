@@ -5,7 +5,7 @@ describe("map", () => {
     const arr = ["a", "b", "c"];
     const res = map(
       arr,
-      (x, i, arr) => x + String(i) + "." + String(arr.length)
+      (x, i, arr) => x + String(i) + "." + String(arr.length),
     );
     expect(res).toStrictEqual(["a0.3", "b1.3", "c2.3"]);
     expect(res).not.toBe(arr);

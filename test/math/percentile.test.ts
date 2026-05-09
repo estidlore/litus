@@ -28,10 +28,10 @@ describe("percentile", () => {
 
   it("fails when weights are invalid", () => {
     expect(() => percentile(x, p, [1, 2, 1, 2, -1])).toThrow(
-      "Weights must be non-negative"
+      "Weights must be non-negative",
     );
     expect(() => percentile(x, p, [1, 2, 3])).toThrow(
-      "Weights must be the same length as the array"
+      "Weights must be the same length as the array",
     );
   });
 });

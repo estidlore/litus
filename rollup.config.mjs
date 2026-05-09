@@ -1,15 +1,15 @@
-import dts from "rollup-plugin-dts";
 import typescript from "@rollup/plugin-typescript";
+import dts from "rollup-plugin-dts";
 
 const tsconfig = "tsconfig.build.json";
 
 const output = {
   generatedCode: {
-    constBindings: true
+    constBindings: true,
   },
   preserveModules: false,
   sourcemap: true,
-  strict: true
+  strict: true,
 };
 
 export default [
@@ -18,9 +18,9 @@ export default [
     input: "src/index.ts",
     output: {
       file: "dist/index.d.ts",
-      format: "es"
+      format: "es",
     },
-    plugins: [dts({ tsconfig })]
+    plugins: [dts({ tsconfig })],
   },
   // esm
   {
@@ -28,9 +28,9 @@ export default [
     output: {
       ...output,
       file: "dist/index.esm.js",
-      format: "esm"
+      format: "esm",
     },
-    plugins: [typescript({ tsconfig })]
+    plugins: [typescript({ tsconfig })],
   },
   // cjs
   {
@@ -38,8 +38,8 @@ export default [
     output: {
       ...output,
       file: "dist/index.cjs.js",
-      format: "cjs"
+      format: "cjs",
     },
-    plugins: [typescript({ tsconfig })]
-  }
+    plugins: [typescript({ tsconfig })],
+  },
 ];

@@ -24,7 +24,7 @@ const objs = [
   { color: "red", size: "S" },
   { color: "green", size: "M" },
   { color: "blue", size: "L" },
-  { color: "red", size: "XL" }
+  { color: "red", size: "XL" },
 ];
 
 _.find(objs, (el) => el.color === "red");

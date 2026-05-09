@@ -7,7 +7,7 @@ describe("pick", () => {
     const picked = pick(person, ["birth", "id"]);
     expect(picked).toStrictEqual({
       birth: person.birth,
-      id: person.id
+      id: person.id,
     });
   });
 });

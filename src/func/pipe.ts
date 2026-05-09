@@ -10,17 +10,17 @@ type LastFnReturn<T> = T extends [...unknown[], (arg: unknown) => infer R]
 type PipeOps<T extends UnaryFn[] = UnaryFn[]> = T extends [
   infer F1 extends UnaryFn,
   infer F2 extends UnaryFn,
-  ...infer Rest extends UnaryFn[]
+  ...infer Rest extends UnaryFn[],
 ]
   ? F2 extends (arg: ReturnType<F1>) => unknown
     ? [F1, ...PipeOps<[F2, ...Rest]>]
     : []
   : T extends [UnaryFn]
-  ? T
-  : [];
+    ? T
+    : [];
 
 export type PipedFn<T extends UnaryFn[]> = (
-  arg: FirstFnArg<T>
+  arg: FirstFnArg<T>,
 ) => LastFnReturn<T>;
 
 /**

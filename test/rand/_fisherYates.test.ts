@@ -41,10 +41,10 @@ describe("_fisherYates", () => {
 
   it("throws if weights are invalid", () => {
     expect(() => fisherYates([1, 2, 3], 2, [1, 2])).toThrow(
-      "Weights must have the same length as the data array"
+      "Weights must have the same length as the data array",
     );
     expect(() => fisherYates([1, 2, 3], 2, [1, -1, 2])).toThrow(
-      "Weights cannot contain negative values."
+      "Weights cannot contain negative values.",
     );
   });
 });

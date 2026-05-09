@@ -11,20 +11,20 @@ export class Time {
     h: 36e5,
     m: 6e4,
     ms: 1,
-    s: 1e3
+    s: 1e3,
   };
 
   public static formatOptions: TimeFormatOptions = {
     date: {
-      dateStyle: "medium"
+      dateStyle: "medium",
     },
     full: {
       dateStyle: "short",
-      timeStyle: "short"
+      timeStyle: "short",
     },
     time: {
-      timeStyle: "medium"
-    }
+      timeStyle: "medium",
+    },
   };
   public static locales?: Intl.LocalesArgument;
 
@@ -40,7 +40,7 @@ export class Time {
   public static convert(
     val: number,
     from: TimeUnit,
-    to: TimeUnit = "ms"
+    to: TimeUnit = "ms",
   ): number {
     const ms = Math.round(Time.UNITS[from] * val);
     return ms / Time.UNITS[to];
@@ -53,7 +53,7 @@ export class Time {
   public format(
     mode: TimeFormat = "full",
     local: Intl.LocalesArgument = Time.locales,
-    opts: Intl.DateTimeFormatOptions = {}
+    opts: Intl.DateTimeFormatOptions = {},
   ): string {
     const options = merge(Time.formatOptions[mode], opts);
     return this.date.toLocaleString(local, options);

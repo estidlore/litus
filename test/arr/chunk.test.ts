@@ -4,7 +4,7 @@ describe("chunk", () => {
   it("returns array of chunks", () => {
     expect(chunk([1, 2, 3, 4], 2)).toStrictEqual([
       [1, 2],
-      [3, 4]
+      [3, 4],
     ]);
   });
 

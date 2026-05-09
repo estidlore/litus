@@ -22,7 +22,7 @@ import * as _ from "litus";
 
 const person = {
   birth: { day: 1, month: 2, year: 2000 },
-  name: ["John", "Doe"]
+  name: ["John", "Doe"],
 };
 _.get(person, "birth");
 // => { day: 1, month: 2, year: 2000 }

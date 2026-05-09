@@ -5,10 +5,10 @@ describe("randWeight", () => {
   it("throws an error for invalid weights array", () => {
     expect(() => randWeight([])).toThrow("Weights array cannot be empty");
     expect(() => randWeight([1, -2, 3])).toThrow(
-      "Weights array cannot contain negative values"
+      "Weights array cannot contain negative values",
     );
     expect(() => randWeight([0, 0, 0])).toThrow(
-      "Total weight must be greater than zero"
+      "Total weight must be greater than zero",
     );
   });
 

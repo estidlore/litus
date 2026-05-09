@@ -1,0 +1,9 @@
+{
+  "editor.formatOnSave": true,
+  "editor.rulers": [
+    {
+      "column": 80,
+      "color": "#888"
+    }
+  ]
+}

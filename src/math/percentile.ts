@@ -49,7 +49,7 @@ const _weighted = (x: number[], p: number[], w: number[]): number[] => {
 export const percentile = <T extends Quantity>(
   x: number[],
   p: T,
-  weights?: number[]
+  weights?: number[],
 ): QuantityT<T> => {
   if (typeof p === "number") {
     return percentile(x, [p], weights)[0] as QuantityT<T>;

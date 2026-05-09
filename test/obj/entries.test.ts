@@ -7,16 +7,17 @@ describe("entries", () => {
     expect(entries(person.birth)).toStrictEqual([
       ["day", 1],
       ["month", 2],
-      ["year", 2000]
+      ["year", 2000],
     ]);
     expect(entries(person.name)).toStrictEqual([
       ["0", "John"],
-      ["1", "Doe"]
+      ["1", "Doe"],
     ]);
+    // eslint-disable-next-line no-sparse-arrays
     expect(entries(["a", "b", , , "c"])).toStrictEqual([
       ["0", "a"],
       ["1", "b"],
-      ["4", "c"]
+      ["4", "c"],
     ]);
   });
 });
