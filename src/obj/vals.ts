@@ -1,3 +1,4 @@
+import { keys } from "./keys";
 import type { Val } from "./types";
 
 /**
@@ -6,14 +7,10 @@ import type { Val } from "./types";
  * @returns Array of the object's values
  */
 export const vals = <T extends object>(obj: T): Val<T>[] => {
-  if (Array.isArray(obj)) {
-    const res: Val<T>[] = [];
-    for (let i = 0; i < obj.length; i++) {
-      if (Object.prototype.hasOwnProperty.call(obj, i)) {
-        res.push(obj[i]);
-      }
-    }
-    return res;
+  const mKeys = keys(obj);
+  const res: Val<T>[] = new Array(mKeys.length);
+  for (let i = 0; i < res.length; i++) {
+    res[i] = obj[mKeys[i]];
   }
-  return Object.values(obj);
+  return res;
 };
