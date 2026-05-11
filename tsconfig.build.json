@@ -1,11 +1,11 @@
 {
-  "compilerOptions": {
-    "baseUrl": "./src",
-    "rootDir": "./src",
-    "paths": {
-      "/*": ["./*"]
-    }
-  },
   "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "noEmit": true,
+    "outDir": "./dist",
+    "rootDir": "./src"
+  },
   "include": ["src"]
 }
