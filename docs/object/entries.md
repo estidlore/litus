@@ -23,5 +23,5 @@ _.entries({ age: 18, name: "John" });
 
 ## Related Functions
 
-- [keys](keys.md)
+- [keys](keys.md) (dependency)
 - [vals](vals.md)

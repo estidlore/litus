@@ -25,5 +25,5 @@ _.keys({ age: 18, name: "John" });
 
 - [copy](copy.md) (dependent)
 - [equal](equal.md) (dependent)
-- [entries](entries.md)
-- [vals](vals.md)
+- [entries](entries.md) (dependent)
+- [vals](vals.md) (dependent)

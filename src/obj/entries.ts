@@ -1,3 +1,4 @@
+import { keys } from "./keys";
 import type { Entry } from "./types";
 
 /**
@@ -6,14 +7,10 @@ import type { Entry } from "./types";
  * @returns Array of key-value pairs from the object
  */
 export const entries = <T extends object>(obj: T): Entry<T>[] => {
-  if (Array.isArray(obj)) {
-    const res: Entry<T>[] = [];
-    for (let i = 0; i < obj.length; i++) {
-      if (Object.prototype.hasOwnProperty.call(obj, i)) {
-        res.push([String(i), obj[i]] as Entry<T>);
-      }
-    }
-    return res;
+  const mKeys = keys(obj);
+  const res: Entry<T>[] = new Array(mKeys.length);
+  for (let i = 0; i < res.length; i++) {
+    res[i] = [mKeys[i], obj[mKeys[i]]];
   }
-  return Object.entries(obj) as Entry<T>[];
+  return res;
 };
