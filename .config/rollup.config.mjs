@@ -1,7 +1,7 @@
 import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
 
-const tsconfig = "tsconfig.build.json";
+const tsconfig = ".config/tsconfig.build.json";
 
 const output = {
   generatedCode: {

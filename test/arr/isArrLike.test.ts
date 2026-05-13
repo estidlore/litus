@@ -25,9 +25,7 @@ describe("isArrLike", () => {
   });
 
   it("returns false for functions", () => {
-    // eslint-disable-next-line no-empty-function
     expect(isArrLike(() => {})).toBe(false);
-    // eslint-disable-next-line no-empty-function
     expect(isArrLike(function () {})).toBe(false);
   });
 

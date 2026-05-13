@@ -16,7 +16,7 @@ export default defineConfig(
   tseslint.configs.recommended,
   eslintConfigPrettier, // Always last to override conflicting rules
   {
-    ignores: ["coverage", "dist", "node_modules"],
+    files: ["../src/**", "../test/**"],
     languageOptions: {
       globals: {
         ...globals.node,
@@ -166,7 +166,7 @@ export default defineConfig(
     },
   },
   {
-    files: ["test/**"],
+    files: ["../test/**"],
     rules: {
       "max-lines-per-function": "off",
     },

@@ -16,6 +16,5 @@
     "target": "es2016",
     "types": ["node"]
   },
-  "exclude": [],
   "include": ["src", "test"]
 }
