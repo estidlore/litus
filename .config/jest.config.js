@@ -1,6 +1,6 @@
 module.exports = {
   collectCoverage: true,
-  collectCoverageFrom: ["./src/**/*.ts"],
+  collectCoverageFrom: ["src/**/*.ts"],
   coverageDirectory: "coverage",
   coveragePathIgnorePatterns: ["src/index.ts", "src/.*types.*"],
   coverageThreshold: {
@@ -16,9 +16,11 @@ module.exports = {
     "^/(.*)$": "<rootDir>/src/$1",
   },
   preset: "ts-jest",
+  rootDir: "../",
+  roots: ["test"],
   testEnvironment: "node",
   transform: {
-    "^.+\\.ts$": ["ts-jest", { tsconfig: "tsconfig.test.json" }],
+    "^.+\\.ts$": ["ts-jest", { tsconfig: ".config/tsconfig.test.json" }],
   },
   transformIgnorePatterns: ["node_modules"],
 };

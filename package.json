@@ -42,10 +42,10 @@
     "type": "git"
   },
   "scripts": {
-    "build": "rimraf ./dist && rollup -c",
-    "format": "prettier --write .",
-    "lint": "eslint --ext .ts src test --fix",
-    "test": "jest"
+    "build": "rimraf ./dist && rollup -c .config/rollup.config.mjs",
+    "format": "prettier -c .config/.prettierrc --write src/ test/",
+    "lint": "eslint -c .config/eslint.config.js --ext .ts src test --fix",
+    "test": "jest -c .config/jest.config.js"
   },
   "sideEffects": false,
   "devDependencies": {
