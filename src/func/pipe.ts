@@ -33,7 +33,7 @@ export const pipe = <T extends UnaryFn[]>(...fns: PipeOps<T>): PipedFn<T> => {
   return ((input) => {
     let res: unknown = input;
     for (let i = 0; i < fns.length; i++) {
-      res = (fns[i] as UnaryFn)(res);
+      res = fns[i](res);
     }
     return res;
   }) as PipedFn<T>;

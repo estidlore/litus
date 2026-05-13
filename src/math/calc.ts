@@ -18,7 +18,7 @@ export const calc = <T extends number[]>(
   opFn: (...nums: T) => number,
 ): (<A extends ConvertTuple<T, Quantity>>(...q: A) => Calc<A>) => {
   return <A extends ConvertTuple<T, Quantity>>(...arr: A) => {
-    const vectors = arr.filter((el) => typeof el !== "number") as number[][];
+    const vectors = arr.filter((el) => typeof el !== "number");
     if (vectors.length === 0) {
       return opFn(...(arr as unknown as T)) as Calc<A>;
     }
