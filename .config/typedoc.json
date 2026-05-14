@@ -1,0 +1,7 @@
+{
+  "$schema": "typedoc.org",
+  "entryPoints": ["../src/*/index.ts"],
+  "out": "../dist-docs",
+  "plugin": [],
+  "tsconfig": "./tsconfig.build.json"
+}
