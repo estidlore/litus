@@ -3,6 +3,7 @@ node_modules
 
 # Package
 dist
+dist-docs
 litus-*.tgz
 
 # Test

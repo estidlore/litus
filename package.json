@@ -43,6 +43,7 @@
   },
   "scripts": {
     "build": "rimraf ./dist && rollup -c .config/rollup.config.mjs",
+    "docs": "typedoc --options .config/typedoc.json",
     "format": "prettier -c .config/.prettierrc --write src/ test/",
     "lint": "eslint -c .config/eslint.config.js --ext .ts src test --fix",
     "test": "jest -c .config/jest.config.js"
@@ -63,6 +64,7 @@
     "rollup-plugin-dts": "^6.2.1",
     "ts-jest": "^29.0.5",
     "tslib": "^2.8.1",
+    "typedoc": "^0.28.19",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.59.2"
   }
